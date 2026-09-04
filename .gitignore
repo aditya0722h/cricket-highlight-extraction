@@ -1,0 +1,6 @@
+.venv312/
+frames/
+*.mp4
+__pycache__/
+*.pyc
+python-3.12.0-amd64.exe
