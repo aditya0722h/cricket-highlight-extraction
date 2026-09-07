@@ -23,12 +23,38 @@ from PIL import Image
 # ---------- Step 1: Frame extraction ----------
 
 def extract_frames(video_path, output_dir="frames", target_fps=1):
+    # --- Error handling: check the file exists before touching OpenCV ---
+    if not os.path.exists(video_path):
+        raise FileNotFoundError(
+            f"Video file not found: '{video_path}'\n"
+            f"  -> Check the filename and make sure it's in the current folder.\n"
+            f"  -> Run 'dir' to see what files are actually here."
+        )
+
+    if os.path.getsize(video_path) == 0:
+        raise ValueError(f"Video file '{video_path}' is empty (0 bytes) - likely a corrupted download.")
+
     os.makedirs(output_dir, exist_ok=True)
     cap = cv2.VideoCapture(video_path)
+
+    # --- Error handling: OpenCV couldn't open the file at all ---
     if not cap.isOpened():
-        raise RuntimeError(f"Could not open video: {video_path}")
+        raise RuntimeError(
+            f"Could not open '{video_path}' as a video.\n"
+            f"  -> The file may be corrupted, or in a format OpenCV doesn't support.\n"
+            f"  -> Try re-downloading it, or convert it to .mp4 with a tool like FFmpeg."
+        )
 
     native_fps = cap.get(cv2.CAP_PROP_FPS)
+
+    # --- Error handling: some corrupted/odd files report 0 FPS ---
+    if native_fps <= 0:
+        cap.release()
+        raise RuntimeError(
+            f"'{video_path}' reports an invalid frame rate ({native_fps} FPS).\n"
+            f"  -> The file is likely corrupted or not a valid video."
+        )
+
     frame_interval = max(1, round(native_fps / target_fps))
 
     extracted = []
@@ -49,6 +75,14 @@ def extract_frames(video_path, output_dir="frames", target_fps=1):
         frame_idx += 1
 
     cap.release()
+
+    # --- Error handling: video opened fine but yielded no usable frames ---
+    if saved_count == 0:
+        raise RuntimeError(
+            f"'{video_path}' opened successfully but no frames could be extracted.\n"
+            f"  -> The video may be 0 seconds long, or its stream may be unreadable."
+        )
+
     print(f"[1/4] Extracted {saved_count} frames at ~{target_fps} FPS")
     return extracted
 
@@ -158,4 +192,14 @@ if __name__ == "__main__":
         sys.exit(1)
 
     video_path = sys.argv[1]
-    run_visual_channel(video_path)
+
+    try:
+        run_visual_channel(video_path)
+    except (FileNotFoundError, ValueError, RuntimeError) as e:
+        # Clean, expected errors - print the message without a scary traceback
+        print(f"\nERROR: {e}")
+        sys.exit(1)
+    except Exception as e:
+        # Anything unexpected - still show it, but label it clearly
+        print(f"\nUNEXPECTED ERROR: {type(e).__name__}: {e}")
+        sys.exit(1)
