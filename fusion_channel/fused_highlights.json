@@ -1,0 +1,9 @@
+{
+  "source_video": "synthetic_test.mp4",
+  "highlights": [
+    [
+      3.0,
+      7.0
+    ]
+  ]
+}

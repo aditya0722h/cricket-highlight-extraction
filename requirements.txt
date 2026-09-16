@@ -8,17 +8,19 @@ librosa>=0.10.0
 soundfile>=0.12.1
 audioread>=3.0.0
 
-
-# NLP, OCR & Text Analytics
+# NLP, Speech Transcribe & Text Analytics
+faster-whisper>=0.10.0
 spacy>=3.6.0
 nltk>=3.8.1
+vaderSentiment>=3.3.2
 pytesseract>=0.3.10
 
-# Data Manipulation & Machine Learning
+# Data Manipulation, Fusion & Rendering
 numpy>=1.24.0
 pandas>=2.0.0
 scipy>=1.10.0
 scikit-learn>=1.3.0
+moviepy>=1.0.3
 
 # General Utilities
 tqdm>=4.65.0

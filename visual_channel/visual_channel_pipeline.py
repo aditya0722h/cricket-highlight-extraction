@@ -1,62 +1,36 @@
-"""
-Visual Channel - Full Pipeline (Module A)
---------------------------------------------
-Single entry point: give it a video, get back the final
-timestamped visual feature file ready for Module D (fusion).
+"""Visual Channel - Full Pipeline (Module A) - Low-VRAM Optimized."""
 
-Usage:
-    python visual_channel_pipeline.py path/to/video.mp4
-"""
-
-import sys
-import os
+import argparse
+import gc
 import json
-
+import os
+import shutil
+import sys
+import tempfile
 import cv2
 import numpy as np
+from PIL import Image
 import torch
 import torchvision
 from torchvision import transforms
-from PIL import Image
 
 
-# ---------- Step 1: Frame extraction ----------
-
-def extract_frames(video_path, output_dir="frames", target_fps=1):
-    # --- Error handling: check the file exists before touching OpenCV ---
+def extract_frames(video_path, output_dir, target_fps=1):
     if not os.path.exists(video_path):
-        raise FileNotFoundError(
-            f"Video file not found: '{video_path}'\n"
-            f"  -> Check the filename and make sure it's in the current folder.\n"
-            f"  -> Run 'dir' to see what files are actually here."
-        )
-
+        raise FileNotFoundError(f"Video file not found: '{video_path}'")
     if os.path.getsize(video_path) == 0:
-        raise ValueError(f"Video file '{video_path}' is empty (0 bytes) - likely a corrupted download.")
+        raise ValueError(f"Video file '{video_path}' is empty (0 bytes).")
 
-    os.makedirs(output_dir, exist_ok=True)
     cap = cv2.VideoCapture(video_path)
-
-    # --- Error handling: OpenCV couldn't open the file at all ---
     if not cap.isOpened():
-        raise RuntimeError(
-            f"Could not open '{video_path}' as a video.\n"
-            f"  -> The file may be corrupted, or in a format OpenCV doesn't support.\n"
-            f"  -> Try re-downloading it, or convert it to .mp4 with a tool like FFmpeg."
-        )
+        raise RuntimeError(f"Could not open '{video_path}'.")
 
     native_fps = cap.get(cv2.CAP_PROP_FPS)
-
-    # --- Error handling: some corrupted/odd files report 0 FPS ---
     if native_fps <= 0:
         cap.release()
-        raise RuntimeError(
-            f"'{video_path}' reports an invalid frame rate ({native_fps} FPS).\n"
-            f"  -> The file is likely corrupted or not a valid video."
-        )
+        raise RuntimeError(f"Invalid frame rate ({native_fps} FPS).")
 
     frame_interval = max(1, round(native_fps / target_fps))
-
     extracted = []
     frame_idx = 0
     saved_count = 0
@@ -66,7 +40,7 @@ def extract_frames(video_path, output_dir="frames", target_fps=1):
         if not ret:
             break
         if frame_idx % frame_interval == 0:
-            timestamp_sec = frame_idx / native_fps
+            timestamp_sec = round(frame_idx / native_fps, 2)
             filename = f"frame_{saved_count:05d}_t{timestamp_sec:.2f}.jpg"
             filepath = os.path.join(output_dir, filename)
             cv2.imwrite(filepath, frame)
@@ -75,19 +49,12 @@ def extract_frames(video_path, output_dir="frames", target_fps=1):
         frame_idx += 1
 
     cap.release()
-
-    # --- Error handling: video opened fine but yielded no usable frames ---
     if saved_count == 0:
-        raise RuntimeError(
-            f"'{video_path}' opened successfully but no frames could be extracted.\n"
-            f"  -> The video may be 0 seconds long, or its stream may be unreadable."
-        )
+        raise RuntimeError("No frames extracted.")
 
-    print(f"[1/4] Extracted {saved_count} frames at ~{target_fps} FPS")
+    print(f"[1/4] Extracted {saved_count} frames at ~{target_fps} FPS.")
     return extracted
 
-
-# ---------- Step 2: MobileNetV3 embeddings ----------
 
 def load_mobilenet(device):
     model = torchvision.models.mobilenet_v3_small(weights="DEFAULT")
@@ -101,89 +68,116 @@ def get_preprocess():
         transforms.Resize(256),
         transforms.CenterCrop(224),
         transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+        transforms.Normalize(
+            mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]
+        ),
     ])
 
 
-def extract_embeddings(frame_paths, device):
+def extract_embeddings(frame_paths, device, batch_size=32):
     model = load_mobilenet(device)
     preprocess = get_preprocess()
     embeddings = {}
 
-    with torch.no_grad():
-        for t, path in frame_paths:
-            image = Image.open(path).convert("RGB")
-            input_tensor = preprocess(image).unsqueeze(0).to(device).half()
-            embedding = model(input_tensor).squeeze(0).cpu().float().numpy()
-            embeddings[t] = embedding.tolist()
+    # Mini-batch inference for maximum GPU utilization
+    for i in range(0, len(frame_paths), batch_size):
+        batch_paths = frame_paths[i : i + batch_size]
+        tensors = []
+        timestamps = []
 
-    print(f"[2/4] Extracted {len(embeddings)} MobileNetV3 embeddings")
+        for t, path in batch_paths:
+            img = Image.open(path).convert("RGB")
+            tensors.append(preprocess(img))
+            timestamps.append(t)
+
+        batch_tensor = torch.stack(tensors).to(device).half()
+
+        with torch.no_grad():
+            outputs = model(batch_tensor).cpu().float().numpy()
+
+        for idx, t in enumerate(timestamps):
+            embeddings[t] = outputs[idx].tolist()
+
+    print(f"[2/4] Extracted {len(embeddings)} MobileNetV3 embeddings.")
+
+    # Memory cleanup for RTX 2050
+    del model
+    gc.collect()
     if device == "cuda":
-        peak_mb = torch.cuda.max_memory_allocated() / (1024 ** 2)
-        print(f"       Peak GPU memory: {peak_mb:.1f} MB")
+        torch.cuda.empty_cache()
 
     return embeddings
 
-
-# ---------- Step 3: Optical flow ----------
 
 def compute_optical_flow(frame_paths):
     motion = {}
     prev_gray = None
 
-    for i, (t, path) in enumerate(frame_paths):
+    for t, path in frame_paths:
         frame = cv2.imread(path)
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        # Downscale frame for speed without changing motion metric ratio
+        resized = cv2.resize(frame, (640, 360))
+        gray = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
 
         if prev_gray is None:
             motion[t] = 0.0
         else:
             flow = cv2.calcOpticalFlowFarneback(
-                prev_gray, gray, None,
-                pyr_scale=0.5, levels=3, winsize=15,
-                iterations=3, poly_n=5, poly_sigma=1.2, flags=0
+                prev_gray,
+                gray,
+                None,
+                pyr_scale=0.5,
+                levels=3,
+                winsize=15,
+                iterations=3,
+                poly_n=5,
+                poly_sigma=1.2,
+                flags=0,
             )
             dx, dy = flow[..., 0], flow[..., 1]
-            motion[t] = float(np.mean(np.sqrt(dx ** 2 + dy ** 2)))
+            motion[t] = float(np.mean(np.sqrt(dx**2 + dy**2)))
 
         prev_gray = gray
 
-    print(f"[3/4] Computed optical flow for {len(motion)} frames")
+    print(f"[3/4] Computed optical flow for {len(motion)} frames.")
     return motion
 
-
-# ---------- Step 4: Merge ----------
 
 def merge(embeddings, motion, output_file):
     merged = []
     for t in sorted(embeddings.keys()):
         merged.append({
-            "t": t,
+            "t": round(float(t), 2),
             "V_spatial": embeddings[t],
-            "V_motion": motion.get(t, None)
+            "V_motion": round(motion.get(t, 0.0), 4),
         })
 
     with open(output_file, "w") as f:
         json.dump(merged, f)
 
-    print(f"[4/4] Saved final output -> {output_file}")
+    print(f"[4/4] Saved output -> {output_file}")
     return merged
 
 
-# ---------- Orchestration ----------
-
-def run_visual_channel(video_path, frames_dir="frames", output_file="visual_channel_output.json", target_fps=1):
+def run_visual_channel(
+    video_path, output_file="visual_channel_output.json", target_fps=1
+):
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(f"Running visual channel pipeline on device: {device}")
-    print(f"Input video: {video_path}\n")
+    print(f"Running Visual Channel on {device}...")
 
-    frame_paths = extract_frames(video_path, output_dir=frames_dir, target_fps=target_fps)
-    embeddings = extract_embeddings(frame_paths, device)
-    motion = compute_optical_flow(frame_paths)
-    merged = merge(embeddings, motion, output_file)
+    # Temp directory handles auto-cleanup on completion
+    temp_dir = tempfile.mkdtemp(prefix="cricket_frames_")
 
-    print(f"\nDone. {len(merged)} timestamped entries ready for Module D.")
-    return merged
+    try:
+        frame_paths = extract_frames(
+            video_path, output_dir=temp_dir, target_fps=target_fps
+        )
+        embeddings = extract_embeddings(frame_paths, device)
+        motion = compute_optical_flow(frame_paths)
+        merged = merge(embeddings, motion, output_file)
+        return merged
+    finally:
+        shutil.rmtree(temp_dir, ignore_errors=True)
 
 
 if __name__ == "__main__":
@@ -192,14 +186,8 @@ if __name__ == "__main__":
         sys.exit(1)
 
     video_path = sys.argv[1]
-
     try:
         run_visual_channel(video_path)
-    except (FileNotFoundError, ValueError, RuntimeError) as e:
-        # Clean, expected errors - print the message without a scary traceback
-        print(f"\nERROR: {e}")
-        sys.exit(1)
     except Exception as e:
-        # Anything unexpected - still show it, but label it clearly
-        print(f"\nUNEXPECTED ERROR: {type(e).__name__}: {e}")
+        print(f"\nERROR: {type(e).__name__}: {e}")
         sys.exit(1)

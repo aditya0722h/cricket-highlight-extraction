@@ -1,108 +1,108 @@
-"""
-Step 2: MobileNetV3 Spatial Feature Extraction
-------------------------------------------------
-Loads a pretrained MobileNetV3-Small, strips the classification head,
-and runs it in FP16 on GPU to extract a spatial saliency embedding
-for each frame produced by extract_frames.py.
+"""Step 2: MobileNetV3 Spatial Feature Extraction.
 
-Output: one embedding vector per frame, paired with its timestamp.
+Loads MobileNetV3-Small, strips the classification head, and extracts 576-dim
+embeddings in mini-batches (FP16 on CUDA).
 """
 
-import os
 import glob
+import json
+import os
 import re
+import gc
+import numpy as np
+from PIL import Image
 import torch
 import torchvision
 from torchvision import transforms
-from PIL import Image
-import numpy as np
-import json
 
 
 def load_mobilenet_feature_extractor(device):
-    """
-    Loads MobileNetV3-Small pretrained on ImageNet, strips the final
-    classifier layer so we get the raw feature embedding instead of
-    class predictions.
-    """
     model = torchvision.models.mobilenet_v3_small(weights="DEFAULT")
-
-    # Remove the classifier head -> we just want the embedding
     model.classifier = torch.nn.Identity()
-
-    model.eval()          # inference mode (no dropout/batchnorm updates)
+    model.eval()
     model = model.to(device)
-    model = model.half()  # FP16 for VRAM savings, matches project spec
+
+    # FP16 precision ONLY if on CUDA to prevent CPU float16 crash
+    if device == "cuda":
+        model = model.half()
 
     return model
 
 
 def get_preprocess_transform():
-    """
-    Standard ImageNet preprocessing: resize, center-crop, normalize.
-    MobileNetV3 expects 224x224 inputs normalized with ImageNet stats.
-    """
     return transforms.Compose([
         transforms.Resize(256),
         transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize(
-            mean=[0.485, 0.456, 0.406],
-            std=[0.229, 0.224, 0.225]
-        )
+            mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]
+        ),
     ])
 
 
 def extract_timestamp_from_filename(filepath):
-    """
-    Pulls the timestamp back out of filenames like:
-    frame_00001_t1.00.jpg  ->  1.00
-    """
     match = re.search(r"_t([\d.]+)\.jpg", filepath)
-    return float(match.group(1)) if match else None
+    return float(match.group(1)) if match else -1.0
 
 
-def extract_embeddings(frames_dir="frames", output_file="visual_embeddings.json"):
+def extract_embeddings(
+    frames_dir="frames",
+    output_file="visual_embeddings.json",
+    batch_size=32,
+):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Using device: {device}")
 
     model = load_mobilenet_feature_extractor(device)
     preprocess = get_preprocess_transform()
 
-    frame_paths = sorted(glob.glob(os.path.join(frames_dir, "*.jpg")))
+    # Sort strictly by extracted numerical timestamp
+    frame_paths = glob.glob(os.path.join(frames_dir, "*.jpg"))
+    frame_paths.sort(key=extract_timestamp_from_filename)
+
     if not frame_paths:
         raise FileNotFoundError(
-            f"No frames found in '{frames_dir}/'. Run extract_frames.py first."
+            f"No frames found in '{frames_dir}/'. Run Step 1 first."
         )
 
-    print(f"Found {len(frame_paths)} frames. Extracting embeddings...")
+    print(f"Found {len(frame_paths)} frames. Extracting embeddings in batches of {batch_size}...")
 
     results = []
 
-    with torch.no_grad():  # no gradient tracking needed for inference
-        for i, frame_path in enumerate(frame_paths):
-            timestamp = extract_timestamp_from_filename(frame_path)
+    with torch.no_grad():
+        for i in range(0, len(frame_paths), batch_size):
+            batch_paths = frame_paths[i : i + batch_size]
+            tensors = []
+            timestamps = []
 
-            image = Image.open(frame_path).convert("RGB")
-            input_tensor = preprocess(image).unsqueeze(0)  # add batch dim
-            input_tensor = input_tensor.to(device).half()
+            for path in batch_paths:
+                timestamp = extract_timestamp_from_filename(path)
+                image = Image.open(path).convert("RGB")
+                tensors.append(preprocess(image))
+                timestamps.append(timestamp)
 
-            embedding = model(input_tensor)               # shape: [1, 576]
-            embedding = embedding.squeeze(0).cpu().float().numpy()
+            batch_tensor = torch.stack(tensors).to(device)
+            if device == "cuda":
+                batch_tensor = batch_tensor.half()
 
-            results.append({
-                "t": timestamp,
-                "frame_path": frame_path,
-                "V_spatial": embedding.tolist()
-            })
+            # Shape: [batch_size, 576]
+            embeddings = model(batch_tensor).cpu().float().numpy()
 
-            if (i + 1) % 10 == 0 or (i + 1) == len(frame_paths):
-                print(f"  Processed {i + 1}/{len(frame_paths)} frames")
+            for idx, timestamp in enumerate(timestamps):
+                results.append({
+                    "t": round(timestamp, 2),
+                    "V_spatial": embeddings[idx].tolist(),
+                })
 
-    # Report peak GPU memory used, so we can confirm we're within budget
+            if (i + len(batch_paths)) % 64 == 0 or (i + len(batch_paths)) == len(frame_paths):
+                print(f"  Processed {i + len(batch_paths)}/{len(frame_paths)} frames")
+
     if device == "cuda":
-        peak_mem_mb = torch.cuda.max_memory_allocated() / (1024 ** 2)
+        peak_mem_mb = torch.cuda.max_memory_allocated() / (1024**2)
         print(f"Peak GPU memory used: {peak_mem_mb:.1f} MB")
+        del model
+        gc.collect()
+        torch.cuda.empty_cache()
 
     with open(output_file, "w") as f:
         json.dump(results, f)
