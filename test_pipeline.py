@@ -47,16 +47,20 @@ def generate_mock_audio_and_speech(duration_sec=10):
 
     for t in np.arange(0.0, duration_sec, 1.0):
         t_rounded = round(float(t), 2)
-        a_vol = 0.9 if 3.0 <= t_rounded <= 5.0 else 0.1
-        s_sent = 0.8 if 3.0 <= t_rounded <= 5.0 else 0.2
+        ste = 0.9 if 3.0 <= t_rounded <= 5.0 else 0.1
+        sentiment = 0.8 if 3.0 <= t_rounded <= 5.0 else 0.2
 
-        audio_data.append({"t": t_rounded, "A_volume": a_vol})
-        speech_data.append({"t": t_rounded, "S_sentiment": s_sent})
+        audio_data.append({"t": t_rounded, "STE": ste})
+        speech_data.append({
+            "t": t_rounded,
+            "sentiment_score": sentiment,
+            "keyword_hit": 3.0 <= t_rounded <= 5.0,
+        })
 
-    with open("audio_channel/audio_channel_output.json", "w") as f:
+    with open("audio_channel/audio_output.json", "w") as f:
         json.dump(audio_data, f)
 
-    with open("speech_channel/speech_channel_output.json", "w") as f:
+    with open("speech_channel/speech_output.json", "w") as f:
         json.dump(speech_data, f)
 
 
@@ -84,7 +88,7 @@ def run_full_test():
     merge_visual_features(
         embeddings_file=os.path.join("visual_channel", "visual_embeddings.json"),
         motion_file=os.path.join("visual_channel", "visual_motion.json"),
-        output_file=os.path.join("visual_channel", "visual_channel_output.json"),
+            output_file=os.path.join("visual_channel", "visual_output.json"),
     )
 
     # 3. Auxiliary Mock Data
@@ -94,16 +98,16 @@ def run_full_test():
     print("\n--- Running Fusion Channel ---")
     metadata = run_fusion_pipeline(
         source_video=video_file,
-        vis_file=os.path.join("visual_channel", "visual_channel_output.json"),
-        aud_file=os.path.join("audio_channel", "audio_channel_output.json"),
-        speech_file=os.path.join("speech_channel", "speech_channel_output.json"),
-        out_json=os.path.join("fusion_channel", "fused_highlights.json"),
+            vis_file=os.path.join("visual_channel", "visual_output.json"),
+            aud_file=os.path.join("audio_channel", "audio_output.json"),
+            speech_file=os.path.join("speech_channel", "speech_output.json"),
+            out_json=os.path.join("fusion_channel", "fusion_output.json"),
         top_k=1,
         window_sec=4.0,
     )
 
     print("\nPipeline execution complete! Deliverable located at:")
-    print(f" -> fusion_channel/fused_highlights.json")
+    print(f" -> fusion_channel/fusion_output.json")
 
 
 if __name__ == "__main__":

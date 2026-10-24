@@ -1,4 +1,9 @@
 .venv312/
+node_modules/
+.env
+.cph/
+tempCodeRunnerFile.python
+.vscode/settings.json
 frames/
 *.mp4
 __pycache__/

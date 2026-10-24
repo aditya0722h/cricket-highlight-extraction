@@ -1,78 +1,84 @@
+Here is the updated `README.md` file. It reflects your current setup, including the Flask backend, Supabase PostgreSQL integration, local replay files, and your planned React + Vite + Tailwind frontend stack.
+
+---
+
+### Updated `README.md`
+
+```markdown
 # Cricket Highlight Extraction
 
-B.Tech final year project — multimodal AI system that automatically detects and extracts highlight clips from cricket match footage, optimized for low-VRAM hardware (target: NVIDIA RTX 2050, 4GB).
+B.Tech final year project — multimodal AI system that automatically detects and extracts highlight clips from cricket match footage, managed via a Flask backend and Supabase PostgreSQL database, optimized for low-VRAM hardware (target: NVIDIA RTX 2050, 4GB)[cite: 19].
 
-Due: 17th (this month)
+Due: 12th (this month)[cite: 19]
 
-## Team & Modules
+## Architecture & Modules
 
 | Module | Owner | Folder | What it outputs |
 |---|---|---|---|
-| A. Visual Channel | Aditya | `visual_channel/` | `V_spatial` (MobileNetV3 embeddings) + `V_motion` (Optical Flow) |
-| B. Audio Channel | TBD | `audio_channel/` | STE, Spectral Centroid, ZCR |
-| C. Speech / NLP | TBD | `speech_channel/` | Transcripts, sentiment, keyword/pause flags |
-| D. Fusion + Deployment | TBD | `fusion/` | Score fusion, clip selection, rendering |
+| A. Visual Channel | Aditya | `visual_channel/` | `V_spatial` (MobileNetV3 embeddings) + `V_motion` (Optical Flow)[cite: 19] |
+| B. Audio Channel | TBD | `audio_channel/` | STE, Spectral Centroid, ZCR[cite: 19] |
+| C. Speech / NLP | TBD | `speech_channel/` | Transcripts, sentiment, keyword/pause flags[cite: 19] |
+| D. Fusion + Deployment | Team | Root / `fusion/` | Score fusion, clip selection, rendering, Flask API[cite: 19] |
 
-## The Schema — read this before writing any code
+## Tech Stack
 
-Every module outputs a JSON file: **a list of entries, one per timestamp**, so Module D can merge everyone's output by joining on `"t"`.
+* **Backend:** Flask, Supabase (PostgreSQL), Python, OpenCV, MoviePy, yt-dlp[cite: 19]
+* **Frontend:** React, Vite, Tailwind CSS
+* **Hardware Target:** NVIDIA RTX 2050 (4GB VRAM) optimized[cite: 19]
 
-```json
-[
-  {"t": 0.0, "<your_feature_name>": <value>, ...},
-  {"t": 1.0, "<your_feature_name>": <value>, ...}
-]
-```
+## Flask Backend & API Endpoints
 
-- `t` = timestamp in **seconds**, matching the video's sparse sampling rate (1 FPS default, 2 FPS for fast action)
-- Each module adds its own named fields alongside `t` — don't rename `t` itself, that's the join key
-- Keep field names matching the project docs' notation where possible (`V_motion`, `STE`, etc.) so the fusion formula in the docs maps directly to code
+The project includes a Flask backend that queues and processes highlight extraction and model fine-tuning jobs asynchronously with Supabase[cite: 19].
 
-### Example: Visual Channel output (already built)
+- **POST `/api/jobs/replay`**: Queue a local video file (e.g., `match.mp4`) for highlight extraction[cite: 19].
+- **POST `/api/jobs/live`**: Queue a live stream URL (`.m3u8`) for processing[cite: 19].
+- **POST `/api/model/train`**: Fine-tune or update detection thresholds using ground-truth JSON files[cite: 19].
+- **GET `/api/jobs`**: Retrieve all recent job statuses, progress percentages, and error logs[cite: 19].
+- **GET `/api/training/logs`**: Review model training history[cite: 19].
 
-```json
-{"t": 5.0, "V_spatial": [0.12, -0.03, ...], "V_motion": 8.3}
-```
+## How to Run the Pipeline Locally
 
-- `V_spatial`: 576-dim embedding vector from MobileNetV3-Small (classifier head removed)
-- `V_motion`: average Farneback Optical Flow magnitude between this frame and the previous one
-
-### What Audio Channel should output
-
-```json
-{"t": 5.0, "STE": 0.42, "spectral_centroid": 1850.3, "ZCR": 0.11}
-```
-
-### What Speech/NLP Channel should output
-
-```json
-{"t": 5.0, "transcript_segment": "...", "sentiment_score": 0.8, "keyword_hit": true, "silence_after": false}
-```
-
-## Visual Channel — how to run it
-
-```bash
-cd visual_channel
-python visual_channel_pipeline.py <path_to_video.mp4>
-```
-
-Outputs `visual_channel_output.json` in the same folder. Runs the full pipeline: frame extraction (1 FPS) → MobileNetV3 embeddings (FP16, GPU) → Farneback Optical Flow (CPU) → merge.
-
-**Requirements:** Python 3.12, PyTorch with CUDA, OpenCV. See `visual_channel/` scripts for the individual pipeline stages if you want to understand or modify any single step.
-
-## Fusion formula (reference, from project docs)
+1. **Start the Flask Server:**
+   ```bash
+   python run.py
 
 ```
-S_total(t) = wv · V_motion_norm + ws · V_spatial_norm + wa · STE_norm + wt · Speech_norm + wc · S_clip_norm
+
+2. **Trigger a Replay Job (PowerShell):**
+```powershell
+$body = @{ video_path = "match.mp4" } | ConvertTo-Json
+Invoke-RestMethod -Uri "http://localhost:5000/api/jobs/replay" -Method Post -ContentType "application/json" -Body $body
+
 ```
 
-Weights vary by video genre — see the architecture docs for the sports/cricket weighting table.
 
-## Deadline checklist
+3. **Check Output Highlights:**
+Processed highlight clips and the master reel will automatically be saved into the `output_highlights/` directory with synchronized audio.
 
-- [x] Visual Channel — built, validated on real cricket footage
-- [ ] Audio Channel
-- [ ] Speech/NLP Channel
-- [ ] Fusion + clip selection
-- [ ] Integration test (all 4 modules merged)
-- [ ] Final render + demo prep
+
+
+## Deadline Checklist
+
+* [x] Backend API & Supabase Integration — built and tested
+
+
+* [x] Visual Channel / OpenCV Pipeline & Audio-Retained Export — built and validated on local video files
+
+
+* [x] Real-time job progress tracking — implemented
+
+
+* [ ] Audio Channel
+* [ ] Speech/NLP Channel
+* [ ] Fusion + clip selection refinement
+* [ ] React + Vite Dashboard UI integration
+* [ ] Final demo prep
+
+```
+
+<Elicitations message="What would you like to do next?">
+  <Elicitation label="Create React frontend component" query="How do I write a React + Tailwind component to poll the /api/jobs endpoint and show live progress bars?"/>
+  <Elicitation label="Update project synopsis PDF" query="Do you need help updating the final capstone synopsis document with these architecture details?"/>
+</Elicitations>
+
+```

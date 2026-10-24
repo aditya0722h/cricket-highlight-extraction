@@ -1,3 +1,11 @@
+# Web Framework & Database
+flask>=3.0.0
+flask-cors>=4.0.0
+flask-sqlalchemy>=3.1.0
+supabase>=2.0.0
+python-dotenv>=1.0.0
+werkzeug>=3.0.0
+
 # Computer Vision & Video Processing
 opencv-python>=4.8.0
 torch>=2.0.0

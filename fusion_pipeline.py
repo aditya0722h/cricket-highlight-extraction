@@ -1,171 +1,134 @@
-"""The script below implements Module D (Fusion + Clip Selection).
-It loads the output JSONs from all three modules, merges them
- on the timestamp key (t), normalizes the metrics, computes the 
- weighted score $S_{total}(t)$, and uses FFmpeg to cut and concatenate 
- the highlight clips instantly without re-encoding."""
-
 import argparse
 import json
 import os
 import subprocess
+import tempfile
 import numpy as np
 import pandas as pd
 
 def min_max_scale(series):
-    """Min-Max normalization returning values scaled to [0, 1]."""
     min_val = series.min()
     max_val = series.max()
     if max_val == min_val:
         return pd.Series(0.0, index=series.index)
     return (series - min_val) / (max_val - min_val)
 
-def load_and_merge_json(visual_path, audio_path, speech_path):
-    print("Loading channel outputs...")
-    with open(visual_path, 'r') as f:
-        df_vis = pd.DataFrame(json.load(f))
-    with open(audio_path, 'r') as f:
-        df_aud = pd.DataFrame(json.load(f))
-    with open(speech_path, 'r') as f:
-        df_spk = pd.DataFrame(json.load(f))
+def load_and_merge_json(vis_path, aud_path, spk_path):
+    with open(vis_path, "r") as f: df_vis = pd.DataFrame(json.load(f))
+    with open(aud_path, "r") as f: df_aud = pd.DataFrame(json.load(f))
+    with open(spk_path, "r") as f: df_spk = pd.DataFrame(json.load(f))
 
-    # Merge all channels on time key 't'
-    df = pd.merge(df_vis, df_aud, on="t", how="inner")
-    df = pd.merge(df, df_spk, on="t", how="inner")
+    df = pd.merge(df_vis, df_aud, on="t", how="outer")
+    df = pd.merge(df, df_spk, on="t", how="outer")
+    
+    for col, default in [("V_motion", 0.0), ("V_spatial", None), ("STE", 0.0), ("sentiment_score", 0.5), ("keyword_hit", False)]:
+        if col not in df.columns: df[col] = default
+        elif col != "V_spatial": df[col] = df[col].fillna(default)
+    df["V_spatial"] = df["V_spatial"].apply(lambda x: x if isinstance(x, list) else [])
     return df.sort_values("t").reset_index(drop=True)
 
+def spatial_norm(value):
+    if not isinstance(value, list) or len(value) == 0:
+        return 0.0
+    try:
+        arr = np.asarray(value, dtype=float)
+    except (TypeError, ValueError):
+        return 0.0
+    if arr.ndim != 1 or arr.size == 0:
+        return 0.0
+    return float(np.linalg.norm(arr))
+
 def compute_fusion_score(df, weights):
-    print("Normalizing features and computing score S_total(t)...")
-    
-    # 1. Visual Motion
-    df['V_motion_norm'] = min_max_scale(df['V_motion'])
-    
-    # 2. Visual Spatial (Vector norm of MobileNetV3 feature embedding)
-    df['V_spatial_norm'] = df['V_spatial'].apply(lambda x: np.linalg.norm(x) if isinstance(x, list) else 0.0)
-    df['V_spatial_norm'] = min_max_scale(df['V_spatial_norm'])
-    
-    # 3. Audio Energy (STE)
-    df['STE_norm'] = min_max_scale(df['STE'])
-    
-    # 4. Speech NLP (Combine sentiment score + keyword hit boost)
-    speech_signal = df['sentiment_score'] + (df['keyword_hit'].astype(float) * 0.5)
-    df['Speech_norm'] = min_max_scale(speech_signal)
-    
-    # Weighted Fusion Formula: S_total(t)
-    df['S_total'] = (
-        weights['wv'] * df['V_motion_norm'] +
-        weights['ws'] * df['V_spatial_norm'] +
-        weights['wa'] * df['STE_norm'] +
-        weights['wt'] * df['Speech_norm']
+    df["V_motion_norm"] = min_max_scale(df["V_motion"])
+    df["V_spatial_norm"] = min_max_scale(df["V_spatial"].apply(spatial_norm))
+    df["STE_norm"] = min_max_scale(df["STE"])
+    df["Speech_norm"] = min_max_scale(df["sentiment_score"] + (df["keyword_hit"].astype(float) * 0.5))
+
+    df["S_total"] = (
+        weights["wv"] * df["V_motion_norm"] +
+        weights["ws"] * df["V_spatial_norm"] +
+        weights["wa"] * df["STE_norm"] +
+        weights["wt"] * df["Speech_norm"]
     )
-    
-    # Apply a 5-second centered rolling average to smooth temporal spikes
-    df['S_total_smoothed'] = df['S_total'].rolling(window=5, min_periods=1, center=True).mean()
+    df["S_total_smoothed"] = df["S_total"].rolling(window=5, min_periods=1, center=True).mean()
     return df
 
-def extract_highlight_segments(df, percentile=85, min_duration=4, pad_sec=2):
-    """Identifies high-score intervals and groups contiguous timestamps into start/end windows."""
-    threshold = np.percentile(df['S_total_smoothed'], percentile)
-    print(f"Applying score threshold: S_total >= {threshold:.4f} (Top {100-percentile}% percentile)")
-    
-    df['is_highlight'] = df['S_total_smoothed'] >= threshold
-    
-    raw_segments = []
-    in_segment = False
-    start_t, end_t = 0.0, 0.0
-    
+def extract_highlight_segments(df, percentile=75, min_duration=4, pad_sec=2):
+    scores = pd.to_numeric(df["S_total_smoothed"], errors="coerce")
+    valid_scores = scores.dropna()
+    if valid_scores.empty:
+        return []
+    threshold = np.percentile(valid_scores, percentile)
+    df["is_highlight"] = scores.notna() & (scores >= threshold)
+
+    segments, in_segment, start_t = [], False, 0.0
     for _, row in df.iterrows():
-        t = row['t']
-        is_hl = row['is_highlight']
-        
-        if is_hl and not in_segment:
-            in_segment = True
-            start_t = max(0.0, t - pad_sec)
-        elif not is_hl and in_segment:
+        if row["is_highlight"] and not in_segment:
+            in_segment, start_t = True, max(0.0, row["t"] - pad_sec)
+        elif not row["is_highlight"] and in_segment:
             in_segment = False
-            end_t = t + pad_sec
-            if (end_t - start_t) >= min_duration:
-                raw_segments.append((start_t, end_t))
-    
+            if (row["t"] + pad_sec - start_t) >= min_duration:
+                segments.append((start_t, row["t"] + pad_sec))
     if in_segment:
-        end_t = df['t'].iloc[-1] + pad_sec
+        end_t = float(df["t"].iloc[-1]) + pad_sec
         if (end_t - start_t) >= min_duration:
-            raw_segments.append((start_t, end_t))
-            
-    # Merge segments closer than 3 seconds apart
-    merged_segments = []
-    for start, end in raw_segments:
-        if not merged_segments:
-            merged_segments.append([start, end])
-        else:
-            prev_start, prev_end = merged_segments[-1]
-            if start <= prev_end + 3.0:
-                merged_segments[-1][1] = max(prev_end, end)
-            else:
-                merged_segments.append([start, end])
-                
-    return merged_segments
+            segments.append((start_t, end_t))
+    return segments
 
 def export_clips(video_path, segments, output_dir):
     os.makedirs(output_dir, exist_ok=True)
-    clip_files = []
-    
-    print(f"Exporting {len(segments)} highlight clips using FFmpeg stream copy...")
+    if not segments:
+        print("No highlight segments selected; skipping FFmpeg export.")
+        return []
+    clips = []
+    concat_list = None
     for idx, (start, end) in enumerate(segments, 1):
-        duration = end - start
-        out_clip = os.path.join(output_dir, f"highlight_{idx:02d}.mp4")
-        
-        # Fast loss-less stream copy without re-encoding
-        cmd = [
-            "ffmpeg", "-y",
-            "-ss", f"{start:.2f}",
-            "-i", video_path,
-            "-t", f"{duration:.2f}",
-            "-c", "copy",
-            "-avoid_negative_ts", "make_zero",
-            out_clip
-        ]
-        subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        clip_files.append(out_clip)
-        print(f" Saved: {out_clip} [{start:.1f}s - {end:.1f}s | Duration: {duration:.1f}s]")
-        
-    # Stitch clips into a single compilation reel
-    concat_list_path = os.path.join(output_dir, "concat_list.txt")
-    final_output = os.path.join(output_dir, "final_highlights.mp4")
-    
-    with open(concat_list_path, 'w') as f:
-        for file in clip_files:
-            f.write(f"file '{os.path.abspath(file)}'\n")
-            
-    concat_cmd = [
-        "ffmpeg", "-y", "-f", "concat", "-safe", "0",
-        "-i", concat_list_path,
-        "-c", "copy",
-        final_output
-    ]
-    subprocess.run(concat_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    print(f"\nFinal highlight reel exported to: {final_output}")
+        out_clip = os.path.join(output_dir, f"reel_{idx:02d}.mp4")
+        subprocess.run([
+            "ffmpeg", "-y", "-ss", f"{start:.2f}", "-i", video_path,
+            "-t", f"{end - start:.2f}", "-c", "copy", "-avoid_negative_ts", "make_zero", out_clip
+        ], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True)
+        clips.append(out_clip)
+
+    try:
+        with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, dir=output_dir) as f:
+            concat_list = f.name
+            for c in clips:
+                f.write(f"file '{os.path.abspath(c)}'\n")
+
+        subprocess.run([
+            "ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", concat_list, "-c", "copy",
+            os.path.join(output_dir, "final_highlights.mp4")
+        ], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True)
+    finally:
+        if concat_list and os.path.exists(concat_list):
+            os.remove(concat_list)
+    return clips
+
+def load_match_config(video_id):
+    config_path = f"model_config_{video_id}.json"
+    if not os.path.exists(config_path):
+        return {}
+    with open(config_path, "r") as f:
+        return json.load(f)
 
 def main():
-    parser = argparse.ArgumentParser(description="Module D: Multimodal Fusion & Clip Selection.")
-    parser.add_argument("video_path", type=str, help="Path to original cricket MP4 video.")
-    parser.add_argument("--vis", type=str, default="visual_channel_output.json")
-    parser.add_argument("--aud", type=str, default="audio_channel_output.json")
-    parser.add_argument("--spk", type=str, default="speech_channel_output.json")
-    parser.add_argument("--out", type=str, default="output_highlights")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--video_id", type=str, required=True)
     args = parser.parse_args()
 
-    # Cricket domain weighting table
-    weights = {'wv': 0.25, 'ws': 0.15, 'wa': 0.30, 'wt': 0.30}
+    vid = args.video_id
+    base = f"dataset/{vid}"
     
-    df = load_and_merge_json(args.vis, args.aud, args.spk)
+    df = load_and_merge_json(f"{base}/visual_output.json", f"{base}/audio_output.json", f"{base}/speech_output.json")
+    config = load_match_config(vid)
+    weights = config.get("fusion_weights", {"wv": 0.25, "ws": 0.15, "wa": 0.30, "wt": 0.30})
+    
     df = compute_fusion_score(df, weights)
-    
-    # Save unified fusion output JSON
-    df.to_json("fusion_output.json", orient="records", indent=2)
-    print("Saved merged database to fusion_output.json")
-    
-    segments = extract_highlight_segments(df, percentile=85)
-    export_clips(args.video_path, segments, args.out)
+    segments = extract_highlight_segments(df)
+    output_json = f"{base}/fusion_output.json"
+    df.drop(columns=["V_spatial"], errors="ignore").to_json(output_json, orient="records", indent=2)
+    export_clips(f"{base}/match.mp4", segments, f"{base}/output_highlights")
 
 if __name__ == "__main__":
     main()

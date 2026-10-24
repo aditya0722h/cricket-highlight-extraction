@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #f6f5f3;        /* Soft warm stone white */
+    --card-bg: #ffffff;           /* Clean crisp paper */
+    --card-border: #e4e2dd;       /* Gentle stone border */
+    --text-primary: #1f2320;      /* Deep natural charcoal */
+    --text-muted: #68726b;        /* Muted organic sage-grey */
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #141715;      /* Deep forest charcoal */
+      --card-bg: #1b201d;        /* Soft slate-olive card */
+      --card-border: #2c3530;     /* Subtle dark stone border */
+      --text-primary: #f0f2f1;    /* Soft warm white text */
+      --text-muted: #93a199;      /* Gentle muted sage text */
+    }
+  }
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Outfit', sans-serif;
+}

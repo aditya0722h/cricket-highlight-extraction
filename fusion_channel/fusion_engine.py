@@ -44,11 +44,14 @@ def compute_fused_scores(
         for item in visual_data
     }
     aud_dict = {
-        round(float(item["t"]), 2): item.get("A_volume", 0.0)
+        round(float(item["t"]), 2): item.get("STE", 0.0)
         for item in audio_data
     }
     sp_dict = {
-        round(float(item["t"]), 2): item.get("S_sentiment", 0.0)
+        round(float(item["t"]), 2): (
+            item.get("sentiment_score", 0.5)
+            + (0.5 if item.get("keyword_hit", False) else 0.0)
+        )
         for item in speech_data
     }
 
@@ -153,6 +156,8 @@ def render_highlights_ffmpeg(
             str(duration),
             "-c",
             "copy",
+            "-avoid_negative_ts",
+            "make_zero",
             out_path,
         ]
 
@@ -170,10 +175,10 @@ def render_highlights_ffmpeg(
 
 def run_fusion_pipeline(
     source_video="sample_video.mp4",
-    vis_file="visual_channel_output.json",
-    aud_file="audio_channel_output.json",
-    speech_file="speech_channel_output.json",
-    out_json="fused_highlights.json",
+    vis_file="visual_output.json",
+    aud_file="audio_output.json",
+    speech_file="speech_output.json",
+    out_json="fusion_output.json",
     top_k=3,
     window_sec=6.0,
 ):

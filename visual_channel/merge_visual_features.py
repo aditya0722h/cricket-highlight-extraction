@@ -10,7 +10,7 @@ import json
 def merge_visual_features(
     embeddings_file="visual_embeddings.json",
     motion_file="visual_motion.json",
-    output_file="visual_channel_output.json",
+    output_file="visual_output.json",
 ):
     with open(embeddings_file, "r") as f:
         embeddings = json.load(f)
@@ -40,8 +40,8 @@ def merge_visual_features(
 
         merged.append({
             "t": t,
-            "V_spatial": entry["V_spatial"],
-            "V_motion": v_motion,
+            "V_spatial": [float(v) for v in entry["V_spatial"]],
+            "V_motion": float(v_motion),
         })
 
     with open(output_file, "w") as f:

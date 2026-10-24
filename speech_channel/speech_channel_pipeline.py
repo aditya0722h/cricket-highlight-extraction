@@ -33,9 +33,12 @@ def check_keyword_hit(text):
     return any(w in CRICKET_KEYWORDS for w in words)
 
 def process_speech(video_path, output_json, model_size="small"):
-    print(f"Loading faster-whisper ({model_size}) on GPU...")
-    # compute_type='float16' uses ~1.2 GB VRAM on RTX 2050
-    model = WhisperModel(model_size, device="cuda", compute_type="float16")
+    import torch
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    compute_type = "float16" if device == "cuda" else "int8"
+    print(f"Loading faster-whisper ({model_size}) on {device}...")
+    model = WhisperModel(model_size, device=device, compute_type=compute_type)
 
     print(f"Transcribing commentary from {video_path}...")
     # faster-whisper handles video inputs directly via FFmpeg
@@ -60,12 +63,12 @@ def process_speech(video_path, output_json, model_size="small"):
             silence_after = True
 
         processed_segments.append({
-            "start": seg.start,
-            "end": seg.end,
+            "start": float(seg.start),
+            "end": float(seg.end),
             "text": text,
-            "sentiment": sent_score,
-            "keyword_hit": kw_hit,
-            "silence_after": silence_after
+            "sentiment": float(sent_score),
+            "keyword_hit": bool(kw_hit),
+            "silence_after": bool(silence_after)
         })
 
     print("Mapping speech features to discrete 1-second timestamps...")
@@ -94,6 +97,9 @@ def process_speech(video_path, output_json, model_size="small"):
                 "silence_after": True
             })
 
+    output_dir = os.path.dirname(output_json)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
     print(f"Saving output to {output_json}...")
     with open(output_json, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
@@ -106,7 +112,8 @@ if __name__ == "__main__":
     parser.add_argument("--model", type=str, default="small", help="Whisper model size (default: small).")
     args = parser.parse_args()
 
-    output_filename = "speech_channel_output.json"
+    # UPDATED: Matches fusion pipeline expectation
+    output_filename = "speech_output.json"
     output_filepath = os.path.join(os.path.dirname(args.video_path) or ".", output_filename)
 
     process_speech(args.video_path, output_filepath, args.model)

@@ -25,15 +25,19 @@ def extract_audio_from_video(video_path, audio_path):
         audio_path,
     ]
     subprocess.run(
-        command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        command, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True
     )
 
 
 def process_audio(video_path, output_json):
     print(f"Extracting audio from {video_path}...")
-    temp_audio = tempfile.mktemp(suffix=".wav")
+    temp_file = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
+    temp_audio = temp_file.name
+    temp_file.close()
     try:
         extract_audio_from_video(video_path, temp_audio)
+        if not os.path.exists(temp_audio) or os.path.getsize(temp_audio) == 0:
+            raise RuntimeError(f"FFmpeg did not create a usable audio file for {video_path}")
 
         print("Loading audio into librosa...")
         y, sr = librosa.load(temp_audio, sr=22050)
@@ -74,6 +78,9 @@ def process_audio(video_path, output_json):
                 "ZCR": round(zcr_val, 4),
             })
 
+        output_dir = os.path.dirname(output_json)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
         print(f"Saving audio features to {output_json}...")
         with open(output_json, "w") as f:
             json.dump(results, f, indent=2)
@@ -94,7 +101,8 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    output_filename = "audio_channel_output.json"
+    # UPDATED: Matches fusion pipeline expectation
+    output_filename = "audio_output.json"
     output_filepath = os.path.join(
         os.path.dirname(args.video_path) or ".", output_filename
     )

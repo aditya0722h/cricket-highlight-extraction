@@ -60,7 +60,10 @@ def load_mobilenet(device):
     model = torchvision.models.mobilenet_v3_small(weights="DEFAULT")
     model.classifier = torch.nn.Identity()
     model.eval()
-    return model.to(device).half()
+    model = model.to(device)
+    if device == "cuda":
+        model = model.half()
+    return model
 
 
 def get_preprocess():
@@ -90,7 +93,9 @@ def extract_embeddings(frame_paths, device, batch_size=32):
             tensors.append(preprocess(img))
             timestamps.append(t)
 
-        batch_tensor = torch.stack(tensors).to(device).half()
+        batch_tensor = torch.stack(tensors).to(device)
+        if device == "cuda":
+            batch_tensor = batch_tensor.half()
 
         with torch.no_grad():
             outputs = model(batch_tensor).cpu().float().numpy()
@@ -148,10 +153,13 @@ def merge(embeddings, motion, output_file):
     for t in sorted(embeddings.keys()):
         merged.append({
             "t": round(float(t), 2),
-            "V_spatial": embeddings[t],
+            "V_spatial": [float(v) for v in embeddings[t]],
             "V_motion": round(motion.get(t, 0.0), 4),
         })
 
+    output_dir = os.path.dirname(output_file)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
     with open(output_file, "w") as f:
         json.dump(merged, f)
 
@@ -160,10 +168,14 @@ def merge(embeddings, motion, output_file):
 
 
 def run_visual_channel(
-    video_path, output_file="visual_channel_output.json", target_fps=1
+    video_path, output_file=None, target_fps=1
 ):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Running Visual Channel on {device}...")
+    if output_file is None:
+        output_file = os.path.join(
+            os.path.dirname(video_path) or ".", "visual_output.json"
+        )
 
     # Temp directory handles auto-cleanup on completion
     temp_dir = tempfile.mkdtemp(prefix="cricket_frames_")
@@ -182,12 +194,19 @@ def run_visual_channel(
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python visual_channel_pipeline.py <path_to_video>")
+        print("Usage: python visual_channel_pipeline_2.py <path_to_video>")
         sys.exit(1)
 
     video_path = sys.argv[1]
+    
+    # UPDATED: Automatically route output to match the video's directory
+    output_filename = "visual_output.json"
+    output_filepath = os.path.join(
+        os.path.dirname(video_path) or ".", output_filename
+    )
+
     try:
-        run_visual_channel(video_path)
+        run_visual_channel(video_path, output_file=output_filepath)
     except Exception as e:
         print(f"\nERROR: {type(e).__name__}: {e}")
         sys.exit(1)
