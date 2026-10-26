@@ -1,0 +1,35 @@
+# Web Framework & Database
+flask>=3.0.0
+flask-cors>=4.0.0
+flask-sqlalchemy>=3.1.0
+supabase>=2.0.0
+python-dotenv>=1.0.0
+werkzeug>=3.0.0
+
+# Computer Vision & Video Processing
+opencv-python>=4.8.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Audio Processing & Feature Extraction
+librosa>=0.10.0
+soundfile>=0.12.1
+audioread>=3.0.0
+
+# NLP, Speech Transcribe & Text Analytics
+faster-whisper>=0.10.0
+spacy>=3.6.0
+nltk>=3.8.1
+vaderSentiment>=3.3.2
+pytesseract>=0.3.10
+
+# Data Manipulation, Fusion & Rendering
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+moviepy>=1.0.3
+
+# General Utilities
+tqdm>=4.65.0
+matplotlib>=3.7.0

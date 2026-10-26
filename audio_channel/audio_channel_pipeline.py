@@ -1,0 +1,118 @@
+import argparse
+import json
+import os
+import subprocess
+import tempfile
+import librosa
+import numpy as np
+from sports.config import load_sport_config
+
+
+def extract_audio_from_video(video_path, audio_path):
+    """Extracts audio from video using FFmpeg, downsampling to 22050 Hz Mono."""
+    command = [
+        "ffmpeg",
+        "-i",
+        video_path,
+        "-q:a",
+        "0",
+        "-map",
+        "a",
+        "-ar",
+        "22050",
+        "-ac",
+        "1",
+        "-y",
+        audio_path,
+    ]
+    subprocess.run(
+        command, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=True
+    )
+
+
+def process_audio(video_path, output_json, sport="cricket"):
+    config = load_sport_config(sport)
+    print(f"Extracting audio from {video_path}...")
+    temp_file = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
+    temp_audio = temp_file.name
+    temp_file.close()
+    try:
+        extract_audio_from_video(video_path, temp_audio)
+        if not os.path.exists(temp_audio) or os.path.getsize(temp_audio) == 0:
+            raise RuntimeError(f"FFmpeg did not create a usable audio file for {video_path}")
+
+        print("Loading audio into librosa...")
+        y, sr = librosa.load(temp_audio, sr=22050)
+
+        hop_length = 512
+        frame_length = 2048
+
+        print("Computing audio features: STE, Spectral Centroid, ZCR...")
+        rms = librosa.feature.rms(
+            y=y, frame_length=frame_length, hop_length=hop_length
+        )[0]
+        centroid = librosa.feature.spectral_centroid(
+            y=y, sr=sr, n_fft=frame_length, hop_length=hop_length
+        )[0]
+        zcr = librosa.feature.zero_crossing_rate(
+            y=y, frame_length=frame_length, hop_length=hop_length
+        )[0]
+
+        times = librosa.frames_to_time(
+            np.arange(len(rms)), sr=sr, hop_length=hop_length
+        )
+        duration_sec = int(np.ceil(librosa.get_duration(y=y, sr=sr)))
+
+        results = []
+        for t in range(duration_sec):
+            mask = (times >= t) & (times < t + 1)
+            if not np.any(mask):
+                continue
+
+            ste_val = float(np.mean(rms[mask] ** 2))
+            centroid_val = float(np.mean(centroid[mask]))
+            zcr_val = float(np.mean(zcr[mask]))
+
+            result = {
+                "t": float(t),
+                "STE": round(ste_val, 4),
+                "spectral_centroid": round(centroid_val, 4),
+                "ZCR": round(zcr_val, 4),
+                "audio_events": [
+                    event
+                    for event in config["event_types"]
+                    if config["audio_energy_thresholds"][event] is not None
+                    and ste_val >= config["audio_energy_thresholds"][event]
+                ],
+            }
+            results.append(result)
+
+        output_dir = os.path.dirname(output_json)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
+        print(f"Saving audio features to {output_json}...")
+        with open(output_json, "w") as f:
+            json.dump(results, f, indent=2)
+
+    finally:
+        if os.path.exists(temp_audio):
+            os.remove(temp_audio)
+
+    print("Audio Channel processing complete.")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Extract audio features for sport highlights."
+    )
+    parser.add_argument(
+        "video_path", type=str, help="Path to input video."
+    )
+    parser.add_argument("--sport", choices=("cricket", "football"), default="cricket")
+    args = parser.parse_args()
+
+    output_filename = "audio_output.json"
+    output_filepath = os.path.join(
+        os.path.dirname(args.video_path) or ".", output_filename
+    )
+    process_audio(args.video_path, output_filepath, sport=args.sport)

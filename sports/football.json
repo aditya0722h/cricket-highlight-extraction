@@ -1,0 +1,72 @@
+{
+  "sport": "football",
+  "tuning_status": "initial_guess",
+  "silence_gap_seconds": 1.5,
+  "keyword_hit_bonus": 0.5,
+  "neutral_sentiment": 0.5,
+  "speech_model_size": "tiny",
+  "motion_event_lead_seconds": 1.0,
+  "motion_cooldown_seconds": 2.0,
+  "slowmo_window_before_seconds": 1.0,
+  "slowmo_window_after_seconds": 1.0,
+  "event_types": ["goal", "near_miss", "card"],
+  "audio_motion_fallback_events": ["goal", "near_miss"],
+  "audio_energy_thresholds": {
+    "goal": 0.04,
+    "near_miss": 0.016,
+    "card": 0.012
+  },
+  "motion_thresholds": {
+    "goal": 0.01,
+    "near_miss": 0.008,
+    "card": 0.006
+  },
+  "visual_motion_thresholds": {
+    "goal": 2.0,
+    "near_miss": 1.5,
+    "card": 1.2
+  },
+  "keyword_lists": {
+    "goal": ["goal", "scores", "scored", "equalizer", "hat-trick"],
+    "near_miss": ["penalty", "saved", "off the post", "wide", "just wide", "missed"],
+    "card": ["red card", "yellow card", "sent off", "booked"]
+  },
+  "overlay_keywords": {
+    "goal": ["goal", "scores", "scored", "equalizer", "hat-trick"],
+    "near_miss": ["penalty", "saved", "off the post", "wide", "just wide", "missed"],
+    "card": ["red card", "yellow card", "sent off", "booked"]
+  },
+  "fusion_weights": {
+    "pipeline": {
+      "wv": 0.35,
+      "ws": 0.10,
+      "wa": 0.30,
+      "wt": 0.25
+    },
+    "channel_engine": {
+      "visual": 0.35,
+      "audio": 0.35,
+      "speech": 0.30
+    }
+  },
+  "clip_padding": {
+    "before": 5,
+    "after": 8
+  },
+  "fusion_detection": {
+    "percentile": 80,
+    "min_duration": 3,
+    "smoothing_window": 3,
+    "top_k": 5,
+    "window_sec": 6.0,
+    "pipeline_window_sec": 6.0,
+    "min_gap_sec": 4.0,
+    "event_merge_gap_seconds": 2.0
+  },
+  "overlay_captions": {
+    "goal": "GOAL!",
+    "near_miss": "SO CLOSE!",
+    "card": "CARD!"
+  },
+  "legacy_motion_threshold": 5000
+}

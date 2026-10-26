@@ -1,0 +1,71 @@
+{
+  "sport": "cricket",
+  "tuning_status": "baseline",
+  "silence_gap_seconds": 1.5,
+  "keyword_hit_bonus": 0.5,
+  "neutral_sentiment": 0.5,
+  "speech_model_size": "small",
+  "motion_event_lead_seconds": 1.0,
+  "motion_cooldown_seconds": 2.0,
+  "slowmo_window_before_seconds": 1.0,
+  "slowmo_window_after_seconds": 1.0,
+  "event_types": ["wicket", "six"],
+  "audio_energy_thresholds": {
+    "six": null,
+    "wicket": null
+  },
+  "motion_thresholds": {
+    "six": 5000,
+    "wicket": 5000
+  },
+  "visual_motion_thresholds": {
+    "six": 5000,
+    "wicket": 5000
+  },
+  "keyword_lists": {
+    "six": ["six", "maximum"],
+    "wicket": [
+      "out", "wicket", "catch", "bowled", "review", "appeal", "gone", "taken",
+      "stumped", "lbw", "dropped"
+    ],
+    "general": [
+      "four", "boundary", "huge", "shot", "unbelievable", "wided"
+    ]
+  },
+  "overlay_keywords": {
+    "six": ["six", "sixes", "sixer", "maximum"],
+    "wicket": ["out", "wicket", "catch", "caught", "bowled", "review", "appeal", "gone", "taken", "stumped", "lbw", "dropped"]
+  },
+  "fusion_weights": {
+    "pipeline": {
+      "wv": 0.25,
+      "ws": 0.15,
+      "wa": 0.30,
+      "wt": 0.30
+    },
+    "channel_engine": {
+      "visual": 0.4,
+      "audio": 0.4,
+      "speech": 0.2
+    }
+  },
+  "clip_padding": {
+    "before": 2,
+    "after": 2
+  },
+  "fusion_detection": {
+    "percentile": 75,
+    "min_duration": 4,
+    "smoothing_window": 5,
+    "top_k": 3,
+    "window_sec": 5.0,
+    "pipeline_window_sec": 6.0,
+    "min_gap_sec": 3.0,
+    "event_merge_gap_seconds": 1.0
+  },
+  "overlay_captions": {
+    "six": "SIX!",
+    "wicket": "WICKET!"
+  },
+  "legacy_motion_threshold": 5000
+}

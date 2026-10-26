@@ -1,0 +1,6236 @@
+[
+  {
+    "t": 0.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1685.5351,
+    "ZCR": 0.1064
+  },
+  {
+    "t": 1.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1837.3802,
+    "ZCR": 0.1128
+  },
+  {
+    "t": 2.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1832.051,
+    "ZCR": 0.1133
+  },
+  {
+    "t": 3.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1901.8054,
+    "ZCR": 0.1179
+  },
+  {
+    "t": 4.0,
+    "STE": 0.0068,
+    "spectral_centroid": 2183.3263,
+    "ZCR": 0.1404
+  },
+  {
+    "t": 5.0,
+    "STE": 0.0052,
+    "spectral_centroid": 1958.412,
+    "ZCR": 0.1229
+  },
+  {
+    "t": 6.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1917.5791,
+    "ZCR": 0.1169
+  },
+  {
+    "t": 7.0,
+    "STE": 0.0057,
+    "spectral_centroid": 2404.6798,
+    "ZCR": 0.1503
+  },
+  {
+    "t": 8.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1869.6963,
+    "ZCR": 0.1157
+  },
+  {
+    "t": 9.0,
+    "STE": 0.0055,
+    "spectral_centroid": 2573.5391,
+    "ZCR": 0.1539
+  },
+  {
+    "t": 10.0,
+    "STE": 0.0043,
+    "spectral_centroid": 2615.9012,
+    "ZCR": 0.1844
+  },
+  {
+    "t": 11.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1890.1597,
+    "ZCR": 0.1157
+  },
+  {
+    "t": 12.0,
+    "STE": 0.0043,
+    "spectral_centroid": 2719.5603,
+    "ZCR": 0.1717
+  },
+  {
+    "t": 13.0,
+    "STE": 0.0042,
+    "spectral_centroid": 1901.8671,
+    "ZCR": 0.0948
+  },
+  {
+    "t": 14.0,
+    "STE": 0.0042,
+    "spectral_centroid": 2408.0783,
+    "ZCR": 0.1467
+  },
+  {
+    "t": 15.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1887.0623,
+    "ZCR": 0.1093
+  },
+  {
+    "t": 16.0,
+    "STE": 0.0,
+    "spectral_centroid": 1484.6044,
+    "ZCR": 0.0853
+  },
+  {
+    "t": 17.0,
+    "STE": 0.0,
+    "spectral_centroid": 1545.2454,
+    "ZCR": 0.0874
+  },
+  {
+    "t": 18.0,
+    "STE": 0.0,
+    "spectral_centroid": 1484.9007,
+    "ZCR": 0.0803
+  },
+  {
+    "t": 19.0,
+    "STE": 0.0027,
+    "spectral_centroid": 848.6292,
+    "ZCR": 0.0376
+  },
+  {
+    "t": 20.0,
+    "STE": 0.001,
+    "spectral_centroid": 1191.2745,
+    "ZCR": 0.0623
+  },
+  {
+    "t": 21.0,
+    "STE": 0.0,
+    "spectral_centroid": 1443.1834,
+    "ZCR": 0.0763
+  },
+  {
+    "t": 22.0,
+    "STE": 0.0,
+    "spectral_centroid": 1699.1812,
+    "ZCR": 0.0857
+  },
+  {
+    "t": 23.0,
+    "STE": 0.0,
+    "spectral_centroid": 2099.1791,
+    "ZCR": 0.1095
+  },
+  {
+    "t": 24.0,
+    "STE": 0.0,
+    "spectral_centroid": 1477.9182,
+    "ZCR": 0.0785
+  },
+  {
+    "t": 25.0,
+    "STE": 0.0,
+    "spectral_centroid": 1504.2126,
+    "ZCR": 0.0764
+  },
+  {
+    "t": 26.0,
+    "STE": 0.0,
+    "spectral_centroid": 1468.4141,
+    "ZCR": 0.0729
+  },
+  {
+    "t": 27.0,
+    "STE": 0.0,
+    "spectral_centroid": 2352.5806,
+    "ZCR": 0.1398
+  },
+  {
+    "t": 28.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1617.8926,
+    "ZCR": 0.078
+  },
+  {
+    "t": 29.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1281.8566,
+    "ZCR": 0.0547
+  },
+  {
+    "t": 30.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1948.1086,
+    "ZCR": 0.1104
+  },
+  {
+    "t": 31.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1731.7711,
+    "ZCR": 0.0985
+  },
+  {
+    "t": 32.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1768.9866,
+    "ZCR": 0.105
+  },
+  {
+    "t": 33.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1674.3369,
+    "ZCR": 0.1038
+  },
+  {
+    "t": 34.0,
+    "STE": 0.0031,
+    "spectral_centroid": 2234.7739,
+    "ZCR": 0.1427
+  },
+  {
+    "t": 35.0,
+    "STE": 0.002,
+    "spectral_centroid": 1913.941,
+    "ZCR": 0.1128
+  },
+  {
+    "t": 36.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2063.4099,
+    "ZCR": 0.1186
+  },
+  {
+    "t": 37.0,
+    "STE": 0.0025,
+    "spectral_centroid": 2044.5843,
+    "ZCR": 0.1135
+  },
+  {
+    "t": 38.0,
+    "STE": 0.0033,
+    "spectral_centroid": 2501.8561,
+    "ZCR": 0.1424
+  },
+  {
+    "t": 39.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2614.8019,
+    "ZCR": 0.1399
+  },
+  {
+    "t": 40.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1664.5587,
+    "ZCR": 0.0703
+  },
+  {
+    "t": 41.0,
+    "STE": 0.001,
+    "spectral_centroid": 2403.2069,
+    "ZCR": 0.1287
+  },
+  {
+    "t": 42.0,
+    "STE": 0.001,
+    "spectral_centroid": 2344.6955,
+    "ZCR": 0.1473
+  },
+  {
+    "t": 43.0,
+    "STE": 0.0003,
+    "spectral_centroid": 2072.9339,
+    "ZCR": 0.1302
+  },
+  {
+    "t": 44.0,
+    "STE": 0.0024,
+    "spectral_centroid": 2616.0065,
+    "ZCR": 0.165
+  },
+  {
+    "t": 45.0,
+    "STE": 0.0023,
+    "spectral_centroid": 2132.9921,
+    "ZCR": 0.1239
+  },
+  {
+    "t": 46.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2533.1563,
+    "ZCR": 0.1481
+  },
+  {
+    "t": 47.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1514.5476,
+    "ZCR": 0.079
+  },
+  {
+    "t": 48.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1431.4815,
+    "ZCR": 0.0676
+  },
+  {
+    "t": 49.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1987.2496,
+    "ZCR": 0.0975
+  },
+  {
+    "t": 50.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2690.038,
+    "ZCR": 0.1709
+  },
+  {
+    "t": 51.0,
+    "STE": 0.001,
+    "spectral_centroid": 1900.4208,
+    "ZCR": 0.0924
+  },
+  {
+    "t": 52.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1502.8861,
+    "ZCR": 0.0839
+  },
+  {
+    "t": 53.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1756.1882,
+    "ZCR": 0.0933
+  },
+  {
+    "t": 54.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1674.3454,
+    "ZCR": 0.1035
+  },
+  {
+    "t": 55.0,
+    "STE": 0.0042,
+    "spectral_centroid": 2110.7467,
+    "ZCR": 0.1265
+  },
+  {
+    "t": 56.0,
+    "STE": 0.0029,
+    "spectral_centroid": 2039.6841,
+    "ZCR": 0.122
+  },
+  {
+    "t": 57.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1752.1887,
+    "ZCR": 0.1085
+  },
+  {
+    "t": 58.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1792.0925,
+    "ZCR": 0.1065
+  },
+  {
+    "t": 59.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1857.9395,
+    "ZCR": 0.1162
+  },
+  {
+    "t": 60.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2400.6081,
+    "ZCR": 0.1403
+  },
+  {
+    "t": 61.0,
+    "STE": 0.003,
+    "spectral_centroid": 2077.0453,
+    "ZCR": 0.1042
+  },
+  {
+    "t": 62.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2514.5944,
+    "ZCR": 0.1569
+  },
+  {
+    "t": 63.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1668.4598,
+    "ZCR": 0.065
+  },
+  {
+    "t": 64.0,
+    "STE": 0.003,
+    "spectral_centroid": 1397.9627,
+    "ZCR": 0.0637
+  },
+  {
+    "t": 65.0,
+    "STE": 0.0112,
+    "spectral_centroid": 1655.7798,
+    "ZCR": 0.0696
+  },
+  {
+    "t": 66.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1628.2821,
+    "ZCR": 0.0798
+  },
+  {
+    "t": 67.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1798.7108,
+    "ZCR": 0.0795
+  },
+  {
+    "t": 68.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1475.9081,
+    "ZCR": 0.065
+  },
+  {
+    "t": 69.0,
+    "STE": 0.0016,
+    "spectral_centroid": 2571.1395,
+    "ZCR": 0.1693
+  },
+  {
+    "t": 70.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2316.0937,
+    "ZCR": 0.1102
+  },
+  {
+    "t": 71.0,
+    "STE": 0.0011,
+    "spectral_centroid": 2010.0402,
+    "ZCR": 0.1254
+  },
+  {
+    "t": 72.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2148.0496,
+    "ZCR": 0.1147
+  },
+  {
+    "t": 73.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1860.2721,
+    "ZCR": 0.1112
+  },
+  {
+    "t": 74.0,
+    "STE": 0.0008,
+    "spectral_centroid": 2581.7162,
+    "ZCR": 0.1674
+  },
+  {
+    "t": 75.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1623.0347,
+    "ZCR": 0.0995
+  },
+  {
+    "t": 76.0,
+    "STE": 0.0019,
+    "spectral_centroid": 2193.1925,
+    "ZCR": 0.117
+  },
+  {
+    "t": 77.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2529.4053,
+    "ZCR": 0.1621
+  },
+  {
+    "t": 78.0,
+    "STE": 0.0022,
+    "spectral_centroid": 2272.3355,
+    "ZCR": 0.1378
+  },
+  {
+    "t": 79.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1945.0179,
+    "ZCR": 0.092
+  },
+  {
+    "t": 80.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1419.7641,
+    "ZCR": 0.0745
+  },
+  {
+    "t": 81.0,
+    "STE": 0.0022,
+    "spectral_centroid": 2307.9946,
+    "ZCR": 0.1318
+  },
+  {
+    "t": 82.0,
+    "STE": 0.0038,
+    "spectral_centroid": 2063.5803,
+    "ZCR": 0.0862
+  },
+  {
+    "t": 83.0,
+    "STE": 0.002,
+    "spectral_centroid": 2508.7447,
+    "ZCR": 0.1409
+  },
+  {
+    "t": 84.0,
+    "STE": 0.0024,
+    "spectral_centroid": 2923.3477,
+    "ZCR": 0.1751
+  },
+  {
+    "t": 85.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1632.9797,
+    "ZCR": 0.0731
+  },
+  {
+    "t": 86.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1516.7801,
+    "ZCR": 0.0725
+  },
+  {
+    "t": 87.0,
+    "STE": 0.0012,
+    "spectral_centroid": 2905.2742,
+    "ZCR": 0.1933
+  },
+  {
+    "t": 88.0,
+    "STE": 0.0007,
+    "spectral_centroid": 2042.6543,
+    "ZCR": 0.0988
+  },
+  {
+    "t": 89.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1618.5569,
+    "ZCR": 0.0847
+  },
+  {
+    "t": 90.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1700.7021,
+    "ZCR": 0.0836
+  },
+  {
+    "t": 91.0,
+    "STE": 0.0015,
+    "spectral_centroid": 2358.0343,
+    "ZCR": 0.1442
+  },
+  {
+    "t": 92.0,
+    "STE": 0.0014,
+    "spectral_centroid": 2215.8461,
+    "ZCR": 0.1212
+  },
+  {
+    "t": 93.0,
+    "STE": 0.0024,
+    "spectral_centroid": 2580.154,
+    "ZCR": 0.1328
+  },
+  {
+    "t": 94.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1502.9902,
+    "ZCR": 0.0674
+  },
+  {
+    "t": 95.0,
+    "STE": 0.002,
+    "spectral_centroid": 1010.6336,
+    "ZCR": 0.0456
+  },
+  {
+    "t": 96.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1928.9499,
+    "ZCR": 0.1039
+  },
+  {
+    "t": 97.0,
+    "STE": 0.002,
+    "spectral_centroid": 2766.0538,
+    "ZCR": 0.1566
+  },
+  {
+    "t": 98.0,
+    "STE": 0.0019,
+    "spectral_centroid": 2009.6055,
+    "ZCR": 0.0789
+  },
+  {
+    "t": 99.0,
+    "STE": 0.0015,
+    "spectral_centroid": 2718.2387,
+    "ZCR": 0.1531
+  },
+  {
+    "t": 100.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1503.9779,
+    "ZCR": 0.0726
+  },
+  {
+    "t": 101.0,
+    "STE": 0.0,
+    "spectral_centroid": 1490.7041,
+    "ZCR": 0.0874
+  },
+  {
+    "t": 102.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1746.5447,
+    "ZCR": 0.0881
+  },
+  {
+    "t": 103.0,
+    "STE": 0.0,
+    "spectral_centroid": 1552.8169,
+    "ZCR": 0.096
+  },
+  {
+    "t": 104.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1676.9748,
+    "ZCR": 0.1092
+  },
+  {
+    "t": 105.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1662.7306,
+    "ZCR": 0.1073
+  },
+  {
+    "t": 106.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1720.5996,
+    "ZCR": 0.1088
+  },
+  {
+    "t": 107.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1760.4213,
+    "ZCR": 0.1104
+  },
+  {
+    "t": 108.0,
+    "STE": 0.0041,
+    "spectral_centroid": 2370.3803,
+    "ZCR": 0.1495
+  },
+  {
+    "t": 109.0,
+    "STE": 0.0077,
+    "spectral_centroid": 2417.0514,
+    "ZCR": 0.1503
+  },
+  {
+    "t": 110.0,
+    "STE": 0.0064,
+    "spectral_centroid": 2374.3219,
+    "ZCR": 0.1642
+  },
+  {
+    "t": 111.0,
+    "STE": 0.0083,
+    "spectral_centroid": 2954.3078,
+    "ZCR": 0.2006
+  },
+  {
+    "t": 112.0,
+    "STE": 0.006,
+    "spectral_centroid": 1947.4984,
+    "ZCR": 0.1105
+  },
+  {
+    "t": 113.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1599.6986,
+    "ZCR": 0.0995
+  },
+  {
+    "t": 114.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1778.8555,
+    "ZCR": 0.1095
+  },
+  {
+    "t": 115.0,
+    "STE": 0.0047,
+    "spectral_centroid": 2558.1029,
+    "ZCR": 0.1625
+  },
+  {
+    "t": 116.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1484.0031,
+    "ZCR": 0.0766
+  },
+  {
+    "t": 117.0,
+    "STE": 0.0049,
+    "spectral_centroid": 1860.8242,
+    "ZCR": 0.1008
+  },
+  {
+    "t": 118.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1518.9934,
+    "ZCR": 0.0699
+  },
+  {
+    "t": 119.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1762.1101,
+    "ZCR": 0.0873
+  },
+  {
+    "t": 120.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1807.932,
+    "ZCR": 0.0976
+  },
+  {
+    "t": 121.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1427.4694,
+    "ZCR": 0.0656
+  },
+  {
+    "t": 122.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1687.3729,
+    "ZCR": 0.0879
+  },
+  {
+    "t": 123.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1959.763,
+    "ZCR": 0.1173
+  },
+  {
+    "t": 124.0,
+    "STE": 0.0019,
+    "spectral_centroid": 2088.8572,
+    "ZCR": 0.1394
+  },
+  {
+    "t": 125.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1796.3834,
+    "ZCR": 0.1156
+  },
+  {
+    "t": 126.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1795.5522,
+    "ZCR": 0.1043
+  },
+  {
+    "t": 127.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1883.7507,
+    "ZCR": 0.1164
+  },
+  {
+    "t": 128.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1620.9528,
+    "ZCR": 0.1011
+  },
+  {
+    "t": 129.0,
+    "STE": 0.005,
+    "spectral_centroid": 2406.2627,
+    "ZCR": 0.1544
+  },
+  {
+    "t": 130.0,
+    "STE": 0.0034,
+    "spectral_centroid": 2528.5556,
+    "ZCR": 0.1762
+  },
+  {
+    "t": 131.0,
+    "STE": 0.0037,
+    "spectral_centroid": 2711.4018,
+    "ZCR": 0.1818
+  },
+  {
+    "t": 132.0,
+    "STE": 0.003,
+    "spectral_centroid": 1875.27,
+    "ZCR": 0.1036
+  },
+  {
+    "t": 133.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2541.9158,
+    "ZCR": 0.1767
+  },
+  {
+    "t": 134.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1713.3355,
+    "ZCR": 0.0925
+  },
+  {
+    "t": 135.0,
+    "STE": 0.0033,
+    "spectral_centroid": 2676.1502,
+    "ZCR": 0.1573
+  },
+  {
+    "t": 136.0,
+    "STE": 0.0009,
+    "spectral_centroid": 2130.1437,
+    "ZCR": 0.1333
+  },
+  {
+    "t": 137.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1653.8032,
+    "ZCR": 0.0908
+  },
+  {
+    "t": 138.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1708.2599,
+    "ZCR": 0.0774
+  },
+  {
+    "t": 139.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1405.4373,
+    "ZCR": 0.0652
+  },
+  {
+    "t": 140.0,
+    "STE": 0.001,
+    "spectral_centroid": 1318.8464,
+    "ZCR": 0.065
+  },
+  {
+    "t": 141.0,
+    "STE": 0.0074,
+    "spectral_centroid": 1475.599,
+    "ZCR": 0.0561
+  },
+  {
+    "t": 142.0,
+    "STE": 0.002,
+    "spectral_centroid": 1614.5619,
+    "ZCR": 0.0709
+  },
+  {
+    "t": 143.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1512.6455,
+    "ZCR": 0.0645
+  },
+  {
+    "t": 144.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1546.5659,
+    "ZCR": 0.0738
+  },
+  {
+    "t": 145.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1623.999,
+    "ZCR": 0.0833
+  },
+  {
+    "t": 146.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1501.5792,
+    "ZCR": 0.0591
+  },
+  {
+    "t": 147.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1797.5838,
+    "ZCR": 0.0882
+  },
+  {
+    "t": 148.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1742.3553,
+    "ZCR": 0.1088
+  },
+  {
+    "t": 149.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1825.1722,
+    "ZCR": 0.1137
+  },
+  {
+    "t": 150.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1817.6145,
+    "ZCR": 0.115
+  },
+  {
+    "t": 151.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1840.2634,
+    "ZCR": 0.1167
+  },
+  {
+    "t": 152.0,
+    "STE": 0.008,
+    "spectral_centroid": 1830.9593,
+    "ZCR": 0.1171
+  },
+  {
+    "t": 153.0,
+    "STE": 0.004,
+    "spectral_centroid": 2114.4605,
+    "ZCR": 0.1388
+  },
+  {
+    "t": 154.0,
+    "STE": 0.0055,
+    "spectral_centroid": 1771.8743,
+    "ZCR": 0.1054
+  },
+  {
+    "t": 155.0,
+    "STE": 0.0028,
+    "spectral_centroid": 1759.3269,
+    "ZCR": 0.1105
+  },
+  {
+    "t": 156.0,
+    "STE": 0.0056,
+    "spectral_centroid": 1796.8274,
+    "ZCR": 0.1099
+  },
+  {
+    "t": 157.0,
+    "STE": 0.0059,
+    "spectral_centroid": 1846.3658,
+    "ZCR": 0.1154
+  },
+  {
+    "t": 158.0,
+    "STE": 0.005,
+    "spectral_centroid": 2228.5866,
+    "ZCR": 0.14
+  },
+  {
+    "t": 159.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1716.4074,
+    "ZCR": 0.103
+  },
+  {
+    "t": 160.0,
+    "STE": 0.0038,
+    "spectral_centroid": 1921.734,
+    "ZCR": 0.1121
+  },
+  {
+    "t": 161.0,
+    "STE": 0.0045,
+    "spectral_centroid": 1764.3114,
+    "ZCR": 0.0865
+  },
+  {
+    "t": 162.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1547.1596,
+    "ZCR": 0.0794
+  },
+  {
+    "t": 163.0,
+    "STE": 0.0029,
+    "spectral_centroid": 2076.3199,
+    "ZCR": 0.1177
+  },
+  {
+    "t": 164.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1577.1541,
+    "ZCR": 0.0725
+  },
+  {
+    "t": 165.0,
+    "STE": 0.0082,
+    "spectral_centroid": 1764.5375,
+    "ZCR": 0.0819
+  },
+  {
+    "t": 166.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1790.8174,
+    "ZCR": 0.0832
+  },
+  {
+    "t": 167.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1684.9718,
+    "ZCR": 0.097
+  },
+  {
+    "t": 168.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1513.9853,
+    "ZCR": 0.0646
+  },
+  {
+    "t": 169.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1755.2976,
+    "ZCR": 0.0784
+  },
+  {
+    "t": 170.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1442.1329,
+    "ZCR": 0.0616
+  },
+  {
+    "t": 171.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1841.0357,
+    "ZCR": 0.0979
+  },
+  {
+    "t": 172.0,
+    "STE": 0.0024,
+    "spectral_centroid": 2115.2015,
+    "ZCR": 0.1291
+  },
+  {
+    "t": 173.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1320.6433,
+    "ZCR": 0.063
+  },
+  {
+    "t": 174.0,
+    "STE": 0.0009,
+    "spectral_centroid": 2210.5372,
+    "ZCR": 0.1449
+  },
+  {
+    "t": 175.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1928.9295,
+    "ZCR": 0.0949
+  },
+  {
+    "t": 176.0,
+    "STE": 0.0015,
+    "spectral_centroid": 2001.2761,
+    "ZCR": 0.1169
+  },
+  {
+    "t": 177.0,
+    "STE": 0.0059,
+    "spectral_centroid": 1778.8693,
+    "ZCR": 0.1078
+  },
+  {
+    "t": 178.0,
+    "STE": 0.0071,
+    "spectral_centroid": 2056.4702,
+    "ZCR": 0.1222
+  },
+  {
+    "t": 179.0,
+    "STE": 0.0065,
+    "spectral_centroid": 1900.014,
+    "ZCR": 0.1156
+  },
+  {
+    "t": 180.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1746.2649,
+    "ZCR": 0.1051
+  },
+  {
+    "t": 181.0,
+    "STE": 0.0053,
+    "spectral_centroid": 2074.9436,
+    "ZCR": 0.1356
+  },
+  {
+    "t": 182.0,
+    "STE": 0.0025,
+    "spectral_centroid": 2614.9924,
+    "ZCR": 0.1888
+  },
+  {
+    "t": 183.0,
+    "STE": 0.004,
+    "spectral_centroid": 1828.6043,
+    "ZCR": 0.1091
+  },
+  {
+    "t": 184.0,
+    "STE": 0.0042,
+    "spectral_centroid": 1972.9181,
+    "ZCR": 0.1194
+  },
+  {
+    "t": 185.0,
+    "STE": 0.0014,
+    "spectral_centroid": 2167.075,
+    "ZCR": 0.1319
+  },
+  {
+    "t": 186.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1506.6588,
+    "ZCR": 0.0664
+  },
+  {
+    "t": 187.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1805.0738,
+    "ZCR": 0.1043
+  },
+  {
+    "t": 188.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1531.5335,
+    "ZCR": 0.0652
+  },
+  {
+    "t": 189.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1522.2486,
+    "ZCR": 0.0652
+  },
+  {
+    "t": 190.0,
+    "STE": 0.0165,
+    "spectral_centroid": 1676.7715,
+    "ZCR": 0.0721
+  },
+  {
+    "t": 191.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1556.7729,
+    "ZCR": 0.0641
+  },
+  {
+    "t": 192.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1951.813,
+    "ZCR": 0.1064
+  },
+  {
+    "t": 193.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1457.2082,
+    "ZCR": 0.0616
+  },
+  {
+    "t": 194.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1699.9219,
+    "ZCR": 0.0657
+  },
+  {
+    "t": 195.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1729.3221,
+    "ZCR": 0.0845
+  },
+  {
+    "t": 196.0,
+    "STE": 0.003,
+    "spectral_centroid": 1706.1555,
+    "ZCR": 0.0778
+  },
+  {
+    "t": 197.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1539.9673,
+    "ZCR": 0.0762
+  },
+  {
+    "t": 198.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1592.2338,
+    "ZCR": 0.0762
+  },
+  {
+    "t": 199.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1671.5116,
+    "ZCR": 0.081
+  },
+  {
+    "t": 200.0,
+    "STE": 0.0013,
+    "spectral_centroid": 2075.8485,
+    "ZCR": 0.1242
+  },
+  {
+    "t": 201.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1546.5843,
+    "ZCR": 0.0683
+  },
+  {
+    "t": 202.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1478.3738,
+    "ZCR": 0.0664
+  },
+  {
+    "t": 203.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1802.1921,
+    "ZCR": 0.0795
+  },
+  {
+    "t": 204.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1658.5004,
+    "ZCR": 0.0671
+  },
+  {
+    "t": 205.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1188.6978,
+    "ZCR": 0.0496
+  },
+  {
+    "t": 206.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1405.9441,
+    "ZCR": 0.0518
+  },
+  {
+    "t": 207.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1485.5513,
+    "ZCR": 0.0585
+  },
+  {
+    "t": 208.0,
+    "STE": 0.003,
+    "spectral_centroid": 1931.9711,
+    "ZCR": 0.0962
+  },
+  {
+    "t": 209.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1784.2568,
+    "ZCR": 0.0869
+  },
+  {
+    "t": 210.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2011.1819,
+    "ZCR": 0.1016
+  },
+  {
+    "t": 211.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1704.6796,
+    "ZCR": 0.096
+  },
+  {
+    "t": 212.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1771.9307,
+    "ZCR": 0.1031
+  },
+  {
+    "t": 213.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2696.8241,
+    "ZCR": 0.1906
+  },
+  {
+    "t": 214.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1694.6485,
+    "ZCR": 0.0967
+  },
+  {
+    "t": 215.0,
+    "STE": 0.0028,
+    "spectral_centroid": 1822.9253,
+    "ZCR": 0.0991
+  },
+  {
+    "t": 216.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1536.6694,
+    "ZCR": 0.0752
+  },
+  {
+    "t": 217.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1906.5948,
+    "ZCR": 0.0853
+  },
+  {
+    "t": 218.0,
+    "STE": 0.0021,
+    "spectral_centroid": 2056.1574,
+    "ZCR": 0.1074
+  },
+  {
+    "t": 219.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1995.47,
+    "ZCR": 0.093
+  },
+  {
+    "t": 220.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1950.9892,
+    "ZCR": 0.0847
+  },
+  {
+    "t": 221.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1462.8328,
+    "ZCR": 0.0586
+  },
+  {
+    "t": 222.0,
+    "STE": 0.0006,
+    "spectral_centroid": 2082.4052,
+    "ZCR": 0.109
+  },
+  {
+    "t": 223.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2351.2928,
+    "ZCR": 0.1395
+  },
+  {
+    "t": 224.0,
+    "STE": 0.003,
+    "spectral_centroid": 1818.2392,
+    "ZCR": 0.0898
+  },
+  {
+    "t": 225.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1664.8566,
+    "ZCR": 0.0938
+  },
+  {
+    "t": 226.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1681.9475,
+    "ZCR": 0.0826
+  },
+  {
+    "t": 227.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1926.8385,
+    "ZCR": 0.0985
+  },
+  {
+    "t": 228.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1763.5546,
+    "ZCR": 0.0852
+  },
+  {
+    "t": 229.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1651.4539,
+    "ZCR": 0.0795
+  },
+  {
+    "t": 230.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1805.0291,
+    "ZCR": 0.0835
+  },
+  {
+    "t": 231.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1701.8706,
+    "ZCR": 0.0727
+  },
+  {
+    "t": 232.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1543.9767,
+    "ZCR": 0.0705
+  },
+  {
+    "t": 233.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1873.627,
+    "ZCR": 0.0879
+  },
+  {
+    "t": 234.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1860.9375,
+    "ZCR": 0.086
+  },
+  {
+    "t": 235.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1660.0762,
+    "ZCR": 0.0917
+  },
+  {
+    "t": 236.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1625.1395,
+    "ZCR": 0.0965
+  },
+  {
+    "t": 237.0,
+    "STE": 0.0006,
+    "spectral_centroid": 2002.7187,
+    "ZCR": 0.1352
+  },
+  {
+    "t": 238.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1708.9179,
+    "ZCR": 0.1098
+  },
+  {
+    "t": 239.0,
+    "STE": 0.001,
+    "spectral_centroid": 1857.3253,
+    "ZCR": 0.1142
+  },
+  {
+    "t": 240.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1457.1683,
+    "ZCR": 0.0728
+  },
+  {
+    "t": 241.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1553.7115,
+    "ZCR": 0.0783
+  },
+  {
+    "t": 242.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1771.3997,
+    "ZCR": 0.0944
+  },
+  {
+    "t": 243.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1713.6577,
+    "ZCR": 0.0845
+  },
+  {
+    "t": 244.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1972.6536,
+    "ZCR": 0.1001
+  },
+  {
+    "t": 245.0,
+    "STE": 0.0,
+    "spectral_centroid": 1547.95,
+    "ZCR": 0.0878
+  },
+  {
+    "t": 246.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1845.8384,
+    "ZCR": 0.1094
+  },
+  {
+    "t": 247.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1999.5436,
+    "ZCR": 0.1178
+  },
+  {
+    "t": 248.0,
+    "STE": 0.0023,
+    "spectral_centroid": 2017.7662,
+    "ZCR": 0.1184
+  },
+  {
+    "t": 249.0,
+    "STE": 0.001,
+    "spectral_centroid": 1750.1919,
+    "ZCR": 0.0975
+  },
+  {
+    "t": 250.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1787.2149,
+    "ZCR": 0.0901
+  },
+  {
+    "t": 251.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1527.8585,
+    "ZCR": 0.0739
+  },
+  {
+    "t": 252.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1948.9651,
+    "ZCR": 0.1022
+  },
+  {
+    "t": 253.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1655.1915,
+    "ZCR": 0.0978
+  },
+  {
+    "t": 254.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1669.3101,
+    "ZCR": 0.0968
+  },
+  {
+    "t": 255.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1703.6627,
+    "ZCR": 0.0958
+  },
+  {
+    "t": 256.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1805.0467,
+    "ZCR": 0.0967
+  },
+  {
+    "t": 257.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1770.332,
+    "ZCR": 0.0942
+  },
+  {
+    "t": 258.0,
+    "STE": 0.0031,
+    "spectral_centroid": 2707.6894,
+    "ZCR": 0.1663
+  },
+  {
+    "t": 259.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2502.3058,
+    "ZCR": 0.1482
+  },
+  {
+    "t": 260.0,
+    "STE": 0.0025,
+    "spectral_centroid": 2186.9166,
+    "ZCR": 0.1176
+  },
+  {
+    "t": 261.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1819.311,
+    "ZCR": 0.0932
+  },
+  {
+    "t": 262.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2184.6748,
+    "ZCR": 0.0999
+  },
+  {
+    "t": 263.0,
+    "STE": 0.0029,
+    "spectral_centroid": 2954.9427,
+    "ZCR": 0.198
+  },
+  {
+    "t": 264.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2379.3813,
+    "ZCR": 0.1298
+  },
+  {
+    "t": 265.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1568.1671,
+    "ZCR": 0.0728
+  },
+  {
+    "t": 266.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2634.6853,
+    "ZCR": 0.1251
+  },
+  {
+    "t": 267.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2012.9538,
+    "ZCR": 0.0845
+  },
+  {
+    "t": 268.0,
+    "STE": 0.0024,
+    "spectral_centroid": 2209.0267,
+    "ZCR": 0.1129
+  },
+  {
+    "t": 269.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1712.1255,
+    "ZCR": 0.0949
+  },
+  {
+    "t": 270.0,
+    "STE": 0.0037,
+    "spectral_centroid": 2071.8989,
+    "ZCR": 0.1168
+  },
+  {
+    "t": 271.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1998.1123,
+    "ZCR": 0.1243
+  },
+  {
+    "t": 272.0,
+    "STE": 0.0056,
+    "spectral_centroid": 2381.1975,
+    "ZCR": 0.1385
+  },
+  {
+    "t": 273.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2332.4885,
+    "ZCR": 0.1522
+  },
+  {
+    "t": 274.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1702.6985,
+    "ZCR": 0.0947
+  },
+  {
+    "t": 275.0,
+    "STE": 0.002,
+    "spectral_centroid": 1940.206,
+    "ZCR": 0.1029
+  },
+  {
+    "t": 276.0,
+    "STE": 0.0042,
+    "spectral_centroid": 2132.0804,
+    "ZCR": 0.1053
+  },
+  {
+    "t": 277.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2900.3058,
+    "ZCR": 0.1658
+  },
+  {
+    "t": 278.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2676.9481,
+    "ZCR": 0.1645
+  },
+  {
+    "t": 279.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1412.4532,
+    "ZCR": 0.0763
+  },
+  {
+    "t": 280.0,
+    "STE": 0.0042,
+    "spectral_centroid": 1564.1758,
+    "ZCR": 0.0705
+  },
+  {
+    "t": 281.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1339.2076,
+    "ZCR": 0.0679
+  },
+  {
+    "t": 282.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1429.8331,
+    "ZCR": 0.0739
+  },
+  {
+    "t": 283.0,
+    "STE": 0.003,
+    "spectral_centroid": 2099.2614,
+    "ZCR": 0.1141
+  },
+  {
+    "t": 284.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1754.6434,
+    "ZCR": 0.1019
+  },
+  {
+    "t": 285.0,
+    "STE": 0.0066,
+    "spectral_centroid": 1983.3443,
+    "ZCR": 0.1169
+  },
+  {
+    "t": 286.0,
+    "STE": 0.0064,
+    "spectral_centroid": 1661.8916,
+    "ZCR": 0.0953
+  },
+  {
+    "t": 287.0,
+    "STE": 0.005,
+    "spectral_centroid": 1586.0562,
+    "ZCR": 0.0908
+  },
+  {
+    "t": 288.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1727.3144,
+    "ZCR": 0.0987
+  },
+  {
+    "t": 289.0,
+    "STE": 0.006,
+    "spectral_centroid": 2160.3517,
+    "ZCR": 0.1338
+  },
+  {
+    "t": 290.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2582.7519,
+    "ZCR": 0.1904
+  },
+  {
+    "t": 291.0,
+    "STE": 0.0054,
+    "spectral_centroid": 2068.6499,
+    "ZCR": 0.1123
+  },
+  {
+    "t": 292.0,
+    "STE": 0.005,
+    "spectral_centroid": 1732.715,
+    "ZCR": 0.0902
+  },
+  {
+    "t": 293.0,
+    "STE": 0.0056,
+    "spectral_centroid": 1666.9447,
+    "ZCR": 0.0893
+  },
+  {
+    "t": 294.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2315.4359,
+    "ZCR": 0.1418
+  },
+  {
+    "t": 295.0,
+    "STE": 0.0022,
+    "spectral_centroid": 2207.9998,
+    "ZCR": 0.1092
+  },
+  {
+    "t": 296.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1807.4292,
+    "ZCR": 0.0966
+  },
+  {
+    "t": 297.0,
+    "STE": 0.0238,
+    "spectral_centroid": 1434.0936,
+    "ZCR": 0.0512
+  },
+  {
+    "t": 298.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1547.3075,
+    "ZCR": 0.0761
+  },
+  {
+    "t": 299.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1598.19,
+    "ZCR": 0.0677
+  },
+  {
+    "t": 300.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1505.5387,
+    "ZCR": 0.0711
+  },
+  {
+    "t": 301.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1404.3328,
+    "ZCR": 0.0784
+  },
+  {
+    "t": 302.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1666.1719,
+    "ZCR": 0.0763
+  },
+  {
+    "t": 303.0,
+    "STE": 0.0062,
+    "spectral_centroid": 2125.1928,
+    "ZCR": 0.1223
+  },
+  {
+    "t": 304.0,
+    "STE": 0.0042,
+    "spectral_centroid": 1831.2881,
+    "ZCR": 0.0885
+  },
+  {
+    "t": 305.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1758.9004,
+    "ZCR": 0.0892
+  },
+  {
+    "t": 306.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1806.0507,
+    "ZCR": 0.104
+  },
+  {
+    "t": 307.0,
+    "STE": 0.0037,
+    "spectral_centroid": 1762.2991,
+    "ZCR": 0.0988
+  },
+  {
+    "t": 308.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1744.3233,
+    "ZCR": 0.0971
+  },
+  {
+    "t": 309.0,
+    "STE": 0.0077,
+    "spectral_centroid": 1863.3792,
+    "ZCR": 0.1053
+  },
+  {
+    "t": 310.0,
+    "STE": 0.0147,
+    "spectral_centroid": 1785.2467,
+    "ZCR": 0.0959
+  },
+  {
+    "t": 311.0,
+    "STE": 0.0059,
+    "spectral_centroid": 1627.215,
+    "ZCR": 0.0813
+  },
+  {
+    "t": 312.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1692.3028,
+    "ZCR": 0.0976
+  },
+  {
+    "t": 313.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1663.6261,
+    "ZCR": 0.1003
+  },
+  {
+    "t": 314.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1903.3525,
+    "ZCR": 0.1045
+  },
+  {
+    "t": 315.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1662.0203,
+    "ZCR": 0.0879
+  },
+  {
+    "t": 316.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1760.3997,
+    "ZCR": 0.081
+  },
+  {
+    "t": 317.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1587.4882,
+    "ZCR": 0.0712
+  },
+  {
+    "t": 318.0,
+    "STE": 0.0016,
+    "spectral_centroid": 2303.6484,
+    "ZCR": 0.1528
+  },
+  {
+    "t": 319.0,
+    "STE": 0.0011,
+    "spectral_centroid": 2336.2644,
+    "ZCR": 0.1578
+  },
+  {
+    "t": 320.0,
+    "STE": 0.0041,
+    "spectral_centroid": 1513.0486,
+    "ZCR": 0.0803
+  },
+  {
+    "t": 321.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1685.8101,
+    "ZCR": 0.0992
+  },
+  {
+    "t": 322.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1586.2414,
+    "ZCR": 0.0747
+  },
+  {
+    "t": 323.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2015.5621,
+    "ZCR": 0.1057
+  },
+  {
+    "t": 324.0,
+    "STE": 0.0028,
+    "spectral_centroid": 1899.7363,
+    "ZCR": 0.1093
+  },
+  {
+    "t": 325.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1753.2436,
+    "ZCR": 0.0996
+  },
+  {
+    "t": 326.0,
+    "STE": 0.0021,
+    "spectral_centroid": 2046.6158,
+    "ZCR": 0.1143
+  },
+  {
+    "t": 327.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1759.8119,
+    "ZCR": 0.0943
+  },
+  {
+    "t": 328.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1720.905,
+    "ZCR": 0.1007
+  },
+  {
+    "t": 329.0,
+    "STE": 0.0048,
+    "spectral_centroid": 2168.5489,
+    "ZCR": 0.1191
+  },
+  {
+    "t": 330.0,
+    "STE": 0.0061,
+    "spectral_centroid": 1983.9597,
+    "ZCR": 0.1127
+  },
+  {
+    "t": 331.0,
+    "STE": 0.0033,
+    "spectral_centroid": 2308.142,
+    "ZCR": 0.1383
+  },
+  {
+    "t": 332.0,
+    "STE": 0.0033,
+    "spectral_centroid": 1842.2234,
+    "ZCR": 0.1021
+  },
+  {
+    "t": 333.0,
+    "STE": 0.0053,
+    "spectral_centroid": 1923.6119,
+    "ZCR": 0.1086
+  },
+  {
+    "t": 334.0,
+    "STE": 0.0044,
+    "spectral_centroid": 2050.5023,
+    "ZCR": 0.1203
+  },
+  {
+    "t": 335.0,
+    "STE": 0.005,
+    "spectral_centroid": 1711.9194,
+    "ZCR": 0.0926
+  },
+  {
+    "t": 336.0,
+    "STE": 0.0056,
+    "spectral_centroid": 1720.0206,
+    "ZCR": 0.0894
+  },
+  {
+    "t": 337.0,
+    "STE": 0.0046,
+    "spectral_centroid": 1722.4311,
+    "ZCR": 0.0744
+  },
+  {
+    "t": 338.0,
+    "STE": 0.0052,
+    "spectral_centroid": 1724.8806,
+    "ZCR": 0.08
+  },
+  {
+    "t": 339.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1656.4666,
+    "ZCR": 0.0907
+  },
+  {
+    "t": 340.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1604.8517,
+    "ZCR": 0.0725
+  },
+  {
+    "t": 341.0,
+    "STE": 0.0078,
+    "spectral_centroid": 1411.6574,
+    "ZCR": 0.0631
+  },
+  {
+    "t": 342.0,
+    "STE": 0.002,
+    "spectral_centroid": 1747.5412,
+    "ZCR": 0.0811
+  },
+  {
+    "t": 343.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1741.1459,
+    "ZCR": 0.0785
+  },
+  {
+    "t": 344.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1469.0348,
+    "ZCR": 0.0638
+  },
+  {
+    "t": 345.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1500.4628,
+    "ZCR": 0.0637
+  },
+  {
+    "t": 346.0,
+    "STE": 0.0011,
+    "spectral_centroid": 2447.4046,
+    "ZCR": 0.169
+  },
+  {
+    "t": 347.0,
+    "STE": 0.0009,
+    "spectral_centroid": 2140.6494,
+    "ZCR": 0.1057
+  },
+  {
+    "t": 348.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2002.7936,
+    "ZCR": 0.1098
+  },
+  {
+    "t": 349.0,
+    "STE": 0.0039,
+    "spectral_centroid": 2018.7808,
+    "ZCR": 0.1209
+  },
+  {
+    "t": 350.0,
+    "STE": 0.0085,
+    "spectral_centroid": 1922.6471,
+    "ZCR": 0.1084
+  },
+  {
+    "t": 351.0,
+    "STE": 0.0067,
+    "spectral_centroid": 1927.7016,
+    "ZCR": 0.1093
+  },
+  {
+    "t": 352.0,
+    "STE": 0.0086,
+    "spectral_centroid": 1838.0925,
+    "ZCR": 0.1044
+  },
+  {
+    "t": 353.0,
+    "STE": 0.0056,
+    "spectral_centroid": 1760.732,
+    "ZCR": 0.1012
+  },
+  {
+    "t": 354.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1729.8689,
+    "ZCR": 0.0975
+  },
+  {
+    "t": 355.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1610.369,
+    "ZCR": 0.0913
+  },
+  {
+    "t": 356.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1767.3376,
+    "ZCR": 0.1024
+  },
+  {
+    "t": 357.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1713.3835,
+    "ZCR": 0.0872
+  },
+  {
+    "t": 358.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1418.5588,
+    "ZCR": 0.0667
+  },
+  {
+    "t": 359.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1459.0707,
+    "ZCR": 0.0664
+  },
+  {
+    "t": 360.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2092.7963,
+    "ZCR": 0.1103
+  },
+  {
+    "t": 361.0,
+    "STE": 0.0039,
+    "spectral_centroid": 1491.5915,
+    "ZCR": 0.0616
+  },
+  {
+    "t": 362.0,
+    "STE": 0.0156,
+    "spectral_centroid": 1474.4903,
+    "ZCR": 0.0608
+  },
+  {
+    "t": 363.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1494.2562,
+    "ZCR": 0.0695
+  },
+  {
+    "t": 364.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1756.4717,
+    "ZCR": 0.0971
+  },
+  {
+    "t": 365.0,
+    "STE": 0.0004,
+    "spectral_centroid": 2223.2352,
+    "ZCR": 0.1292
+  },
+  {
+    "t": 366.0,
+    "STE": 0.0071,
+    "spectral_centroid": 2561.2378,
+    "ZCR": 0.1333
+  },
+  {
+    "t": 367.0,
+    "STE": 0.0125,
+    "spectral_centroid": 2251.7426,
+    "ZCR": 0.1225
+  },
+  {
+    "t": 368.0,
+    "STE": 0.0196,
+    "spectral_centroid": 1854.6749,
+    "ZCR": 0.1051
+  },
+  {
+    "t": 369.0,
+    "STE": 0.0125,
+    "spectral_centroid": 2227.9928,
+    "ZCR": 0.1327
+  },
+  {
+    "t": 370.0,
+    "STE": 0.0124,
+    "spectral_centroid": 1826.8895,
+    "ZCR": 0.1022
+  },
+  {
+    "t": 371.0,
+    "STE": 0.0102,
+    "spectral_centroid": 2081.5965,
+    "ZCR": 0.1259
+  },
+  {
+    "t": 372.0,
+    "STE": 0.0077,
+    "spectral_centroid": 1872.9976,
+    "ZCR": 0.1105
+  },
+  {
+    "t": 373.0,
+    "STE": 0.0052,
+    "spectral_centroid": 1634.1703,
+    "ZCR": 0.0941
+  },
+  {
+    "t": 374.0,
+    "STE": 0.0056,
+    "spectral_centroid": 1608.2319,
+    "ZCR": 0.0934
+  },
+  {
+    "t": 375.0,
+    "STE": 0.0063,
+    "spectral_centroid": 1696.374,
+    "ZCR": 0.0947
+  },
+  {
+    "t": 376.0,
+    "STE": 0.0038,
+    "spectral_centroid": 1569.0303,
+    "ZCR": 0.0894
+  },
+  {
+    "t": 377.0,
+    "STE": 0.001,
+    "spectral_centroid": 1895.7296,
+    "ZCR": 0.1076
+  },
+  {
+    "t": 378.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1699.7565,
+    "ZCR": 0.0783
+  },
+  {
+    "t": 379.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1500.2372,
+    "ZCR": 0.0721
+  },
+  {
+    "t": 380.0,
+    "STE": 0.0032,
+    "spectral_centroid": 1531.0161,
+    "ZCR": 0.0821
+  },
+  {
+    "t": 381.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1434.5593,
+    "ZCR": 0.0661
+  },
+  {
+    "t": 382.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1361.607,
+    "ZCR": 0.0647
+  },
+  {
+    "t": 383.0,
+    "STE": 0.0045,
+    "spectral_centroid": 1862.9776,
+    "ZCR": 0.0852
+  },
+  {
+    "t": 384.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1523.1624,
+    "ZCR": 0.0719
+  },
+  {
+    "t": 385.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1655.5903,
+    "ZCR": 0.0737
+  },
+  {
+    "t": 386.0,
+    "STE": 0.002,
+    "spectral_centroid": 1716.4821,
+    "ZCR": 0.0826
+  },
+  {
+    "t": 387.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1609.688,
+    "ZCR": 0.0803
+  },
+  {
+    "t": 388.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1633.7667,
+    "ZCR": 0.0796
+  },
+  {
+    "t": 389.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1942.7248,
+    "ZCR": 0.0963
+  },
+  {
+    "t": 390.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1683.4001,
+    "ZCR": 0.0818
+  },
+  {
+    "t": 391.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1521.2298,
+    "ZCR": 0.0664
+  },
+  {
+    "t": 392.0,
+    "STE": 0.0016,
+    "spectral_centroid": 2166.7257,
+    "ZCR": 0.1055
+  },
+  {
+    "t": 393.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1774.8956,
+    "ZCR": 0.0899
+  },
+  {
+    "t": 394.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1741.6878,
+    "ZCR": 0.1011
+  },
+  {
+    "t": 395.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1722.2655,
+    "ZCR": 0.101
+  },
+  {
+    "t": 396.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1705.5688,
+    "ZCR": 0.1013
+  },
+  {
+    "t": 397.0,
+    "STE": 0.0053,
+    "spectral_centroid": 1760.7156,
+    "ZCR": 0.0993
+  },
+  {
+    "t": 398.0,
+    "STE": 0.0108,
+    "spectral_centroid": 2045.3319,
+    "ZCR": 0.1192
+  },
+  {
+    "t": 399.0,
+    "STE": 0.0068,
+    "spectral_centroid": 2042.1789,
+    "ZCR": 0.1215
+  },
+  {
+    "t": 400.0,
+    "STE": 0.0057,
+    "spectral_centroid": 2045.7594,
+    "ZCR": 0.1207
+  },
+  {
+    "t": 401.0,
+    "STE": 0.0033,
+    "spectral_centroid": 1786.2711,
+    "ZCR": 0.1039
+  },
+  {
+    "t": 402.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1623.4273,
+    "ZCR": 0.083
+  },
+  {
+    "t": 403.0,
+    "STE": 0.005,
+    "spectral_centroid": 1929.0032,
+    "ZCR": 0.1141
+  },
+  {
+    "t": 404.0,
+    "STE": 0.0047,
+    "spectral_centroid": 2570.884,
+    "ZCR": 0.1562
+  },
+  {
+    "t": 405.0,
+    "STE": 0.0037,
+    "spectral_centroid": 1835.373,
+    "ZCR": 0.0933
+  },
+  {
+    "t": 406.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1715.354,
+    "ZCR": 0.0718
+  },
+  {
+    "t": 407.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1773.4432,
+    "ZCR": 0.0748
+  },
+  {
+    "t": 408.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1584.4286,
+    "ZCR": 0.0624
+  },
+  {
+    "t": 409.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1573.9106,
+    "ZCR": 0.0642
+  },
+  {
+    "t": 410.0,
+    "STE": 0.0189,
+    "spectral_centroid": 1847.9365,
+    "ZCR": 0.0806
+  },
+  {
+    "t": 411.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1828.3156,
+    "ZCR": 0.0717
+  },
+  {
+    "t": 412.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1708.8491,
+    "ZCR": 0.0624
+  },
+  {
+    "t": 413.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1673.7073,
+    "ZCR": 0.084
+  },
+  {
+    "t": 414.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1804.436,
+    "ZCR": 0.0936
+  },
+  {
+    "t": 415.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1768.7019,
+    "ZCR": 0.0815
+  },
+  {
+    "t": 416.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1875.5007,
+    "ZCR": 0.0984
+  },
+  {
+    "t": 417.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1588.9412,
+    "ZCR": 0.0796
+  },
+  {
+    "t": 418.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1947.663,
+    "ZCR": 0.0932
+  },
+  {
+    "t": 419.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1585.1577,
+    "ZCR": 0.0811
+  },
+  {
+    "t": 420.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1525.5902,
+    "ZCR": 0.0884
+  },
+  {
+    "t": 421.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1787.4075,
+    "ZCR": 0.1102
+  },
+  {
+    "t": 422.0,
+    "STE": 0.0034,
+    "spectral_centroid": 2081.8113,
+    "ZCR": 0.1142
+  },
+  {
+    "t": 423.0,
+    "STE": 0.0142,
+    "spectral_centroid": 1907.1253,
+    "ZCR": 0.1105
+  },
+  {
+    "t": 424.0,
+    "STE": 0.0093,
+    "spectral_centroid": 2056.0526,
+    "ZCR": 0.1184
+  },
+  {
+    "t": 425.0,
+    "STE": 0.0054,
+    "spectral_centroid": 1863.6524,
+    "ZCR": 0.1015
+  },
+  {
+    "t": 426.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1846.0793,
+    "ZCR": 0.1092
+  },
+  {
+    "t": 427.0,
+    "STE": 0.0053,
+    "spectral_centroid": 2167.1754,
+    "ZCR": 0.122
+  },
+  {
+    "t": 428.0,
+    "STE": 0.0053,
+    "spectral_centroid": 2082.16,
+    "ZCR": 0.1098
+  },
+  {
+    "t": 429.0,
+    "STE": 0.002,
+    "spectral_centroid": 1844.8711,
+    "ZCR": 0.1088
+  },
+  {
+    "t": 430.0,
+    "STE": 0.0049,
+    "spectral_centroid": 1757.7985,
+    "ZCR": 0.0862
+  },
+  {
+    "t": 431.0,
+    "STE": 0.0022,
+    "spectral_centroid": 2633.2675,
+    "ZCR": 0.1801
+  },
+  {
+    "t": 432.0,
+    "STE": 0.0053,
+    "spectral_centroid": 1867.5249,
+    "ZCR": 0.0896
+  },
+  {
+    "t": 433.0,
+    "STE": 0.0042,
+    "spectral_centroid": 2390.9108,
+    "ZCR": 0.1422
+  },
+  {
+    "t": 434.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1788.3303,
+    "ZCR": 0.0927
+  },
+  {
+    "t": 435.0,
+    "STE": 0.0098,
+    "spectral_centroid": 1648.5801,
+    "ZCR": 0.0779
+  },
+  {
+    "t": 436.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1846.411,
+    "ZCR": 0.098
+  },
+  {
+    "t": 437.0,
+    "STE": 0.002,
+    "spectral_centroid": 1982.9156,
+    "ZCR": 0.0962
+  },
+  {
+    "t": 438.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1936.7819,
+    "ZCR": 0.0844
+  },
+  {
+    "t": 439.0,
+    "STE": 0.0037,
+    "spectral_centroid": 1615.0737,
+    "ZCR": 0.0706
+  },
+  {
+    "t": 440.0,
+    "STE": 0.0065,
+    "spectral_centroid": 1531.9705,
+    "ZCR": 0.0643
+  },
+  {
+    "t": 441.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1488.436,
+    "ZCR": 0.0671
+  },
+  {
+    "t": 442.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1890.6804,
+    "ZCR": 0.0866
+  },
+  {
+    "t": 443.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1745.3464,
+    "ZCR": 0.0797
+  },
+  {
+    "t": 444.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1669.7154,
+    "ZCR": 0.0884
+  },
+  {
+    "t": 445.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1432.9243,
+    "ZCR": 0.0883
+  },
+  {
+    "t": 446.0,
+    "STE": 0.0022,
+    "spectral_centroid": 2399.5416,
+    "ZCR": 0.1508
+  },
+  {
+    "t": 447.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2073.6199,
+    "ZCR": 0.1082
+  },
+  {
+    "t": 448.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1601.0676,
+    "ZCR": 0.0937
+  },
+  {
+    "t": 449.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2136.3107,
+    "ZCR": 0.1139
+  },
+  {
+    "t": 450.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1744.4165,
+    "ZCR": 0.0801
+  },
+  {
+    "t": 451.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1854.2102,
+    "ZCR": 0.0966
+  },
+  {
+    "t": 452.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1572.4889,
+    "ZCR": 0.0816
+  },
+  {
+    "t": 453.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1583.783,
+    "ZCR": 0.0692
+  },
+  {
+    "t": 454.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1933.9843,
+    "ZCR": 0.115
+  },
+  {
+    "t": 455.0,
+    "STE": 0.0041,
+    "spectral_centroid": 2731.7888,
+    "ZCR": 0.1887
+  },
+  {
+    "t": 456.0,
+    "STE": 0.0033,
+    "spectral_centroid": 2096.2999,
+    "ZCR": 0.1144
+  },
+  {
+    "t": 457.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1820.4148,
+    "ZCR": 0.1151
+  },
+  {
+    "t": 458.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1825.634,
+    "ZCR": 0.114
+  },
+  {
+    "t": 459.0,
+    "STE": 0.001,
+    "spectral_centroid": 2135.4387,
+    "ZCR": 0.1268
+  },
+  {
+    "t": 460.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2300.693,
+    "ZCR": 0.1452
+  },
+  {
+    "t": 461.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1656.5343,
+    "ZCR": 0.0859
+  },
+  {
+    "t": 462.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2271.7987,
+    "ZCR": 0.1183
+  },
+  {
+    "t": 463.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1741.0493,
+    "ZCR": 0.0792
+  },
+  {
+    "t": 464.0,
+    "STE": 0.0,
+    "spectral_centroid": 1565.7391,
+    "ZCR": 0.0871
+  },
+  {
+    "t": 465.0,
+    "STE": 0.002,
+    "spectral_centroid": 2118.7123,
+    "ZCR": 0.1155
+  },
+  {
+    "t": 466.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1724.2114,
+    "ZCR": 0.0967
+  },
+  {
+    "t": 467.0,
+    "STE": 0.0058,
+    "spectral_centroid": 2579.7372,
+    "ZCR": 0.1671
+  },
+  {
+    "t": 468.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1662.9512,
+    "ZCR": 0.0941
+  },
+  {
+    "t": 469.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1677.7682,
+    "ZCR": 0.0986
+  },
+  {
+    "t": 470.0,
+    "STE": 0.0042,
+    "spectral_centroid": 2044.5232,
+    "ZCR": 0.1228
+  },
+  {
+    "t": 471.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1546.2331,
+    "ZCR": 0.0778
+  },
+  {
+    "t": 472.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1897.2273,
+    "ZCR": 0.0888
+  },
+  {
+    "t": 473.0,
+    "STE": 0.002,
+    "spectral_centroid": 1879.7654,
+    "ZCR": 0.0971
+  },
+  {
+    "t": 474.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1398.3888,
+    "ZCR": 0.0583
+  },
+  {
+    "t": 475.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1466.9836,
+    "ZCR": 0.057
+  },
+  {
+    "t": 476.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1627.5138,
+    "ZCR": 0.0684
+  },
+  {
+    "t": 477.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1422.2209,
+    "ZCR": 0.0534
+  },
+  {
+    "t": 478.0,
+    "STE": 0.0194,
+    "spectral_centroid": 1588.1026,
+    "ZCR": 0.0658
+  },
+  {
+    "t": 479.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1726.2236,
+    "ZCR": 0.068
+  },
+  {
+    "t": 480.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1889.3672,
+    "ZCR": 0.0884
+  },
+  {
+    "t": 481.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1770.5522,
+    "ZCR": 0.0774
+  },
+  {
+    "t": 482.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2202.0952,
+    "ZCR": 0.0954
+  },
+  {
+    "t": 483.0,
+    "STE": 0.002,
+    "spectral_centroid": 2326.4752,
+    "ZCR": 0.1294
+  },
+  {
+    "t": 484.0,
+    "STE": 0.0076,
+    "spectral_centroid": 1787.5431,
+    "ZCR": 0.0796
+  },
+  {
+    "t": 485.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2094.7425,
+    "ZCR": 0.1054
+  },
+  {
+    "t": 486.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1698.6685,
+    "ZCR": 0.0892
+  },
+  {
+    "t": 487.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1848.0051,
+    "ZCR": 0.0879
+  },
+  {
+    "t": 488.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2073.5678,
+    "ZCR": 0.0891
+  },
+  {
+    "t": 489.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2057.007,
+    "ZCR": 0.113
+  },
+  {
+    "t": 490.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1793.3899,
+    "ZCR": 0.0944
+  },
+  {
+    "t": 491.0,
+    "STE": 0.0061,
+    "spectral_centroid": 1805.1814,
+    "ZCR": 0.1012
+  },
+  {
+    "t": 492.0,
+    "STE": 0.0056,
+    "spectral_centroid": 2056.3071,
+    "ZCR": 0.1178
+  },
+  {
+    "t": 493.0,
+    "STE": 0.005,
+    "spectral_centroid": 1772.8461,
+    "ZCR": 0.0916
+  },
+  {
+    "t": 494.0,
+    "STE": 0.0055,
+    "spectral_centroid": 1961.2162,
+    "ZCR": 0.1053
+  },
+  {
+    "t": 495.0,
+    "STE": 0.0046,
+    "spectral_centroid": 1661.3461,
+    "ZCR": 0.0885
+  },
+  {
+    "t": 496.0,
+    "STE": 0.0068,
+    "spectral_centroid": 2528.4355,
+    "ZCR": 0.1418
+  },
+  {
+    "t": 497.0,
+    "STE": 0.0067,
+    "spectral_centroid": 1919.9332,
+    "ZCR": 0.102
+  },
+  {
+    "t": 498.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1528.6182,
+    "ZCR": 0.0766
+  },
+  {
+    "t": 499.0,
+    "STE": 0.0061,
+    "spectral_centroid": 1472.0878,
+    "ZCR": 0.0726
+  },
+  {
+    "t": 500.0,
+    "STE": 0.0047,
+    "spectral_centroid": 2665.1109,
+    "ZCR": 0.1685
+  },
+  {
+    "t": 501.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1859.6723,
+    "ZCR": 0.0995
+  },
+  {
+    "t": 502.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1478.3374,
+    "ZCR": 0.059
+  },
+  {
+    "t": 503.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1728.7397,
+    "ZCR": 0.0793
+  },
+  {
+    "t": 504.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1369.5127,
+    "ZCR": 0.0562
+  },
+  {
+    "t": 505.0,
+    "STE": 0.0103,
+    "spectral_centroid": 2126.5061,
+    "ZCR": 0.1014
+  },
+  {
+    "t": 506.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1423.974,
+    "ZCR": 0.0593
+  },
+  {
+    "t": 507.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1263.7007,
+    "ZCR": 0.0609
+  },
+  {
+    "t": 508.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1456.8264,
+    "ZCR": 0.0641
+  },
+  {
+    "t": 509.0,
+    "STE": 0.0012,
+    "spectral_centroid": 2254.8159,
+    "ZCR": 0.1457
+  },
+  {
+    "t": 510.0,
+    "STE": 0.005,
+    "spectral_centroid": 1565.2135,
+    "ZCR": 0.082
+  },
+  {
+    "t": 511.0,
+    "STE": 0.0012,
+    "spectral_centroid": 2311.9348,
+    "ZCR": 0.1425
+  },
+  {
+    "t": 512.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1438.6429,
+    "ZCR": 0.0655
+  },
+  {
+    "t": 513.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1469.1725,
+    "ZCR": 0.0842
+  },
+  {
+    "t": 514.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1927.6555,
+    "ZCR": 0.1085
+  },
+  {
+    "t": 515.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1590.122,
+    "ZCR": 0.0721
+  },
+  {
+    "t": 516.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1857.0079,
+    "ZCR": 0.1042
+  },
+  {
+    "t": 517.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1599.4331,
+    "ZCR": 0.0916
+  },
+  {
+    "t": 518.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1625.212,
+    "ZCR": 0.0907
+  },
+  {
+    "t": 519.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1662.1777,
+    "ZCR": 0.1
+  },
+  {
+    "t": 520.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1621.3091,
+    "ZCR": 0.0983
+  },
+  {
+    "t": 521.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1590.4245,
+    "ZCR": 0.0957
+  },
+  {
+    "t": 522.0,
+    "STE": 0.0,
+    "spectral_centroid": 1549.0686,
+    "ZCR": 0.0921
+  },
+  {
+    "t": 523.0,
+    "STE": 0.0,
+    "spectral_centroid": 1483.5307,
+    "ZCR": 0.083
+  },
+  {
+    "t": 524.0,
+    "STE": 0.0014,
+    "spectral_centroid": 2156.9285,
+    "ZCR": 0.1249
+  },
+  {
+    "t": 525.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1908.2583,
+    "ZCR": 0.1041
+  },
+  {
+    "t": 526.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1864.5131,
+    "ZCR": 0.1029
+  },
+  {
+    "t": 527.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1557.7462,
+    "ZCR": 0.0909
+  },
+  {
+    "t": 528.0,
+    "STE": 0.0038,
+    "spectral_centroid": 1641.1532,
+    "ZCR": 0.0878
+  },
+  {
+    "t": 529.0,
+    "STE": 0.0033,
+    "spectral_centroid": 2103.4032,
+    "ZCR": 0.1156
+  },
+  {
+    "t": 530.0,
+    "STE": 0.0041,
+    "spectral_centroid": 1573.0117,
+    "ZCR": 0.0794
+  },
+  {
+    "t": 531.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1650.1291,
+    "ZCR": 0.0888
+  },
+  {
+    "t": 532.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1592.2326,
+    "ZCR": 0.0788
+  },
+  {
+    "t": 533.0,
+    "STE": 0.004,
+    "spectral_centroid": 1687.9011,
+    "ZCR": 0.0745
+  },
+  {
+    "t": 534.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1491.8451,
+    "ZCR": 0.0719
+  },
+  {
+    "t": 535.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1633.7492,
+    "ZCR": 0.0871
+  },
+  {
+    "t": 536.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1903.4991,
+    "ZCR": 0.1072
+  },
+  {
+    "t": 537.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1969.77,
+    "ZCR": 0.1063
+  },
+  {
+    "t": 538.0,
+    "STE": 0.0066,
+    "spectral_centroid": 1902.4192,
+    "ZCR": 0.1011
+  },
+  {
+    "t": 539.0,
+    "STE": 0.0057,
+    "spectral_centroid": 1925.4507,
+    "ZCR": 0.1059
+  },
+  {
+    "t": 540.0,
+    "STE": 0.0038,
+    "spectral_centroid": 1661.7179,
+    "ZCR": 0.0912
+  },
+  {
+    "t": 541.0,
+    "STE": 0.0048,
+    "spectral_centroid": 2099.6537,
+    "ZCR": 0.11
+  },
+  {
+    "t": 542.0,
+    "STE": 0.0046,
+    "spectral_centroid": 1819.2499,
+    "ZCR": 0.0973
+  },
+  {
+    "t": 543.0,
+    "STE": 0.003,
+    "spectral_centroid": 1921.3323,
+    "ZCR": 0.1152
+  },
+  {
+    "t": 544.0,
+    "STE": 0.0051,
+    "spectral_centroid": 1649.1591,
+    "ZCR": 0.0821
+  },
+  {
+    "t": 545.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1550.3829,
+    "ZCR": 0.0811
+  },
+  {
+    "t": 546.0,
+    "STE": 0.001,
+    "spectral_centroid": 1615.3685,
+    "ZCR": 0.0663
+  },
+  {
+    "t": 547.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1692.2135,
+    "ZCR": 0.0809
+  },
+  {
+    "t": 548.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1759.2272,
+    "ZCR": 0.0925
+  },
+  {
+    "t": 549.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1645.8895,
+    "ZCR": 0.0827
+  },
+  {
+    "t": 550.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1703.6655,
+    "ZCR": 0.094
+  },
+  {
+    "t": 551.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1544.025,
+    "ZCR": 0.0867
+  },
+  {
+    "t": 552.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1950.3407,
+    "ZCR": 0.1059
+  },
+  {
+    "t": 553.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2514.4183,
+    "ZCR": 0.1598
+  },
+  {
+    "t": 554.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1775.9345,
+    "ZCR": 0.0967
+  },
+  {
+    "t": 555.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1743.1255,
+    "ZCR": 0.0977
+  },
+  {
+    "t": 556.0,
+    "STE": 0.0049,
+    "spectral_centroid": 2175.1032,
+    "ZCR": 0.1298
+  },
+  {
+    "t": 557.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1668.6341,
+    "ZCR": 0.0903
+  },
+  {
+    "t": 558.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1676.7235,
+    "ZCR": 0.0795
+  },
+  {
+    "t": 559.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2058.9122,
+    "ZCR": 0.1163
+  },
+  {
+    "t": 560.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1724.3238,
+    "ZCR": 0.0958
+  },
+  {
+    "t": 561.0,
+    "STE": 0.0033,
+    "spectral_centroid": 2140.8114,
+    "ZCR": 0.1211
+  },
+  {
+    "t": 562.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1757.0898,
+    "ZCR": 0.1
+  },
+  {
+    "t": 563.0,
+    "STE": 0.0047,
+    "spectral_centroid": 2303.281,
+    "ZCR": 0.1442
+  },
+  {
+    "t": 564.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1769.8854,
+    "ZCR": 0.1015
+  },
+  {
+    "t": 565.0,
+    "STE": 0.0041,
+    "spectral_centroid": 2276.8283,
+    "ZCR": 0.1372
+  },
+  {
+    "t": 566.0,
+    "STE": 0.0038,
+    "spectral_centroid": 2517.165,
+    "ZCR": 0.1428
+  },
+  {
+    "t": 567.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1529.5894,
+    "ZCR": 0.07
+  },
+  {
+    "t": 568.0,
+    "STE": 0.0037,
+    "spectral_centroid": 1897.7627,
+    "ZCR": 0.0974
+  },
+  {
+    "t": 569.0,
+    "STE": 0.002,
+    "spectral_centroid": 1510.4312,
+    "ZCR": 0.069
+  },
+  {
+    "t": 570.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1517.4254,
+    "ZCR": 0.072
+  },
+  {
+    "t": 571.0,
+    "STE": 0.003,
+    "spectral_centroid": 1652.2543,
+    "ZCR": 0.0797
+  },
+  {
+    "t": 572.0,
+    "STE": 0.0227,
+    "spectral_centroid": 1976.5371,
+    "ZCR": 0.099
+  },
+  {
+    "t": 573.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1811.8834,
+    "ZCR": 0.0919
+  },
+  {
+    "t": 574.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1975.5044,
+    "ZCR": 0.1129
+  },
+  {
+    "t": 575.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1612.8012,
+    "ZCR": 0.0793
+  },
+  {
+    "t": 576.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1898.3069,
+    "ZCR": 0.0988
+  },
+  {
+    "t": 577.0,
+    "STE": 0.0044,
+    "spectral_centroid": 1406.4567,
+    "ZCR": 0.0597
+  },
+  {
+    "t": 578.0,
+    "STE": 0.0093,
+    "spectral_centroid": 1484.4193,
+    "ZCR": 0.061
+  },
+  {
+    "t": 579.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1364.0398,
+    "ZCR": 0.0532
+  },
+  {
+    "t": 580.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1563.875,
+    "ZCR": 0.0668
+  },
+  {
+    "t": 581.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1610.6905,
+    "ZCR": 0.0722
+  },
+  {
+    "t": 582.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2244.1578,
+    "ZCR": 0.1233
+  },
+  {
+    "t": 583.0,
+    "STE": 0.002,
+    "spectral_centroid": 2288.5333,
+    "ZCR": 0.1175
+  },
+  {
+    "t": 584.0,
+    "STE": 0.0009,
+    "spectral_centroid": 2209.467,
+    "ZCR": 0.1109
+  },
+  {
+    "t": 585.0,
+    "STE": 0.0025,
+    "spectral_centroid": 2427.1051,
+    "ZCR": 0.1345
+  },
+  {
+    "t": 586.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2061.205,
+    "ZCR": 0.1145
+  },
+  {
+    "t": 587.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1731.2517,
+    "ZCR": 0.0951
+  },
+  {
+    "t": 588.0,
+    "STE": 0.004,
+    "spectral_centroid": 1781.3996,
+    "ZCR": 0.0923
+  },
+  {
+    "t": 589.0,
+    "STE": 0.0041,
+    "spectral_centroid": 1900.1082,
+    "ZCR": 0.0939
+  },
+  {
+    "t": 590.0,
+    "STE": 0.0039,
+    "spectral_centroid": 2662.1652,
+    "ZCR": 0.1669
+  },
+  {
+    "t": 591.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1877.124,
+    "ZCR": 0.1064
+  },
+  {
+    "t": 592.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1379.0296,
+    "ZCR": 0.068
+  },
+  {
+    "t": 593.0,
+    "STE": 0.004,
+    "spectral_centroid": 1508.2672,
+    "ZCR": 0.0645
+  },
+  {
+    "t": 594.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2192.9963,
+    "ZCR": 0.1062
+  },
+  {
+    "t": 595.0,
+    "STE": 0.003,
+    "spectral_centroid": 1868.5079,
+    "ZCR": 0.0959
+  },
+  {
+    "t": 596.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1703.4478,
+    "ZCR": 0.0971
+  },
+  {
+    "t": 597.0,
+    "STE": 0.0063,
+    "spectral_centroid": 1966.6284,
+    "ZCR": 0.1165
+  },
+  {
+    "t": 598.0,
+    "STE": 0.0057,
+    "spectral_centroid": 1917.6934,
+    "ZCR": 0.1125
+  },
+  {
+    "t": 599.0,
+    "STE": 0.004,
+    "spectral_centroid": 1822.6467,
+    "ZCR": 0.1007
+  },
+  {
+    "t": 600.0,
+    "STE": 0.0038,
+    "spectral_centroid": 2353.6383,
+    "ZCR": 0.151
+  },
+  {
+    "t": 601.0,
+    "STE": 0.0047,
+    "spectral_centroid": 2104.3797,
+    "ZCR": 0.123
+  },
+  {
+    "t": 602.0,
+    "STE": 0.0045,
+    "spectral_centroid": 1679.442,
+    "ZCR": 0.0951
+  },
+  {
+    "t": 603.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1776.9148,
+    "ZCR": 0.0965
+  },
+  {
+    "t": 604.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1989.1915,
+    "ZCR": 0.1159
+  },
+  {
+    "t": 605.0,
+    "STE": 0.0033,
+    "spectral_centroid": 2074.2773,
+    "ZCR": 0.1259
+  },
+  {
+    "t": 606.0,
+    "STE": 0.0036,
+    "spectral_centroid": 2423.4492,
+    "ZCR": 0.1531
+  },
+  {
+    "t": 607.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1899.4041,
+    "ZCR": 0.0986
+  },
+  {
+    "t": 608.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2109.2597,
+    "ZCR": 0.11
+  },
+  {
+    "t": 609.0,
+    "STE": 0.0022,
+    "spectral_centroid": 2145.1112,
+    "ZCR": 0.1097
+  },
+  {
+    "t": 610.0,
+    "STE": 0.0084,
+    "spectral_centroid": 2028.2871,
+    "ZCR": 0.0937
+  },
+  {
+    "t": 611.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1575.6064,
+    "ZCR": 0.0603
+  },
+  {
+    "t": 612.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1415.1635,
+    "ZCR": 0.0526
+  },
+  {
+    "t": 613.0,
+    "STE": 0.003,
+    "spectral_centroid": 2361.4848,
+    "ZCR": 0.1114
+  },
+  {
+    "t": 614.0,
+    "STE": 0.0023,
+    "spectral_centroid": 2173.7179,
+    "ZCR": 0.114
+  },
+  {
+    "t": 615.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2171.1936,
+    "ZCR": 0.1176
+  },
+  {
+    "t": 616.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1995.6942,
+    "ZCR": 0.1016
+  },
+  {
+    "t": 617.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2110.7467,
+    "ZCR": 0.0928
+  },
+  {
+    "t": 618.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1905.3367,
+    "ZCR": 0.0757
+  },
+  {
+    "t": 619.0,
+    "STE": 0.0037,
+    "spectral_centroid": 2035.2557,
+    "ZCR": 0.0872
+  },
+  {
+    "t": 620.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1917.3711,
+    "ZCR": 0.0757
+  },
+  {
+    "t": 621.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1498.8175,
+    "ZCR": 0.0547
+  },
+  {
+    "t": 622.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1714.6308,
+    "ZCR": 0.0723
+  },
+  {
+    "t": 623.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1927.4199,
+    "ZCR": 0.1036
+  },
+  {
+    "t": 624.0,
+    "STE": 0.0055,
+    "spectral_centroid": 1789.8063,
+    "ZCR": 0.1025
+  },
+  {
+    "t": 625.0,
+    "STE": 0.0085,
+    "spectral_centroid": 2167.3375,
+    "ZCR": 0.1239
+  },
+  {
+    "t": 626.0,
+    "STE": 0.0066,
+    "spectral_centroid": 1771.6921,
+    "ZCR": 0.0892
+  },
+  {
+    "t": 627.0,
+    "STE": 0.0042,
+    "spectral_centroid": 1831.1186,
+    "ZCR": 0.1024
+  },
+  {
+    "t": 628.0,
+    "STE": 0.0059,
+    "spectral_centroid": 1782.2265,
+    "ZCR": 0.0815
+  },
+  {
+    "t": 629.0,
+    "STE": 0.003,
+    "spectral_centroid": 2543.4768,
+    "ZCR": 0.1664
+  },
+  {
+    "t": 630.0,
+    "STE": 0.0028,
+    "spectral_centroid": 1586.8705,
+    "ZCR": 0.0707
+  },
+  {
+    "t": 631.0,
+    "STE": 0.0042,
+    "spectral_centroid": 1910.9616,
+    "ZCR": 0.0953
+  },
+  {
+    "t": 632.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2280.7785,
+    "ZCR": 0.1106
+  },
+  {
+    "t": 633.0,
+    "STE": 0.003,
+    "spectral_centroid": 2369.5348,
+    "ZCR": 0.1328
+  },
+  {
+    "t": 634.0,
+    "STE": 0.002,
+    "spectral_centroid": 1927.2659,
+    "ZCR": 0.1033
+  },
+  {
+    "t": 635.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1445.4821,
+    "ZCR": 0.061
+  },
+  {
+    "t": 636.0,
+    "STE": 0.0034,
+    "spectral_centroid": 2189.2425,
+    "ZCR": 0.1183
+  },
+  {
+    "t": 637.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1573.3826,
+    "ZCR": 0.0583
+  },
+  {
+    "t": 638.0,
+    "STE": 0.0032,
+    "spectral_centroid": 3120.6946,
+    "ZCR": 0.1899
+  },
+  {
+    "t": 639.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2160.856,
+    "ZCR": 0.0894
+  },
+  {
+    "t": 640.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2999.4652,
+    "ZCR": 0.177
+  },
+  {
+    "t": 641.0,
+    "STE": 0.0135,
+    "spectral_centroid": 1409.6454,
+    "ZCR": 0.0538
+  },
+  {
+    "t": 642.0,
+    "STE": 0.0042,
+    "spectral_centroid": 2326.6772,
+    "ZCR": 0.1213
+  },
+  {
+    "t": 643.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2255.8272,
+    "ZCR": 0.1184
+  },
+  {
+    "t": 644.0,
+    "STE": 0.0022,
+    "spectral_centroid": 2629.2367,
+    "ZCR": 0.1356
+  },
+  {
+    "t": 645.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2446.9355,
+    "ZCR": 0.1562
+  },
+  {
+    "t": 646.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1367.6892,
+    "ZCR": 0.0543
+  },
+  {
+    "t": 647.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1577.3261,
+    "ZCR": 0.0536
+  },
+  {
+    "t": 648.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1394.663,
+    "ZCR": 0.0573
+  },
+  {
+    "t": 649.0,
+    "STE": 0.0108,
+    "spectral_centroid": 1461.2522,
+    "ZCR": 0.0577
+  },
+  {
+    "t": 650.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2203.1863,
+    "ZCR": 0.1048
+  },
+  {
+    "t": 651.0,
+    "STE": 0.0019,
+    "spectral_centroid": 2303.5449,
+    "ZCR": 0.1186
+  },
+  {
+    "t": 652.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1628.7943,
+    "ZCR": 0.0661
+  },
+  {
+    "t": 653.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1596.5408,
+    "ZCR": 0.0768
+  },
+  {
+    "t": 654.0,
+    "STE": 0.0015,
+    "spectral_centroid": 2471.2173,
+    "ZCR": 0.1513
+  },
+  {
+    "t": 655.0,
+    "STE": 0.001,
+    "spectral_centroid": 1655.587,
+    "ZCR": 0.0732
+  },
+  {
+    "t": 656.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1746.2327,
+    "ZCR": 0.0882
+  },
+  {
+    "t": 657.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1756.1373,
+    "ZCR": 0.1018
+  },
+  {
+    "t": 658.0,
+    "STE": 0.0044,
+    "spectral_centroid": 1950.6985,
+    "ZCR": 0.1076
+  },
+  {
+    "t": 659.0,
+    "STE": 0.0036,
+    "spectral_centroid": 2038.0076,
+    "ZCR": 0.1225
+  },
+  {
+    "t": 660.0,
+    "STE": 0.0051,
+    "spectral_centroid": 2109.8977,
+    "ZCR": 0.1257
+  },
+  {
+    "t": 661.0,
+    "STE": 0.0051,
+    "spectral_centroid": 1707.7868,
+    "ZCR": 0.0839
+  },
+  {
+    "t": 662.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1702.5859,
+    "ZCR": 0.0923
+  },
+  {
+    "t": 663.0,
+    "STE": 0.0052,
+    "spectral_centroid": 1718.8779,
+    "ZCR": 0.0872
+  },
+  {
+    "t": 664.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1490.2342,
+    "ZCR": 0.0719
+  },
+  {
+    "t": 665.0,
+    "STE": 0.004,
+    "spectral_centroid": 1327.2885,
+    "ZCR": 0.0631
+  },
+  {
+    "t": 666.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1335.086,
+    "ZCR": 0.0671
+  },
+  {
+    "t": 667.0,
+    "STE": 0.0,
+    "spectral_centroid": 1529.9092,
+    "ZCR": 0.0886
+  },
+  {
+    "t": 668.0,
+    "STE": 0.0,
+    "spectral_centroid": 1602.9146,
+    "ZCR": 0.0856
+  },
+  {
+    "t": 669.0,
+    "STE": 0.003,
+    "spectral_centroid": 1727.9325,
+    "ZCR": 0.0907
+  },
+  {
+    "t": 670.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1647.2303,
+    "ZCR": 0.1007
+  },
+  {
+    "t": 671.0,
+    "STE": 0.0046,
+    "spectral_centroid": 1701.8215,
+    "ZCR": 0.093
+  },
+  {
+    "t": 672.0,
+    "STE": 0.0038,
+    "spectral_centroid": 1793.0468,
+    "ZCR": 0.0994
+  },
+  {
+    "t": 673.0,
+    "STE": 0.0046,
+    "spectral_centroid": 2736.986,
+    "ZCR": 0.1759
+  },
+  {
+    "t": 674.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1683.0528,
+    "ZCR": 0.0918
+  },
+  {
+    "t": 675.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1736.8241,
+    "ZCR": 0.0987
+  },
+  {
+    "t": 676.0,
+    "STE": 0.0033,
+    "spectral_centroid": 1778.7058,
+    "ZCR": 0.0835
+  },
+  {
+    "t": 677.0,
+    "STE": 0.0041,
+    "spectral_centroid": 2529.9462,
+    "ZCR": 0.1547
+  },
+  {
+    "t": 678.0,
+    "STE": 0.0012,
+    "spectral_centroid": 2349.8971,
+    "ZCR": 0.1265
+  },
+  {
+    "t": 679.0,
+    "STE": 0.0015,
+    "spectral_centroid": 2562.5544,
+    "ZCR": 0.1194
+  },
+  {
+    "t": 680.0,
+    "STE": 0.0058,
+    "spectral_centroid": 2887.5107,
+    "ZCR": 0.1492
+  },
+  {
+    "t": 681.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2126.2432,
+    "ZCR": 0.1233
+  },
+  {
+    "t": 682.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1817.9779,
+    "ZCR": 0.1092
+  },
+  {
+    "t": 683.0,
+    "STE": 0.0038,
+    "spectral_centroid": 2784.0673,
+    "ZCR": 0.1758
+  },
+  {
+    "t": 684.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2187.9059,
+    "ZCR": 0.1415
+  },
+  {
+    "t": 685.0,
+    "STE": 0.0041,
+    "spectral_centroid": 2545.9387,
+    "ZCR": 0.1583
+  },
+  {
+    "t": 686.0,
+    "STE": 0.004,
+    "spectral_centroid": 2712.0261,
+    "ZCR": 0.1642
+  },
+  {
+    "t": 687.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2043.4495,
+    "ZCR": 0.126
+  },
+  {
+    "t": 688.0,
+    "STE": 0.0029,
+    "spectral_centroid": 2505.7047,
+    "ZCR": 0.1523
+  },
+  {
+    "t": 689.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2481.3998,
+    "ZCR": 0.1259
+  },
+  {
+    "t": 690.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1593.4491,
+    "ZCR": 0.0853
+  },
+  {
+    "t": 691.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1690.4942,
+    "ZCR": 0.0974
+  },
+  {
+    "t": 692.0,
+    "STE": 0.0144,
+    "spectral_centroid": 2067.7556,
+    "ZCR": 0.1226
+  },
+  {
+    "t": 693.0,
+    "STE": 0.0091,
+    "spectral_centroid": 1674.3257,
+    "ZCR": 0.0967
+  },
+  {
+    "t": 694.0,
+    "STE": 0.0072,
+    "spectral_centroid": 1910.6227,
+    "ZCR": 0.1192
+  },
+  {
+    "t": 695.0,
+    "STE": 0.0064,
+    "spectral_centroid": 1871.4981,
+    "ZCR": 0.1047
+  },
+  {
+    "t": 696.0,
+    "STE": 0.0061,
+    "spectral_centroid": 2212.9427,
+    "ZCR": 0.1261
+  },
+  {
+    "t": 697.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1481.7408,
+    "ZCR": 0.0799
+  },
+  {
+    "t": 698.0,
+    "STE": 0.002,
+    "spectral_centroid": 1869.9077,
+    "ZCR": 0.1003
+  },
+  {
+    "t": 699.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1897.9565,
+    "ZCR": 0.0985
+  },
+  {
+    "t": 700.0,
+    "STE": 0.0025,
+    "spectral_centroid": 2956.0502,
+    "ZCR": 0.1886
+  },
+  {
+    "t": 701.0,
+    "STE": 0.0036,
+    "spectral_centroid": 2602.319,
+    "ZCR": 0.1529
+  },
+  {
+    "t": 702.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1539.0356,
+    "ZCR": 0.0693
+  },
+  {
+    "t": 703.0,
+    "STE": 0.0124,
+    "spectral_centroid": 2040.0729,
+    "ZCR": 0.1014
+  },
+  {
+    "t": 704.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1743.9829,
+    "ZCR": 0.0822
+  },
+  {
+    "t": 705.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1712.7203,
+    "ZCR": 0.0758
+  },
+  {
+    "t": 706.0,
+    "STE": 0.0023,
+    "spectral_centroid": 2095.3919,
+    "ZCR": 0.1168
+  },
+  {
+    "t": 707.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1994.4161,
+    "ZCR": 0.1054
+  },
+  {
+    "t": 708.0,
+    "STE": 0.0035,
+    "spectral_centroid": 3351.0752,
+    "ZCR": 0.215
+  },
+  {
+    "t": 709.0,
+    "STE": 0.0014,
+    "spectral_centroid": 2040.3571,
+    "ZCR": 0.1283
+  },
+  {
+    "t": 710.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2114.5619,
+    "ZCR": 0.1191
+  },
+  {
+    "t": 711.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1882.6215,
+    "ZCR": 0.1059
+  },
+  {
+    "t": 712.0,
+    "STE": 0.0025,
+    "spectral_centroid": 2432.8066,
+    "ZCR": 0.1144
+  },
+  {
+    "t": 713.0,
+    "STE": 0.0003,
+    "spectral_centroid": 2014.7427,
+    "ZCR": 0.1393
+  },
+  {
+    "t": 714.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1510.679,
+    "ZCR": 0.0916
+  },
+  {
+    "t": 715.0,
+    "STE": 0.0015,
+    "spectral_centroid": 2484.1881,
+    "ZCR": 0.171
+  },
+  {
+    "t": 716.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1968.9079,
+    "ZCR": 0.0884
+  },
+  {
+    "t": 717.0,
+    "STE": 0.002,
+    "spectral_centroid": 2887.3118,
+    "ZCR": 0.1605
+  },
+  {
+    "t": 718.0,
+    "STE": 0.0,
+    "spectral_centroid": 1627.7402,
+    "ZCR": 0.0942
+  },
+  {
+    "t": 719.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1684.0764,
+    "ZCR": 0.099
+  },
+  {
+    "t": 720.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1669.7509,
+    "ZCR": 0.0971
+  },
+  {
+    "t": 721.0,
+    "STE": 0.0059,
+    "spectral_centroid": 1827.2247,
+    "ZCR": 0.1016
+  },
+  {
+    "t": 722.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1765.0932,
+    "ZCR": 0.1044
+  },
+  {
+    "t": 723.0,
+    "STE": 0.0057,
+    "spectral_centroid": 1878.4315,
+    "ZCR": 0.1087
+  },
+  {
+    "t": 724.0,
+    "STE": 0.0037,
+    "spectral_centroid": 2062.8925,
+    "ZCR": 0.1242
+  },
+  {
+    "t": 725.0,
+    "STE": 0.0037,
+    "spectral_centroid": 1815.8389,
+    "ZCR": 0.0943
+  },
+  {
+    "t": 726.0,
+    "STE": 0.003,
+    "spectral_centroid": 1597.7388,
+    "ZCR": 0.0756
+  },
+  {
+    "t": 727.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1539.0946,
+    "ZCR": 0.0748
+  },
+  {
+    "t": 728.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1532.4687,
+    "ZCR": 0.0899
+  },
+  {
+    "t": 729.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1822.1209,
+    "ZCR": 0.0981
+  },
+  {
+    "t": 730.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1973.3883,
+    "ZCR": 0.1142
+  },
+  {
+    "t": 731.0,
+    "STE": 0.0048,
+    "spectral_centroid": 1840.0083,
+    "ZCR": 0.1077
+  },
+  {
+    "t": 732.0,
+    "STE": 0.0081,
+    "spectral_centroid": 2047.61,
+    "ZCR": 0.108
+  },
+  {
+    "t": 733.0,
+    "STE": 0.006,
+    "spectral_centroid": 1990.9436,
+    "ZCR": 0.1017
+  },
+  {
+    "t": 734.0,
+    "STE": 0.004,
+    "spectral_centroid": 1711.49,
+    "ZCR": 0.0978
+  },
+  {
+    "t": 735.0,
+    "STE": 0.0049,
+    "spectral_centroid": 1886.3174,
+    "ZCR": 0.113
+  },
+  {
+    "t": 736.0,
+    "STE": 0.0052,
+    "spectral_centroid": 2064.8502,
+    "ZCR": 0.1127
+  },
+  {
+    "t": 737.0,
+    "STE": 0.0058,
+    "spectral_centroid": 1978.1528,
+    "ZCR": 0.0907
+  },
+  {
+    "t": 738.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1969.2932,
+    "ZCR": 0.1052
+  },
+  {
+    "t": 739.0,
+    "STE": 0.0015,
+    "spectral_centroid": 2046.3175,
+    "ZCR": 0.1075
+  },
+  {
+    "t": 740.0,
+    "STE": 0.0099,
+    "spectral_centroid": 1577.3415,
+    "ZCR": 0.0763
+  },
+  {
+    "t": 741.0,
+    "STE": 0.003,
+    "spectral_centroid": 2077.0123,
+    "ZCR": 0.0892
+  },
+  {
+    "t": 742.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1815.6051,
+    "ZCR": 0.0963
+  },
+  {
+    "t": 743.0,
+    "STE": 0.001,
+    "spectral_centroid": 1925.8568,
+    "ZCR": 0.1064
+  },
+  {
+    "t": 744.0,
+    "STE": 0.0032,
+    "spectral_centroid": 2547.384,
+    "ZCR": 0.1247
+  },
+  {
+    "t": 745.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1902.8058,
+    "ZCR": 0.0764
+  },
+  {
+    "t": 746.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1818.9143,
+    "ZCR": 0.1001
+  },
+  {
+    "t": 747.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1888.207,
+    "ZCR": 0.1094
+  },
+  {
+    "t": 748.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1933.2859,
+    "ZCR": 0.1029
+  },
+  {
+    "t": 749.0,
+    "STE": 0.0053,
+    "spectral_centroid": 1970.0605,
+    "ZCR": 0.105
+  },
+  {
+    "t": 750.0,
+    "STE": 0.0047,
+    "spectral_centroid": 2108.1385,
+    "ZCR": 0.1206
+  },
+  {
+    "t": 751.0,
+    "STE": 0.0048,
+    "spectral_centroid": 2371.3806,
+    "ZCR": 0.1549
+  },
+  {
+    "t": 752.0,
+    "STE": 0.0034,
+    "spectral_centroid": 2265.5972,
+    "ZCR": 0.1293
+  },
+  {
+    "t": 753.0,
+    "STE": 0.0047,
+    "spectral_centroid": 1963.7374,
+    "ZCR": 0.1066
+  },
+  {
+    "t": 754.0,
+    "STE": 0.0038,
+    "spectral_centroid": 1801.3812,
+    "ZCR": 0.102
+  },
+  {
+    "t": 755.0,
+    "STE": 0.0047,
+    "spectral_centroid": 1956.452,
+    "ZCR": 0.1046
+  },
+  {
+    "t": 756.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1488.0357,
+    "ZCR": 0.065
+  },
+  {
+    "t": 757.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1630.2465,
+    "ZCR": 0.0739
+  },
+  {
+    "t": 758.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2201.208,
+    "ZCR": 0.1154
+  },
+  {
+    "t": 759.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1671.0236,
+    "ZCR": 0.0987
+  },
+  {
+    "t": 760.0,
+    "STE": 0.0028,
+    "spectral_centroid": 1713.9697,
+    "ZCR": 0.0972
+  },
+  {
+    "t": 761.0,
+    "STE": 0.0037,
+    "spectral_centroid": 1653.9974,
+    "ZCR": 0.0945
+  },
+  {
+    "t": 762.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1730.7543,
+    "ZCR": 0.0822
+  },
+  {
+    "t": 763.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1714.8741,
+    "ZCR": 0.0955
+  },
+  {
+    "t": 764.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1814.8959,
+    "ZCR": 0.0918
+  },
+  {
+    "t": 765.0,
+    "STE": 0.003,
+    "spectral_centroid": 2079.6084,
+    "ZCR": 0.0976
+  },
+  {
+    "t": 766.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1692.2311,
+    "ZCR": 0.0725
+  },
+  {
+    "t": 767.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1567.0564,
+    "ZCR": 0.0716
+  },
+  {
+    "t": 768.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1920.3124,
+    "ZCR": 0.1023
+  },
+  {
+    "t": 769.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1556.9428,
+    "ZCR": 0.0703
+  },
+  {
+    "t": 770.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1526.8689,
+    "ZCR": 0.0779
+  },
+  {
+    "t": 771.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1622.1975,
+    "ZCR": 0.0826
+  },
+  {
+    "t": 772.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1763.4919,
+    "ZCR": 0.0997
+  },
+  {
+    "t": 773.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1792.5331,
+    "ZCR": 0.0997
+  },
+  {
+    "t": 774.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1676.1062,
+    "ZCR": 0.0899
+  },
+  {
+    "t": 775.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1793.9861,
+    "ZCR": 0.0985
+  },
+  {
+    "t": 776.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1879.9787,
+    "ZCR": 0.1047
+  },
+  {
+    "t": 777.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1635.0858,
+    "ZCR": 0.0725
+  },
+  {
+    "t": 778.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1594.5731,
+    "ZCR": 0.0674
+  },
+  {
+    "t": 779.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1723.0904,
+    "ZCR": 0.0858
+  },
+  {
+    "t": 780.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1482.7486,
+    "ZCR": 0.0652
+  },
+  {
+    "t": 781.0,
+    "STE": 0.005,
+    "spectral_centroid": 1729.592,
+    "ZCR": 0.0911
+  },
+  {
+    "t": 782.0,
+    "STE": 0.0033,
+    "spectral_centroid": 1738.2862,
+    "ZCR": 0.0912
+  },
+  {
+    "t": 783.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1684.3079,
+    "ZCR": 0.0894
+  },
+  {
+    "t": 784.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2228.184,
+    "ZCR": 0.1118
+  },
+  {
+    "t": 785.0,
+    "STE": 0.0049,
+    "spectral_centroid": 1919.1044,
+    "ZCR": 0.0876
+  },
+  {
+    "t": 786.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1726.7198,
+    "ZCR": 0.0995
+  },
+  {
+    "t": 787.0,
+    "STE": 0.0039,
+    "spectral_centroid": 1609.3223,
+    "ZCR": 0.0741
+  },
+  {
+    "t": 788.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1551.8431,
+    "ZCR": 0.0607
+  },
+  {
+    "t": 789.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1758.4751,
+    "ZCR": 0.0847
+  },
+  {
+    "t": 790.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1960.5736,
+    "ZCR": 0.0961
+  },
+  {
+    "t": 791.0,
+    "STE": 0.0041,
+    "spectral_centroid": 2507.0779,
+    "ZCR": 0.169
+  },
+  {
+    "t": 792.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1896.2887,
+    "ZCR": 0.0931
+  },
+  {
+    "t": 793.0,
+    "STE": 0.0037,
+    "spectral_centroid": 2266.1772,
+    "ZCR": 0.1389
+  },
+  {
+    "t": 794.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1584.5035,
+    "ZCR": 0.0847
+  },
+  {
+    "t": 795.0,
+    "STE": 0.0038,
+    "spectral_centroid": 2287.4909,
+    "ZCR": 0.1315
+  },
+  {
+    "t": 796.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1732.8826,
+    "ZCR": 0.076
+  },
+  {
+    "t": 797.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1463.8034,
+    "ZCR": 0.0666
+  },
+  {
+    "t": 798.0,
+    "STE": 0.001,
+    "spectral_centroid": 1085.2754,
+    "ZCR": 0.0418
+  },
+  {
+    "t": 799.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1280.1994,
+    "ZCR": 0.0477
+  },
+  {
+    "t": 800.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1843.6259,
+    "ZCR": 0.0857
+  },
+  {
+    "t": 801.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2507.157,
+    "ZCR": 0.1244
+  },
+  {
+    "t": 802.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1518.0929,
+    "ZCR": 0.0692
+  },
+  {
+    "t": 803.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1682.7387,
+    "ZCR": 0.0859
+  },
+  {
+    "t": 804.0,
+    "STE": 0.0002,
+    "spectral_centroid": 1561.9824,
+    "ZCR": 0.0891
+  },
+  {
+    "t": 805.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1742.8263,
+    "ZCR": 0.1024
+  },
+  {
+    "t": 806.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1596.7056,
+    "ZCR": 0.0777
+  },
+  {
+    "t": 807.0,
+    "STE": 0.0046,
+    "spectral_centroid": 1659.7831,
+    "ZCR": 0.0795
+  },
+  {
+    "t": 808.0,
+    "STE": 0.0023,
+    "spectral_centroid": 2122.5056,
+    "ZCR": 0.1185
+  },
+  {
+    "t": 809.0,
+    "STE": 0.0032,
+    "spectral_centroid": 1932.728,
+    "ZCR": 0.0843
+  },
+  {
+    "t": 810.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1966.2228,
+    "ZCR": 0.113
+  },
+  {
+    "t": 811.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1792.597,
+    "ZCR": 0.0984
+  },
+  {
+    "t": 812.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1815.0136,
+    "ZCR": 0.0949
+  },
+  {
+    "t": 813.0,
+    "STE": 0.0089,
+    "spectral_centroid": 1958.3045,
+    "ZCR": 0.1036
+  },
+  {
+    "t": 814.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1721.4951,
+    "ZCR": 0.1009
+  },
+  {
+    "t": 815.0,
+    "STE": 0.006,
+    "spectral_centroid": 1885.3879,
+    "ZCR": 0.1
+  },
+  {
+    "t": 816.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1709.5936,
+    "ZCR": 0.0982
+  },
+  {
+    "t": 817.0,
+    "STE": 0.005,
+    "spectral_centroid": 1681.9237,
+    "ZCR": 0.0762
+  },
+  {
+    "t": 818.0,
+    "STE": 0.0017,
+    "spectral_centroid": 1718.227,
+    "ZCR": 0.1004
+  },
+  {
+    "t": 819.0,
+    "STE": 0.002,
+    "spectral_centroid": 1541.6399,
+    "ZCR": 0.0867
+  },
+  {
+    "t": 820.0,
+    "STE": 0.0038,
+    "spectral_centroid": 2186.6521,
+    "ZCR": 0.1122
+  },
+  {
+    "t": 821.0,
+    "STE": 0.0034,
+    "spectral_centroid": 2155.3128,
+    "ZCR": 0.1162
+  },
+  {
+    "t": 822.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1390.8695,
+    "ZCR": 0.0654
+  },
+  {
+    "t": 823.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1536.2973,
+    "ZCR": 0.07
+  },
+  {
+    "t": 824.0,
+    "STE": 0.0039,
+    "spectral_centroid": 1601.8051,
+    "ZCR": 0.0678
+  },
+  {
+    "t": 825.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1737.8407,
+    "ZCR": 0.0734
+  },
+  {
+    "t": 826.0,
+    "STE": 0.0153,
+    "spectral_centroid": 1462.2036,
+    "ZCR": 0.0561
+  },
+  {
+    "t": 827.0,
+    "STE": 0.0038,
+    "spectral_centroid": 1735.7825,
+    "ZCR": 0.0955
+  },
+  {
+    "t": 828.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1475.1123,
+    "ZCR": 0.0621
+  },
+  {
+    "t": 829.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1815.1807,
+    "ZCR": 0.0913
+  },
+  {
+    "t": 830.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1485.0232,
+    "ZCR": 0.0642
+  },
+  {
+    "t": 831.0,
+    "STE": 0.0056,
+    "spectral_centroid": 1445.2892,
+    "ZCR": 0.0516
+  },
+  {
+    "t": 832.0,
+    "STE": 0.0044,
+    "spectral_centroid": 1593.9942,
+    "ZCR": 0.0654
+  },
+  {
+    "t": 833.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1259.0489,
+    "ZCR": 0.0485
+  },
+  {
+    "t": 834.0,
+    "STE": 0.0028,
+    "spectral_centroid": 1386.0084,
+    "ZCR": 0.0518
+  },
+  {
+    "t": 835.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1474.7771,
+    "ZCR": 0.068
+  },
+  {
+    "t": 836.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1523.228,
+    "ZCR": 0.0826
+  },
+  {
+    "t": 837.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1927.855,
+    "ZCR": 0.1047
+  },
+  {
+    "t": 838.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2303.7325,
+    "ZCR": 0.14
+  },
+  {
+    "t": 839.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2306.9928,
+    "ZCR": 0.1156
+  },
+  {
+    "t": 840.0,
+    "STE": 0.0007,
+    "spectral_centroid": 2121.6,
+    "ZCR": 0.1205
+  },
+  {
+    "t": 841.0,
+    "STE": 0.0023,
+    "spectral_centroid": 2310.6177,
+    "ZCR": 0.1766
+  },
+  {
+    "t": 842.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1693.6221,
+    "ZCR": 0.0827
+  },
+  {
+    "t": 843.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1694.9672,
+    "ZCR": 0.1001
+  },
+  {
+    "t": 844.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1803.1134,
+    "ZCR": 0.0969
+  },
+  {
+    "t": 845.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1619.5822,
+    "ZCR": 0.0913
+  },
+  {
+    "t": 846.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1563.5762,
+    "ZCR": 0.0888
+  },
+  {
+    "t": 847.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1777.4696,
+    "ZCR": 0.1019
+  },
+  {
+    "t": 848.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1683.8238,
+    "ZCR": 0.0916
+  },
+  {
+    "t": 849.0,
+    "STE": 0.0032,
+    "spectral_centroid": 1875.3254,
+    "ZCR": 0.0954
+  },
+  {
+    "t": 850.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1709.379,
+    "ZCR": 0.0798
+  },
+  {
+    "t": 851.0,
+    "STE": 0.0037,
+    "spectral_centroid": 1363.4553,
+    "ZCR": 0.0511
+  },
+  {
+    "t": 852.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1390.1795,
+    "ZCR": 0.0603
+  },
+  {
+    "t": 853.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1669.3233,
+    "ZCR": 0.0912
+  },
+  {
+    "t": 854.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1711.2066,
+    "ZCR": 0.0705
+  },
+  {
+    "t": 855.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1631.3711,
+    "ZCR": 0.0902
+  },
+  {
+    "t": 856.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1462.9639,
+    "ZCR": 0.0584
+  },
+  {
+    "t": 857.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1683.6,
+    "ZCR": 0.0839
+  },
+  {
+    "t": 858.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1465.9371,
+    "ZCR": 0.0729
+  },
+  {
+    "t": 859.0,
+    "STE": 0.0039,
+    "spectral_centroid": 1611.44,
+    "ZCR": 0.0786
+  },
+  {
+    "t": 860.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1926.409,
+    "ZCR": 0.1128
+  },
+  {
+    "t": 861.0,
+    "STE": 0.0028,
+    "spectral_centroid": 1733.8927,
+    "ZCR": 0.0834
+  },
+  {
+    "t": 862.0,
+    "STE": 0.0031,
+    "spectral_centroid": 2068.607,
+    "ZCR": 0.0826
+  },
+  {
+    "t": 863.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1657.0628,
+    "ZCR": 0.0871
+  },
+  {
+    "t": 864.0,
+    "STE": 0.003,
+    "spectral_centroid": 1873.0023,
+    "ZCR": 0.0967
+  },
+  {
+    "t": 865.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1648.0148,
+    "ZCR": 0.0826
+  },
+  {
+    "t": 866.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1674.9896,
+    "ZCR": 0.0968
+  },
+  {
+    "t": 867.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1698.1814,
+    "ZCR": 0.1009
+  },
+  {
+    "t": 868.0,
+    "STE": 0.0032,
+    "spectral_centroid": 1662.3598,
+    "ZCR": 0.0827
+  },
+  {
+    "t": 869.0,
+    "STE": 0.0042,
+    "spectral_centroid": 1953.2691,
+    "ZCR": 0.0975
+  },
+  {
+    "t": 870.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1846.3233,
+    "ZCR": 0.1036
+  },
+  {
+    "t": 871.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1754.4346,
+    "ZCR": 0.0935
+  },
+  {
+    "t": 872.0,
+    "STE": 0.004,
+    "spectral_centroid": 1741.5277,
+    "ZCR": 0.0852
+  },
+  {
+    "t": 873.0,
+    "STE": 0.0057,
+    "spectral_centroid": 1687.8825,
+    "ZCR": 0.0761
+  },
+  {
+    "t": 874.0,
+    "STE": 0.006,
+    "spectral_centroid": 1887.4088,
+    "ZCR": 0.0963
+  },
+  {
+    "t": 875.0,
+    "STE": 0.0052,
+    "spectral_centroid": 1721.7656,
+    "ZCR": 0.0875
+  },
+  {
+    "t": 876.0,
+    "STE": 0.001,
+    "spectral_centroid": 1744.2593,
+    "ZCR": 0.0949
+  },
+  {
+    "t": 877.0,
+    "STE": 0.0073,
+    "spectral_centroid": 1963.538,
+    "ZCR": 0.1025
+  },
+  {
+    "t": 878.0,
+    "STE": 0.0053,
+    "spectral_centroid": 2143.3529,
+    "ZCR": 0.088
+  },
+  {
+    "t": 879.0,
+    "STE": 0.0018,
+    "spectral_centroid": 2066.8766,
+    "ZCR": 0.118
+  },
+  {
+    "t": 880.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2014.537,
+    "ZCR": 0.0825
+  },
+  {
+    "t": 881.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2055.8088,
+    "ZCR": 0.1094
+  },
+  {
+    "t": 882.0,
+    "STE": 0.0012,
+    "spectral_centroid": 2349.4898,
+    "ZCR": 0.1462
+  },
+  {
+    "t": 883.0,
+    "STE": 0.0029,
+    "spectral_centroid": 2465.6991,
+    "ZCR": 0.1228
+  },
+  {
+    "t": 884.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2213.0506,
+    "ZCR": 0.1072
+  },
+  {
+    "t": 885.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1912.9403,
+    "ZCR": 0.1098
+  },
+  {
+    "t": 886.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1782.5809,
+    "ZCR": 0.1021
+  },
+  {
+    "t": 887.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1766.2285,
+    "ZCR": 0.1045
+  },
+  {
+    "t": 888.0,
+    "STE": 0.0058,
+    "spectral_centroid": 2044.4707,
+    "ZCR": 0.1168
+  },
+  {
+    "t": 889.0,
+    "STE": 0.0042,
+    "spectral_centroid": 1742.914,
+    "ZCR": 0.092
+  },
+  {
+    "t": 890.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1770.4402,
+    "ZCR": 0.1055
+  },
+  {
+    "t": 891.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1794.3121,
+    "ZCR": 0.103
+  },
+  {
+    "t": 892.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1963.7755,
+    "ZCR": 0.1174
+  },
+  {
+    "t": 893.0,
+    "STE": 0.002,
+    "spectral_centroid": 2129.9567,
+    "ZCR": 0.1168
+  },
+  {
+    "t": 894.0,
+    "STE": 0.0043,
+    "spectral_centroid": 1906.1739,
+    "ZCR": 0.0759
+  },
+  {
+    "t": 895.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1654.3242,
+    "ZCR": 0.0701
+  },
+  {
+    "t": 896.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1721.2586,
+    "ZCR": 0.0771
+  },
+  {
+    "t": 897.0,
+    "STE": 0.0147,
+    "spectral_centroid": 1612.7445,
+    "ZCR": 0.0664
+  },
+  {
+    "t": 898.0,
+    "STE": 0.002,
+    "spectral_centroid": 1919.8534,
+    "ZCR": 0.1003
+  },
+  {
+    "t": 899.0,
+    "STE": 0.0029,
+    "spectral_centroid": 1836.7473,
+    "ZCR": 0.0787
+  },
+  {
+    "t": 900.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1626.726,
+    "ZCR": 0.0809
+  },
+  {
+    "t": 901.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1943.7691,
+    "ZCR": 0.0871
+  },
+  {
+    "t": 902.0,
+    "STE": 0.0073,
+    "spectral_centroid": 1841.1098,
+    "ZCR": 0.0904
+  },
+  {
+    "t": 903.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1737.6482,
+    "ZCR": 0.0923
+  },
+  {
+    "t": 904.0,
+    "STE": 0.0013,
+    "spectral_centroid": 2049.3442,
+    "ZCR": 0.1176
+  },
+  {
+    "t": 905.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2215.1842,
+    "ZCR": 0.1211
+  },
+  {
+    "t": 906.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1882.1917,
+    "ZCR": 0.1106
+  },
+  {
+    "t": 907.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1685.9729,
+    "ZCR": 0.0797
+  },
+  {
+    "t": 908.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1908.1522,
+    "ZCR": 0.113
+  },
+  {
+    "t": 909.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1726.6172,
+    "ZCR": 0.1
+  },
+  {
+    "t": 910.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1700.8141,
+    "ZCR": 0.1008
+  },
+  {
+    "t": 911.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1588.1797,
+    "ZCR": 0.0818
+  },
+  {
+    "t": 912.0,
+    "STE": 0.0012,
+    "spectral_centroid": 1662.2464,
+    "ZCR": 0.0946
+  },
+  {
+    "t": 913.0,
+    "STE": 0.0028,
+    "spectral_centroid": 1837.8973,
+    "ZCR": 0.0959
+  },
+  {
+    "t": 914.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1607.7964,
+    "ZCR": 0.0842
+  },
+  {
+    "t": 915.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1620.9214,
+    "ZCR": 0.0748
+  },
+  {
+    "t": 916.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1494.8871,
+    "ZCR": 0.0651
+  },
+  {
+    "t": 917.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1885.7744,
+    "ZCR": 0.0991
+  },
+  {
+    "t": 918.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1894.7164,
+    "ZCR": 0.0987
+  },
+  {
+    "t": 919.0,
+    "STE": 0.0051,
+    "spectral_centroid": 1152.5971,
+    "ZCR": 0.0433
+  },
+  {
+    "t": 920.0,
+    "STE": 0.0063,
+    "spectral_centroid": 1357.3709,
+    "ZCR": 0.0497
+  },
+  {
+    "t": 921.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1991.6939,
+    "ZCR": 0.1136
+  },
+  {
+    "t": 922.0,
+    "STE": 0.0018,
+    "spectral_centroid": 1992.445,
+    "ZCR": 0.1032
+  },
+  {
+    "t": 923.0,
+    "STE": 0.008,
+    "spectral_centroid": 1640.0318,
+    "ZCR": 0.0861
+  },
+  {
+    "t": 924.0,
+    "STE": 0.002,
+    "spectral_centroid": 1686.695,
+    "ZCR": 0.0793
+  },
+  {
+    "t": 925.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1680.0646,
+    "ZCR": 0.0791
+  },
+  {
+    "t": 926.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1418.4804,
+    "ZCR": 0.0599
+  },
+  {
+    "t": 927.0,
+    "STE": 0.0016,
+    "spectral_centroid": 1558.4385,
+    "ZCR": 0.0735
+  },
+  {
+    "t": 928.0,
+    "STE": 0.001,
+    "spectral_centroid": 2229.9584,
+    "ZCR": 0.1496
+  },
+  {
+    "t": 929.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1851.4627,
+    "ZCR": 0.0921
+  },
+  {
+    "t": 930.0,
+    "STE": 0.0003,
+    "spectral_centroid": 1932.285,
+    "ZCR": 0.1165
+  },
+  {
+    "t": 931.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1663.1317,
+    "ZCR": 0.0914
+  },
+  {
+    "t": 932.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1865.581,
+    "ZCR": 0.108
+  },
+  {
+    "t": 933.0,
+    "STE": 0.0035,
+    "spectral_centroid": 2247.5641,
+    "ZCR": 0.1304
+  },
+  {
+    "t": 934.0,
+    "STE": 0.0046,
+    "spectral_centroid": 2027.6495,
+    "ZCR": 0.1168
+  },
+  {
+    "t": 935.0,
+    "STE": 0.0048,
+    "spectral_centroid": 1958.9892,
+    "ZCR": 0.1045
+  },
+  {
+    "t": 936.0,
+    "STE": 0.0052,
+    "spectral_centroid": 1887.9839,
+    "ZCR": 0.1076
+  },
+  {
+    "t": 937.0,
+    "STE": 0.0053,
+    "spectral_centroid": 1934.3606,
+    "ZCR": 0.111
+  },
+  {
+    "t": 938.0,
+    "STE": 0.0027,
+    "spectral_centroid": 2093.4739,
+    "ZCR": 0.1294
+  },
+  {
+    "t": 939.0,
+    "STE": 0.0045,
+    "spectral_centroid": 1898.0886,
+    "ZCR": 0.0947
+  },
+  {
+    "t": 940.0,
+    "STE": 0.0026,
+    "spectral_centroid": 1920.4678,
+    "ZCR": 0.1113
+  },
+  {
+    "t": 941.0,
+    "STE": 0.0057,
+    "spectral_centroid": 1752.297,
+    "ZCR": 0.0834
+  },
+  {
+    "t": 942.0,
+    "STE": 0.004,
+    "spectral_centroid": 2272.9427,
+    "ZCR": 0.1316
+  },
+  {
+    "t": 943.0,
+    "STE": 0.0034,
+    "spectral_centroid": 1892.8182,
+    "ZCR": 0.1113
+  },
+  {
+    "t": 944.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1729.0364,
+    "ZCR": 0.0755
+  },
+  {
+    "t": 945.0,
+    "STE": 0.0035,
+    "spectral_centroid": 1699.0782,
+    "ZCR": 0.0853
+  },
+  {
+    "t": 946.0,
+    "STE": 0.0021,
+    "spectral_centroid": 2012.0934,
+    "ZCR": 0.1117
+  },
+  {
+    "t": 947.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1723.4219,
+    "ZCR": 0.0704
+  },
+  {
+    "t": 948.0,
+    "STE": 0.0115,
+    "spectral_centroid": 1478.932,
+    "ZCR": 0.0559
+  },
+  {
+    "t": 949.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1927.3342,
+    "ZCR": 0.1042
+  },
+  {
+    "t": 950.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1728.111,
+    "ZCR": 0.0755
+  },
+  {
+    "t": 951.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1914.1688,
+    "ZCR": 0.1183
+  },
+  {
+    "t": 952.0,
+    "STE": 0.0027,
+    "spectral_centroid": 1573.1289,
+    "ZCR": 0.0677
+  },
+  {
+    "t": 953.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1190.7461,
+    "ZCR": 0.0687
+  },
+  {
+    "t": 954.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1920.0598,
+    "ZCR": 0.1059
+  },
+  {
+    "t": 955.0,
+    "STE": 0.0031,
+    "spectral_centroid": 1701.1234,
+    "ZCR": 0.0894
+  },
+  {
+    "t": 956.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1561.1266,
+    "ZCR": 0.0658
+  },
+  {
+    "t": 957.0,
+    "STE": 0.0023,
+    "spectral_centroid": 2131.1766,
+    "ZCR": 0.1047
+  },
+  {
+    "t": 958.0,
+    "STE": 0.0038,
+    "spectral_centroid": 1562.498,
+    "ZCR": 0.0731
+  },
+  {
+    "t": 959.0,
+    "STE": 0.0029,
+    "spectral_centroid": 2549.4636,
+    "ZCR": 0.1693
+  },
+  {
+    "t": 960.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1411.2927,
+    "ZCR": 0.0538
+  },
+  {
+    "t": 961.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1365.1743,
+    "ZCR": 0.0566
+  },
+  {
+    "t": 962.0,
+    "STE": 0.0,
+    "spectral_centroid": 1767.7797,
+    "ZCR": 0.0843
+  },
+  {
+    "t": 963.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2086.4106,
+    "ZCR": 0.061
+  },
+  {
+    "t": 964.0,
+    "STE": 0.0007,
+    "spectral_centroid": 2291.2799,
+    "ZCR": 0.1023
+  },
+  {
+    "t": 965.0,
+    "STE": 0.0019,
+    "spectral_centroid": 1918.3814,
+    "ZCR": 0.099
+  },
+  {
+    "t": 966.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1337.2997,
+    "ZCR": 0.0548
+  },
+  {
+    "t": 967.0,
+    "STE": 0.0014,
+    "spectral_centroid": 1656.3365,
+    "ZCR": 0.0874
+  },
+  {
+    "t": 968.0,
+    "STE": 0.0004,
+    "spectral_centroid": 2204.3018,
+    "ZCR": 0.1453
+  },
+  {
+    "t": 969.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1700.4939,
+    "ZCR": 0.0999
+  },
+  {
+    "t": 970.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1704.8888,
+    "ZCR": 0.0995
+  },
+  {
+    "t": 971.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1785.3445,
+    "ZCR": 0.108
+  },
+  {
+    "t": 972.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1767.6102,
+    "ZCR": 0.0972
+  },
+  {
+    "t": 973.0,
+    "STE": 0.0,
+    "spectral_centroid": 1770.6799,
+    "ZCR": 0.095
+  },
+  {
+    "t": 974.0,
+    "STE": 0.0044,
+    "spectral_centroid": 2159.1405,
+    "ZCR": 0.1149
+  },
+  {
+    "t": 975.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1384.6572,
+    "ZCR": 0.0572
+  },
+  {
+    "t": 976.0,
+    "STE": 0.0025,
+    "spectral_centroid": 2160.075,
+    "ZCR": 0.1083
+  },
+  {
+    "t": 977.0,
+    "STE": 0.0034,
+    "spectral_centroid": 2239.7856,
+    "ZCR": 0.131
+  },
+  {
+    "t": 978.0,
+    "STE": 0.0038,
+    "spectral_centroid": 2117.8804,
+    "ZCR": 0.1147
+  },
+  {
+    "t": 979.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1757.2703,
+    "ZCR": 0.1022
+  },
+  {
+    "t": 980.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1563.3147,
+    "ZCR": 0.0828
+  },
+  {
+    "t": 981.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1244.2978,
+    "ZCR": 0.0573
+  },
+  {
+    "t": 982.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1229.1207,
+    "ZCR": 0.0445
+  },
+  {
+    "t": 983.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1090.8705,
+    "ZCR": 0.0388
+  },
+  {
+    "t": 984.0,
+    "STE": 0.0102,
+    "spectral_centroid": 1331.2747,
+    "ZCR": 0.0546
+  },
+  {
+    "t": 985.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1759.4345,
+    "ZCR": 0.0841
+  },
+  {
+    "t": 986.0,
+    "STE": 0.0004,
+    "spectral_centroid": 2174.1894,
+    "ZCR": 0.0918
+  },
+  {
+    "t": 987.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1337.8381,
+    "ZCR": 0.0549
+  },
+  {
+    "t": 988.0,
+    "STE": 0.0112,
+    "spectral_centroid": 2550.6427,
+    "ZCR": 0.1492
+  },
+  {
+    "t": 989.0,
+    "STE": 0.0005,
+    "spectral_centroid": 1593.1405,
+    "ZCR": 0.0797
+  },
+  {
+    "t": 990.0,
+    "STE": 0.0,
+    "spectral_centroid": 1674.2874,
+    "ZCR": 0.079
+  },
+  {
+    "t": 991.0,
+    "STE": 0.0028,
+    "spectral_centroid": 2191.3833,
+    "ZCR": 0.1179
+  },
+  {
+    "t": 992.0,
+    "STE": 0.0023,
+    "spectral_centroid": 2467.7406,
+    "ZCR": 0.1343
+  },
+  {
+    "t": 993.0,
+    "STE": 0.0021,
+    "spectral_centroid": 1828.7621,
+    "ZCR": 0.1076
+  },
+  {
+    "t": 994.0,
+    "STE": 0.0042,
+    "spectral_centroid": 2084.4924,
+    "ZCR": 0.1236
+  },
+  {
+    "t": 995.0,
+    "STE": 0.0042,
+    "spectral_centroid": 1605.9274,
+    "ZCR": 0.0799
+  },
+  {
+    "t": 996.0,
+    "STE": 0.0038,
+    "spectral_centroid": 1897.4868,
+    "ZCR": 0.0979
+  },
+  {
+    "t": 997.0,
+    "STE": 0.0034,
+    "spectral_centroid": 2276.1826,
+    "ZCR": 0.1362
+  },
+  {
+    "t": 998.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1732.9363,
+    "ZCR": 0.0962
+  },
+  {
+    "t": 999.0,
+    "STE": 0.0004,
+    "spectral_centroid": 1751.8443,
+    "ZCR": 0.0968
+  },
+  {
+    "t": 1000.0,
+    "STE": 0.0009,
+    "spectral_centroid": 1530.0841,
+    "ZCR": 0.0744
+  },
+  {
+    "t": 1001.0,
+    "STE": 0.0036,
+    "spectral_centroid": 2221.7977,
+    "ZCR": 0.1164
+  },
+  {
+    "t": 1002.0,
+    "STE": 0.0022,
+    "spectral_centroid": 1401.1148,
+    "ZCR": 0.0681
+  },
+  {
+    "t": 1003.0,
+    "STE": 0.0026,
+    "spectral_centroid": 2156.8971,
+    "ZCR": 0.1225
+  },
+  {
+    "t": 1004.0,
+    "STE": 0.0111,
+    "spectral_centroid": 1897.8528,
+    "ZCR": 0.0869
+  },
+  {
+    "t": 1005.0,
+    "STE": 0.0036,
+    "spectral_centroid": 1887.0713,
+    "ZCR": 0.0764
+  },
+  {
+    "t": 1006.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1550.6215,
+    "ZCR": 0.061
+  },
+  {
+    "t": 1007.0,
+    "STE": 0.0037,
+    "spectral_centroid": 2130.5861,
+    "ZCR": 0.1242
+  },
+  {
+    "t": 1008.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1424.4249,
+    "ZCR": 0.0587
+  },
+  {
+    "t": 1009.0,
+    "STE": 0.0051,
+    "spectral_centroid": 1532.9235,
+    "ZCR": 0.0709
+  },
+  {
+    "t": 1010.0,
+    "STE": 0.0023,
+    "spectral_centroid": 2110.6087,
+    "ZCR": 0.1248
+  },
+  {
+    "t": 1011.0,
+    "STE": 0.0046,
+    "spectral_centroid": 2107.4965,
+    "ZCR": 0.0995
+  },
+  {
+    "t": 1012.0,
+    "STE": 0.005,
+    "spectral_centroid": 1932.9317,
+    "ZCR": 0.1063
+  },
+  {
+    "t": 1013.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1384.6894,
+    "ZCR": 0.0577
+  },
+  {
+    "t": 1014.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1606.288,
+    "ZCR": 0.0671
+  },
+  {
+    "t": 1015.0,
+    "STE": 0.0011,
+    "spectral_centroid": 1941.8268,
+    "ZCR": 0.0907
+  },
+  {
+    "t": 1016.0,
+    "STE": 0.0001,
+    "spectral_centroid": 1718.381,
+    "ZCR": 0.0902
+  },
+  {
+    "t": 1017.0,
+    "STE": 0.0,
+    "spectral_centroid": 1676.7748,
+    "ZCR": 0.1054
+  },
+  {
+    "t": 1018.0,
+    "STE": 0.0,
+    "spectral_centroid": 1644.0725,
+    "ZCR": 0.1016
+  },
+  {
+    "t": 1019.0,
+    "STE": 0.0,
+    "spectral_centroid": 1600.3736,
+    "ZCR": 0.0897
+  },
+  {
+    "t": 1020.0,
+    "STE": 0.0013,
+    "spectral_centroid": 1469.2108,
+    "ZCR": 0.0731
+  },
+  {
+    "t": 1021.0,
+    "STE": 0.0017,
+    "spectral_centroid": 2940.0761,
+    "ZCR": 0.209
+  },
+  {
+    "t": 1022.0,
+    "STE": 0.0013,
+    "spectral_centroid": 2439.8303,
+    "ZCR": 0.1558
+  },
+  {
+    "t": 1023.0,
+    "STE": 0.0007,
+    "spectral_centroid": 1836.3159,
+    "ZCR": 0.1082
+  },
+  {
+    "t": 1024.0,
+    "STE": 0.004,
+    "spectral_centroid": 1861.157,
+    "ZCR": 0.0997
+  },
+  {
+    "t": 1025.0,
+    "STE": 0.0043,
+    "spectral_centroid": 2276.6277,
+    "ZCR": 0.1455
+  },
+  {
+    "t": 1026.0,
+    "STE": 0.0025,
+    "spectral_centroid": 1721.38,
+    "ZCR": 0.0942
+  },
+  {
+    "t": 1027.0,
+    "STE": 0.0015,
+    "spectral_centroid": 1894.4419,
+    "ZCR": 0.1085
+  },
+  {
+    "t": 1028.0,
+    "STE": 0.001,
+    "spectral_centroid": 1812.3465,
+    "ZCR": 0.101
+  },
+  {
+    "t": 1029.0,
+    "STE": 0.0006,
+    "spectral_centroid": 1788.9193,
+    "ZCR": 0.1037
+  },
+  {
+    "t": 1030.0,
+    "STE": 0.0008,
+    "spectral_centroid": 1807.3011,
+    "ZCR": 0.1001
+  },
+  {
+    "t": 1031.0,
+    "STE": 0.0024,
+    "spectral_centroid": 1921.7312,
+    "ZCR": 0.1117
+  },
+  {
+    "t": 1032.0,
+    "STE": 0.0021,
+    "spectral_centroid": 2230.5594,
+    "ZCR": 0.1425
+  },
+  {
+    "t": 1033.0,
+    "STE": 0.0023,
+    "spectral_centroid": 1975.4612,
+    "ZCR": 0.1128
+  },
+  {
+    "t": 1034.0,
+    "STE": 0.0048,
+    "spectral_centroid": 3074.5694,
+    "ZCR": 0.3366
+  },
+  {
+    "t": 1035.0,
+    "STE": 0.0313,
+    "spectral_centroid": 2037.6718,
+    "ZCR": 0.129
+  },
+  {
+    "t": 1036.0,
+    "STE": 0.0022,
+    "spectral_centroid": 750.3437,
+    "ZCR": 0.0222
+  },
+  {
+    "t": 1037.0,
+    "STE": 0.0,
+    "spectral_centroid": 1257.7037,
+    "ZCR": 0.0215
+  },
+  {
+    "t": 1038.0,
+    "STE": 0.0,
+    "spectral_centroid": 0.0,
+    "ZCR": 0.0
+  }
+]
