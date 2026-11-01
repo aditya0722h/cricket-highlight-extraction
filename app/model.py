@@ -7,10 +7,14 @@ class VideoJob(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     job_type = db.Column(db.String(50), nullable=False, default='replay') # 'replay' or 'live'
     source_path = db.Column(db.String(500), nullable=False) # File path or stream URL
+    sport = db.Column(db.String(20), nullable=False, default='cricket')
     status = db.Column(db.String(50), default='queued') # queued, processing, completed, failed
     progress = db.Column(db.Integer, nullable=False, default=0)
     progress_message = db.Column(db.String(200), nullable=True)
     error_message = db.Column(db.Text, nullable=True)
+    aspect = db.Column(db.String(20), nullable=False, default='landscape')
+    edit_style = db.Column(db.String(20), nullable=False, default='plain')
+    output_paths = db.Column(db.JSON, nullable=False, default=list)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     def to_dict(self):
@@ -18,10 +22,14 @@ class VideoJob(db.Model):
             "id": self.id,
             "job_type": self.job_type,
             "source_path": self.source_path,
+            "sport": self.sport,
             "status": self.status,
             "progress": self.progress,
             "progress_message": self.progress_message,
             "error_message": self.error_message,
+            "aspect": self.aspect,
+            "edit_style": self.edit_style,
+            "output_paths": self.output_paths or [],
             "created_at": self.created_at.isoformat()
         }
 

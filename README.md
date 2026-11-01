@@ -7,6 +7,22 @@ Here is the updated `README.md` file. It reflects your current setup, including 
 ```markdown
 # Cricket Highlight Extraction
 
+## Portrait Reframing
+
+Portrait highlight export is opt-in; the existing landscape export remains the default:
+
+```powershell
+python main.py match.mp4 --aspect portrait --resolution 720x1280 --output_dir output_highlights
+```
+
+Reframe a standalone clip and cache the frame-by-frame crop/layout plan for reuse:
+
+```powershell
+python -m visual_channel.reframe --input highlight.mp4 --output reel_portrait.mp4 --aspect portrait --resolution 1080x1920 --plan-json reframe_plan.json --event-label "SIX!" --score "Over 14.3"
+```
+
+Use `--plan-json` again to render with a saved plan. Crop analysis and rendering are separate APIs (`plan_reframe` and `render_portrait`) for integrations that need custom caching or progress reporting.
+
 B.Tech final year project — multimodal AI system that automatically detects and extracts highlight clips from cricket match footage, managed via a Flask backend and Supabase PostgreSQL database, optimized for low-VRAM hardware (target: NVIDIA RTX 2050, 4GB)[cite: 19].
 
 Due: 12th (this month)[cite: 19]

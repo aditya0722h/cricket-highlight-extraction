@@ -9,6 +9,7 @@ import os
 import re
 import cv2
 import numpy as np
+from sports.config import load_sport_config
 
 
 def extract_timestamp_from_filename(filepath):
@@ -17,8 +18,9 @@ def extract_timestamp_from_filename(filepath):
 
 
 def compute_optical_flow(
-    frames_dir="frames", output_file="visual_motion.json"
+    frames_dir="frames", output_file="visual_motion.json", sport="cricket"
 ):
+    config = load_sport_config(sport)
     # Fetch and sort strictly by actual timestamp rather than string name
     frame_paths = glob.glob(os.path.join(frames_dir, "*.jpg"))
     frame_paths.sort(key=extract_timestamp_from_filename)
@@ -37,7 +39,11 @@ def compute_optical_flow(
     prev_gray = cv2.cvtColor(prev_resized, cv2.COLOR_BGR2GRAY)
 
     first_timestamp = extract_timestamp_from_filename(frame_paths[0])
-    results.append({"t": round(first_timestamp, 2), "V_motion": 0.0})
+    results.append({
+        "t": round(first_timestamp, 2),
+        "V_motion": 0.0,
+        "motion_events": [],
+    })
 
     for i in range(1, len(frame_paths)):
         curr_frame = cv2.imread(frame_paths[i])
@@ -63,7 +69,15 @@ def compute_optical_flow(
         v_motion = float(np.mean(np.sqrt(dx**2 + dy**2)))
 
         timestamp = extract_timestamp_from_filename(frame_paths[i])
-        results.append({"t": round(timestamp, 2), "V_motion": round(v_motion, 4)})
+        results.append({
+            "t": round(timestamp, 2),
+            "V_motion": round(v_motion, 4),
+            "motion_events": [
+                event
+                for event in config["event_types"]
+                if v_motion >= config["visual_motion_thresholds"][event]
+            ],
+        })
 
         prev_gray = curr_gray
 
@@ -84,4 +98,11 @@ def compute_optical_flow(
 
 
 if __name__ == "__main__":
-    compute_optical_flow(frames_dir="frames", output_file="visual_motion.json")
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--sport", choices=("cricket", "football"), default="cricket")
+    arguments = parser.parse_args()
+    compute_optical_flow(
+        frames_dir="frames", output_file="visual_motion.json", sport=arguments.sport
+    )

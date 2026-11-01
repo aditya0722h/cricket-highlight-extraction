@@ -1,10 +1,12 @@
 .venv312/
+.venv/
 node_modules/
 .env
 .cph/
 tempCodeRunnerFile.python
 .vscode/settings.json
 frames/
+output_highlights/
 *.mp4
 __pycache__/
 *.pyc
