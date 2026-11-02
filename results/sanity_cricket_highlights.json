@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "sport": "cricket",
+  "status": "metrics_unavailable",
+  "ground_truth_file": null,
+  "ground_truth_interval_count": null,
+  "overlap_rule": {
+    "metric": "intersection over union (IoU)",
+    "minimum_iou": 0.5,
+    "matching": "maximum one-to-one interval matching",
+    "timestamp_labels": "each positive row covers [t, t + 1) seconds"
+  },
+  "prediction_settings": {
+    "top_k": 3,
+    "window_sec": 6.0,
+    "weights": {
+      "audio_only": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "speech_only": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_only": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "full_fusion": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    }
+  },
+  "channel_files": {
+    "visual": "data\\processed\\cricket_official_highlights\\visual_output.json",
+    "audio": "data\\processed\\cricket_official_highlights\\audio_output.json",
+    "speech": "data\\processed\\cricket_official_highlights\\speech_output.json"
+  },
+  "variants": {
+    "audio_only": {
+      "status": "metrics_unavailable",
+      "predicted_highlights": [
+        [
+          52.0,
+          58.0
+        ],
+        [
+          92.0,
+          98.0
+        ],
+        [
+          800.0,
+          806.0
+        ]
+      ],
+      "metrics": null,
+      "reason": "Ground truth was not supplied; predictions are not metrics."
+    },
+    "speech_only": {
+      "status": "metrics_unavailable",
+      "predicted_highlights": [
+        [
+          27.0,
+          33.0
+        ],
+        [
+          244.0,
+          250.0
+        ],
+        [
+          677.0,
+          683.0
+        ]
+      ],
+      "metrics": null,
+      "reason": "Ground truth was not supplied; predictions are not metrics."
+    },
+    "visual_only": {
+      "status": "metrics_unavailable",
+      "predicted_highlights": [
+        [
+          535.0,
+          541.0
+        ],
+        [
+          566.0,
+          572.0
+        ],
+        [
+          718.0,
+          724.0
+        ]
+      ],
+      "metrics": null,
+      "reason": "Ground truth was not supplied; predictions are not metrics."
+    },
+    "full_fusion": {
+      "status": "metrics_unavailable",
+      "predicted_highlights": [
+        [
+          27.0,
+          33.0
+        ],
+        [
+          94.0,
+          100.0
+        ],
+        [
+          677.0,
+          683.0
+        ]
+      ],
+      "metrics": null,
+      "reason": "Ground truth was not supplied; predictions are not metrics."
+    }
+  },
+  "sanity_check": {
+    "video": "cricket_official_highlights.mp4",
+    "duration_seconds": 885.121,
+    "fusion_window_count": 3,
+    "fusion_windows": [
+      [
+        27.0,
+        33.0
+      ],
+      [
+        94.0,
+        100.0
+      ],
+      [
+        677.0,
+        683.0
+      ]
+    ],
+    "flagged_seconds": 18.0,
+    "flagged_fraction": 0.02033619225888584,
+    "flagged_percent": 2.034,
+    "interpretation": "sanity check on an official highlight reel only; not an accuracy metric"
+  }
+}

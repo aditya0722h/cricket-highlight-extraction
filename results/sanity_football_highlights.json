@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "sport": "football",
+  "status": "metrics_unavailable",
+  "ground_truth_file": null,
+  "ground_truth_interval_count": null,
+  "overlap_rule": {
+    "metric": "intersection over union (IoU)",
+    "minimum_iou": 0.5,
+    "matching": "maximum one-to-one interval matching",
+    "timestamp_labels": "each positive row covers [t, t + 1) seconds"
+  },
+  "prediction_settings": {
+    "top_k": 3,
+    "window_sec": 6.0,
+    "weights": {
+      "audio_only": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "speech_only": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_only": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "full_fusion": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    }
+  },
+  "channel_files": {
+    "visual": "data\\processed\\football_official_highlights\\visual_output.json",
+    "audio": "data\\processed\\football_official_highlights\\audio_output.json",
+    "speech": "data\\processed\\football_official_highlights\\speech_output.json"
+  },
+  "variants": {
+    "audio_only": {
+      "status": "metrics_unavailable",
+      "predicted_highlights": [
+        [
+          185.0,
+          191.0
+        ],
+        [
+          384.0,
+          390.0
+        ],
+        [
+          547.0,
+          553.0
+        ]
+      ],
+      "metrics": null,
+      "reason": "Ground truth was not supplied; predictions are not metrics."
+    },
+    "speech_only": {
+      "status": "metrics_unavailable",
+      "predicted_highlights": [
+        [
+          42.0,
+          48.0
+        ],
+        [
+          239.0,
+          245.0
+        ],
+        [
+          402.0,
+          408.0
+        ]
+      ],
+      "metrics": null,
+      "reason": "Ground truth was not supplied; predictions are not metrics."
+    },
+    "visual_only": {
+      "status": "metrics_unavailable",
+      "predicted_highlights": [
+        [
+          21.0,
+          27.0
+        ],
+        [
+          223.0,
+          229.0
+        ],
+        [
+          708.0,
+          714.0
+        ]
+      ],
+      "metrics": null,
+      "reason": "Ground truth was not supplied; predictions are not metrics."
+    },
+    "full_fusion": {
+      "status": "metrics_unavailable",
+      "predicted_highlights": [
+        [
+          183.0,
+          189.0
+        ],
+        [
+          385.0,
+          391.0
+        ],
+        [
+          546.0,
+          552.0
+        ]
+      ],
+      "metrics": null,
+      "reason": "Ground truth was not supplied; predictions are not metrics."
+    }
+  },
+  "sanity_check": {
+    "video": "football_official_highlights.mp4",
+    "duration_seconds": 716.0,
+    "fusion_window_count": 3,
+    "fusion_windows": [
+      [183.0, 189.0],
+      [385.0, 391.0],
+      [546.0, 552.0]
+    ],
+    "flagged_seconds": 18.0,
+    "flagged_fraction": 0.025139664804469275,
+    "flagged_percent": 2.514,
+    "interpretation": "sanity check on an official highlight reel only; not an accuracy metric"
+  }
+}
