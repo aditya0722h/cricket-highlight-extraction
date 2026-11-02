@@ -35,11 +35,14 @@ def extract_frames(video_path, output_dir, target_fps=1):
     frame_idx = 0
     saved_count = 0
 
-    while True:
-        ret, frame = cap.read()
-        if not ret:
-            break
+    while cap.grab():
         if frame_idx % frame_interval == 0:
+            ret, frame = cap.retrieve()
+            if not ret:
+                cap.release()
+                raise RuntimeError(
+                    f"Could not retrieve sampled frame {frame_idx} from '{video_path}'."
+                )
             timestamp_sec = round(frame_idx / native_fps, 2)
             filename = f"frame_{saved_count:05d}_t{timestamp_sec:.2f}.jpg"
             filepath = os.path.join(output_dir, filename)

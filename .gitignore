@@ -18,6 +18,7 @@ dist/
 *.key
 
 # Large media and model artifacts
+data/
 *.mp4
 *.mkv
 *.mov

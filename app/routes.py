@@ -119,11 +119,16 @@ def run_pipeline_task(app_context, job_id, script_name, target_path, output_dir=
         db.session.commit()
 
 def run_training_task(app_context, log_id, match_name, ground_truth_path):
-    """Background worker for fine-tuning model weights using training_weights.py."""
+    """Run the legacy motion-threshold adjustment from a single label file."""
     with app_context:
         log_entry = TrainingLog.query.get(log_id)
         try:
-            cmd = [sys.executable, "training_weights.py", "--gt_path", ground_truth_path]
+            cmd = [
+                sys.executable,
+                "adjust_motion_threshold.py",
+                "--gt_path",
+                ground_truth_path,
+            ]
             result = subprocess.run(cmd, capture_output=True, text=True)
 
             if result.returncode != 0:
@@ -180,7 +185,7 @@ def start_replay():
 
 @main_bp.route('/api/model/train', methods=['POST'])
 def train_model():
-    """Phase 2: Train model parameters using ground-truth highlights."""
+    """Legacy endpoint that adjusts the motion threshold from one label file."""
     data = request.get_json()
     if not data or 'match_name' not in data or 'ground_truth_path' not in data:
         return jsonify({"error": "Missing 'match_name' or 'ground_truth_path' in JSON body"}), 400
@@ -196,7 +201,10 @@ def train_model():
     thread = threading.Thread(target=run_training_task, args=(app_context, log_entry.id, match_name, gt_path))
     thread.start()
 
-    return jsonify({"message": "Model training started in background.", "training_log": log_entry.to_dict()}), 201
+    return jsonify({
+        "message": "Legacy motion-threshold adjustment started in background.",
+        "training_log": log_entry.to_dict(),
+    }), 201
 
 
 @main_bp.route('/api/jobs/live', methods=['POST'])
