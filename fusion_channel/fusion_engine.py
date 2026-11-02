@@ -133,6 +133,21 @@ def extract_highlight_windows(
     return selected_windows
 
 
+def next_available_path(path):
+    """Return path if unused, or append an incrementing suffix before its extension."""
+    if not os.path.exists(path):
+        return path
+
+    directory, filename = os.path.split(path)
+    stem, extension = os.path.splitext(filename)
+    suffix = 2
+    while True:
+        candidate = os.path.join(directory, f"{stem}_{suffix}{extension}")
+        if not os.path.exists(candidate):
+            return candidate
+        suffix += 1
+
+
 def render_highlights_ffmpeg(
     video_path, windows, output_dir="output_highlights"
 ):
@@ -142,12 +157,12 @@ def render_highlights_ffmpeg(
 
     for idx, (start_t, end_t) in enumerate(windows, 1):
         duration = end_t - start_t
-        out_path = os.path.join(output_dir, f"highlight_{idx:02d}.mp4")
+        requested_path = os.path.join(output_dir, f"highlight_{idx:02d}.mp4")
+        out_path = next_available_path(requested_path)
 
-        # High-speed stream copy command without re-encoding
         cmd = [
             "ffmpeg",
-            "-y",
+            "-n",
             "-ss",
             str(start_t),
             "-i",
@@ -167,8 +182,10 @@ def render_highlights_ffmpeg(
             )
             exported_files.append(out_path)
             print(f"  Rendered clip {idx}: {start_t}s - {end_t}s -> {out_path}")
-        except Exception as e:
-            print(f"  FFmpeg rendering failed for clip {idx}: {e}")
+        except (FileNotFoundError, subprocess.CalledProcessError) as error:
+            raise RuntimeError(
+                f"FFmpeg failed to render clip {idx} to {out_path}."
+            ) from error
 
     return exported_files
 
@@ -203,8 +220,22 @@ def run_fusion_pipeline(
 
     # Save metadata JSON deliverable
     metadata = {"source_video": source_video, "highlights": windows}
-    with open(out_json, "w") as f:
-        json.dump(metadata, f, indent=2)
+    os.makedirs(os.path.dirname(os.path.abspath(out_json)), exist_ok=True)
+    requested_json_path = out_json
+    suffix = 1
+    while True:
+        actual_json_path = (
+            requested_json_path
+            if suffix == 1
+            else next_available_path(requested_json_path)
+        )
+        try:
+            with open(actual_json_path, "x", encoding="utf-8") as file:
+                json.dump(metadata, file, indent=2)
+            break
+        except FileExistsError:
+            suffix += 1
+    print(f"Saved fusion metadata: {actual_json_path}")
 
     # Step 4: Render clips to disk
     if os.path.exists(source_video):

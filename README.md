@@ -104,7 +104,17 @@ FFmpeg must be installed and available on `PATH`. To run channels and record per
 python benchmark_channels.py --video data\videos\match.mp4 --output-dir data\processed\match --model-size small
 ```
 
-The benchmark reuses valid existing channel outputs; use `--force` to recompute. To evaluate ablations against interval labels (`[[start, end], ...]`):
+The benchmark reuses valid existing channel outputs; use `--force` to recompute. To generate selected clips from the cricket channel outputs:
+
+```powershell
+python -c "from fusion_channel.fusion_engine import run_fusion_pipeline; run_fusion_pipeline(source_video=r'data\videos\cricket_full_match.mp4', vis_file=r'data\processed\cricket_full_match\visual_output.json', aud_file=r'data\processed\cricket_full_match\audio_output.json', speech_file=r'data\processed\cricket_full_match\speech_output.json', out_json=r'results\cricket_match_1_selected.json', top_k=3, window_sec=6.0)"
+```
+
+This prints the selected time ranges, writes them to `results\cricket_match_1_selected.json`, and renders MP4 clips under `output_highlights\` (`highlight_01.mp4`, etc.). It uses the default hand-set fusion weights `(0.4, 0.4, 0.2)`. If those output names already exist, new files get an incrementing suffix (for example, `highlight_01_2.mp4` and `cricket_match_1_selected_2.json`); existing files are preserved. FFmpeg refuses to overwrite an existing clip. Stream-copy trimming can make clip boundaries approximate, so inspect clips before presenting them. These are ranked model selections, not verified highlights.
+
+For football, use `data\videos\football_full_match.mp4`, the corresponding three JSON files under `data\processed\football_full_match\`, and an output JSON path such as `results\football_match_1_selected.json`. This runs the generic pipeline, not football-specific event detection.
+
+To evaluate ablations against interval labels (`[[start, end], ...]`):
 
 ```powershell
 python evaluate.py --sport cricket `
