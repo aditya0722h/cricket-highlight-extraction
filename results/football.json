@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "sport": "football",
+  "status": "metrics_unavailable",
+  "ground_truth_file": null,
+  "ground_truth_interval_count": null,
+  "overlap_rule": {
+    "metric": "intersection over union (IoU)",
+    "minimum_iou": 0.5,
+    "matching": "maximum one-to-one interval matching",
+    "timestamp_labels": "each positive row covers [t, t + 1) seconds"
+  },
+  "prediction_settings": {
+    "top_k": 3,
+    "window_sec": 6.0,
+    "weights": {
+      "audio_only": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "speech_only": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "visual_only": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "full_fusion": [
+        0.4,
+        0.4,
+        0.2
+      ]
+    }
+  },
+  "channel_files": {
+    "visual": null,
+    "audio": null,
+    "speech": null
+  },
+  "variants": {
+    "audio_only": {
+      "status": "unavailable",
+      "reason": "audio: No channel input file was supplied.",
+      "predicted_highlights": null,
+      "metrics": null
+    },
+    "speech_only": {
+      "status": "unavailable",
+      "reason": "speech: No channel input file was supplied.",
+      "predicted_highlights": null,
+      "metrics": null
+    },
+    "visual_only": {
+      "status": "unavailable",
+      "reason": "visual: No channel input file was supplied.",
+      "predicted_highlights": null,
+      "metrics": null
+    },
+    "full_fusion": {
+      "status": "unavailable",
+      "reason": "visual: No channel input file was supplied.; audio: No channel input file was supplied.; speech: No channel input file was supplied.",
+      "predicted_highlights": null,
+      "metrics": null
+    }
+  }
+}

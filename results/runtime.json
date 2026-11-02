@@ -1,0 +1,26 @@
+{
+  "measurement": "synthetic integration-test wall-clock time",
+  "run_count": 1,
+  "command": "python test_pipeline.py",
+  "execution_context": "isolated temporary copy of the project",
+  "video_duration_seconds": 10.0,
+  "elapsed_seconds": 18.5,
+  "elapsed_seconds_per_video_minute": 111.0,
+  "includes": [
+    "synthetic video creation",
+    "Python and model startup",
+    "MobileNetV3 visual feature extraction",
+    "Farneback optical-flow extraction",
+    "mock audio and speech feature setup",
+    "fusion and highlight clip export"
+  ],
+  "interpretation": "One synthetic smoke-test run only; not a representative real-match throughput benchmark.",
+  "hardware_and_software": {
+    "operating_system": "Windows 11",
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "cuda_available": true,
+    "python": "3.14.3",
+    "pytorch": "2.14.1+cu130",
+    "opencv": "5.0.0"
+  }
+}
