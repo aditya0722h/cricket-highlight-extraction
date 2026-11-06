@@ -1,0 +1,55 @@
+{
+  "sport": "cricket",
+  "input_video": "cricket_official_highlights.mp4",
+  "source_kind": "official highlights reel",
+  "source_license_status": "publicly available on YouTube; rights not owned; removal on request",
+  "input_duration_seconds": 885.12,
+  "output_duration_seconds": 18.0,
+  "method": {
+    "weights": {
+      "visual": 0.4,
+      "audio": 0.4,
+      "speech": 0.2
+    },
+    "top_k": 3,
+    "window_seconds": 6.0
+  },
+  "highlights": [
+    {
+      "start_seconds": 27.0,
+      "end_seconds": 33.0,
+      "duration_seconds": 6.0,
+      "mean_fused_score": 0.4884,
+      "mean_channel_scores": {
+        "V": 0.5791,
+        "A": 0.2275,
+        "S": 0.8289
+      },
+      "clip": "cricket-moment-01.mp4"
+    },
+    {
+      "start_seconds": 94.0,
+      "end_seconds": 100.0,
+      "duration_seconds": 6.0,
+      "mean_fused_score": 0.5071,
+      "mean_channel_scores": {
+        "V": 0.5658,
+        "A": 0.4739,
+        "S": 0.4563
+      },
+      "clip": "cricket-moment-02.mp4"
+    },
+    {
+      "start_seconds": 677.0,
+      "end_seconds": 683.0,
+      "duration_seconds": 6.0,
+      "mean_fused_score": 0.458,
+      "mean_channel_scores": {
+        "V": 0.5614,
+        "A": 0.1668,
+        "S": 0.8338
+      },
+      "clip": "cricket-moment-03.mp4"
+    }
+  ]
+}

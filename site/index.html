@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AutoHighlight is a multimodal sports highlight extraction research prototype for cricket and football video.">
+    <title>AutoHighlight — Arindam | Sports highlight extraction</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="AutoHighlight home">
+        <span class="wordmark-icon" aria-hidden="true">A</span>
+        <span>AutoHighlight</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#demo">Demo</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#results">Results</a>
+        <a href="#run">Run it</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+        <span aria-hidden="true">◐</span>
+        <span id="theme-label">Dark mode</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Multimodal sports video · research prototype</p>
+          <h1>Find the moments<br>worth watching.</h1>
+          <p class="built-by">Built by Arindam</p>
+          <p class="hero-lede">AutoHighlight ranks short cricket and football video moments by combining visual motion, audio energy, and commentary cues.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/aditya0722h/cricket-highlight-extraction" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://drive.google.com/file/d/1WCA5cShFrJUcbjL8AA2530AWcb_fWMjN/view?usp=drive_link" target="_blank" rel="noopener">Report (PDF) <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Three signal streams combine into selected moments">
+          <div class="signal-card signal-visual">
+            <span class="signal-icon" aria-hidden="true">▥</span>
+            <span>Visual motion</span>
+            <span class="signal-line"></span>
+          </div>
+          <div class="signal-card signal-audio">
+            <span class="signal-icon" aria-hidden="true">⌁</span>
+            <span>Audio energy</span>
+            <span class="signal-line"></span>
+          </div>
+          <div class="signal-card signal-speech">
+            <span class="signal-icon" aria-hidden="true">“</span>
+            <span>Commentary</span>
+            <span class="signal-line"></span>
+          </div>
+          <div class="signal-output">
+            <span class="output-mark" aria-hidden="true">✦</span>
+            <span>Ranked moments</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrap section-block" id="demo">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / Primary demo</p>
+            <h2>Selected from full-match footage</h2>
+          </div>
+        </div>
+        <div class="demo-layout">
+          <div class="video-card">
+            <video id="demo-video" src="assets/cricket-full-match-demo.mp4" controls playsinline preload="metadata" aria-label="AutoHighlight selected moments from a cricket full-match segment"></video>
+            <div class="video-caption">
+              <span class="caption-dot" aria-hidden="true"></span>
+              <a id="video-caption" href="#source-footage-notice">Selected moments from cricket_full_match.mp4 (00:15:00–00:30:00 segment). Source footage rights/license not verified; no ownership is claimed.</a>
+            </div>
+          </div>
+          <aside class="match-card" aria-live="polite">
+            <p class="eyebrow">Input match</p>
+            <h3 id="match-title">Cricket full-match segment</h3>
+            <p class="match-source" id="match-source">cricket_full_match.mp4 · segment starts at 00:15:00</p>
+            <div class="duration-comparison">
+              <div>
+                <span class="stat-label">Input video</span>
+                <strong id="input-duration">—</strong>
+              </div>
+              <span class="duration-arrow" aria-hidden="true">→</span>
+              <div>
+                <span class="stat-label">Selected output</span>
+                <strong id="output-duration">—</strong>
+              </div>
+            </div>
+            <p class="match-note">Selected using cached channel features from this full match. The score is a ranking value, not a probability. The source footage license has not been verified.</p>
+            <p class="match-note">The 15:00–30:00 segment was chosen because it yielded three full six-second windows, not for highlight quality.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-wrap section-block" id="secondary-examples">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Secondary examples</p>
+            <h2>Selections from official highlight reels</h2>
+          </div>
+          <p class="section-aside">These are secondary sanity-check demos, not full-match evaluations.</p>
+        </div>
+        <div class="secondary-video-grid">
+          <figure class="video-card">
+            <video src="assets/cricket-highlights.mp4" controls playsinline preload="metadata" aria-label="Secondary cricket official highlights reel example"></video>
+            <figcaption class="video-caption">Cricket · input: cricket_official_highlights.mp4. <a href="#source-footage-notice">Source footage notice</a>.</figcaption>
+          </figure>
+          <figure class="video-card">
+            <video src="assets/football-highlights.mp4" controls playsinline preload="metadata" aria-label="Secondary football official highlights reel example"></video>
+            <figcaption class="video-caption">Football · input: football_official_highlights.mp4. <a href="#source-footage-notice">Source footage notice</a>.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-wrap source-notice" id="source-footage-notice" aria-labelledby="source-footage-title">
+        <h2 id="source-footage-title">Source footage notice</h2>
+        <p>The full-match demo clips on this page were taken from a match video that was publicly available on YouTube. I do not own the rights to this footage, and its use here is only a short, non-commercial demonstration of a student research project. All rights remain with the original broadcaster and rights holders, and no endorsement by them is implied.</p>
+        <p>This evaluation uses automatically generated pseudo-labels. Once human annotation is available, future versions of this project will not use matches from copyrighted sources. They will use only openly licensed footage, footage I record myself, or footage I have permission to use.</p>
+        <p>If you are a rights holder and want any clip removed, email arindam5277acsc@gmail.com and I will take it down promptly.</p>
+      </section>
+
+      <section class="section-wrap section-block two-column" id="approach">
+        <div>
+          <p class="eyebrow">02 / The idea</p>
+          <h2>Highlights are a signal-fusion problem.</h2>
+        </div>
+        <div class="body-copy">
+          <p>Long matches contain far more footage than most viewers want to revisit, while meaningful moments can appear as motion, crowd/audio changes, or excited commentary. AutoHighlight samples these signals independently and aligns their timestamped features. A weighted fusion score ranks short, separated windows for review or export. The current system is a research prototype: cricket-oriented speech keywords are used for both sports, and the football path is not a football-event detector.</p>
+        </div>
+      </section>
+
+      <section class="section-wrap section-block" id="pipeline">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / Under the hood</p>
+            <h2>Three channels, one ranked reel.</h2>
+          </div>
+          <p class="section-aside">The diagram follows the modular offline fusion path in the repository.</p>
+        </div>
+        <div class="diagram-frame">
+          <svg class="pipeline-svg" viewBox="0 0 1050 354" role="img" aria-labelledby="pipeline-title pipeline-description">
+            <title id="pipeline-title">AutoHighlight multimodal pipeline</title>
+            <desc id="pipeline-description">Video input branches into visual, audio, and speech feature channels. Timestamp-aligned features are normalized and fused, then top-scoring non-overlapping windows are exported as MP4 clips.</desc>
+            <defs>
+              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
+              </marker>
+            </defs>
+            <g class="diagram-lines" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)">
+              <path d="M145 177 H190 V68 H222"></path>
+              <path d="M190 177 H222"></path>
+              <path d="M190 177 V286 H222"></path>
+              <path d="M425 68 H468 V177 H500"></path>
+              <path d="M425 177 H500"></path>
+              <path d="M425 286 H468 V177 H500"></path>
+              <path d="M690 177 H745"></path>
+              <path d="M900 177 H938"></path>
+            </g>
+            <g class="diagram-node input-node">
+              <rect x="20" y="139" width="125" height="76" rx="14"></rect>
+              <text x="82" y="171" text-anchor="middle" class="node-title">Input video</text>
+              <text x="82" y="193" text-anchor="middle" class="node-subtitle">MP4 / match reel</text>
+            </g>
+            <g class="diagram-node visual-node">
+              <rect x="222" y="30" width="203" height="76" rx="14"></rect>
+              <text x="323" y="61" text-anchor="middle" class="node-title">Visual channel</text>
+              <text x="323" y="84" text-anchor="middle" class="node-subtitle">OpenCV · MobileNet · flow</text>
+            </g>
+            <g class="diagram-node audio-node">
+              <rect x="222" y="139" width="203" height="76" rx="14"></rect>
+              <text x="323" y="170" text-anchor="middle" class="node-title">Audio channel</text>
+              <text x="323" y="193" text-anchor="middle" class="node-subtitle">FFmpeg · librosa features</text>
+            </g>
+            <g class="diagram-node speech-node">
+              <rect x="222" y="248" width="203" height="76" rx="14"></rect>
+              <text x="323" y="279" text-anchor="middle" class="node-title">Speech channel</text>
+              <text x="323" y="302" text-anchor="middle" class="node-subtitle">Whisper · VADER · keywords</text>
+            </g>
+            <g class="diagram-node fusion-node">
+              <rect x="500" y="139" width="190" height="76" rx="14"></rect>
+              <text x="595" y="170" text-anchor="middle" class="node-title">Align + fuse</text>
+              <text x="595" y="193" text-anchor="middle" class="node-subtitle">Normalize · weighted score</text>
+            </g>
+            <g class="diagram-node select-node">
+              <rect x="745" y="139" width="155" height="76" rx="14"></rect>
+              <text x="822" y="170" text-anchor="middle" class="node-title">Select windows</text>
+              <text x="822" y="193" text-anchor="middle" class="node-subtitle">Top-k · non-overlap</text>
+            </g>
+            <g class="diagram-node output-node">
+              <rect x="938" y="139" width="102" height="76" rx="14"></rect>
+              <text x="989" y="170" text-anchor="middle" class="node-title">MP4</text>
+              <text x="989" y="193" text-anchor="middle" class="node-subtitle">FFmpeg</text>
+            </g>
+          </svg>
+        </div>
+        <div class="pipeline-footnote"><span class="mini-tag">Important distinction</span> Visual embeddings support pseudo-label generation; fusion consumes the motion feature. The Flask job worker calls a separate motion-only detector, not this standalone multimodal path.</div>
+      </section>
+
+      <section class="section-wrap section-block" id="output-details">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 / Inspect a selection</p>
+            <h2>Where did the model look?</h2>
+          </div>
+          <p class="section-aside" id="score-description">Mean fused ranking score per selected window. Not a calibrated confidence.</p>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <span>Start of input</span>
+            <span id="timeline-duration">End of input</span>
+          </div>
+          <div class="timeline-track" id="timeline" role="img" aria-label="Timeline of selected moments"></div>
+          <div class="timeline-scale"><span>0:00</span><span>Selected intervals</span><span id="timeline-end-label">—</span></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">Moment</th><th scope="col">In</th><th scope="col">Out</th><th scope="col">Length</th><th scope="col">Mean score</th></tr>
+            </thead>
+            <tbody id="highlights-table">
+              <tr><td colspan="5" class="empty-state">Loading actual model output…</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="data-source-note" id="data-source-note">Output timestamps and scores are loaded from the JSON files in <code>site/assets/</code>.</p>
+      </section>
+
+      <section class="section-wrap section-block" id="results">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">05 / What has been measured</p>
+            <h2>Evaluation, with the caveat up front.</h2>
+          </div>
+          <p class="section-aside">Full fusion · interval IoU ≥ 0.5 · one-to-one matching · at most 3 predicted 6-second windows.</p>
+        </div>
+        <div class="notice">
+          <span class="notice-icon" aria-hidden="true">i</span>
+          <p>These scores use automatically generated visual-similarity pseudo-labels, not human annotations. They are weak labels and are not verified highlight accuracy.</p>
+        </div>
+        <div class="table-wrap results-table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">Video</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cricket match 1</td><td>0.0000</td><td>0.0000</td><td>0.0000</td></tr>
+              <tr><td>Cricket match 2</td><td>0.3333</td><td>0.0149</td><td>0.0286</td></tr>
+              <tr><td>Football match 1</td><td>0.3333</td><td>0.0164</td><td>0.0313</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="plain-explanation">The evaluation selects at most three six-second windows, while each video has 61–68 pseudo-label intervals, which limits recall. The pseudo-labels come from matching visual embeddings against official highlight reels, so edits, transitions, replays, and unmatched scenes can make the labels noisy. Matches were not manually verified, so some apparent errors may be label errors. The current ranking setup and weights can also miss moments present in the pseudo-labels.</p>
+        <h3 class="subsection-title">Per-channel ablation · Cricket match 1</h3>
+        <p class="data-source-note">Run <code>python run_ablation.py</code> to generate results. This table uses the same pseudo-label interval evaluation and settings as the repository report.</p>
+        <div class="table-wrap results-table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">Variant</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th></tr>
+            </thead>
+            <tbody id="ablation-table">
+              <tr><td colspan="4" class="empty-state">Ablation results not loaded yet.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="subsection-title">Hit-rate by selection budget · Cricket match 1</h3>
+        <p class="data-source-note">Hit-rate is the fraction of selected windows with any positive-duration overlap with a pseudo-label interval. Precision, recall, and F1 use the repository's IoU ≥ 0.5 one-to-one matching rule.</p>
+        <div class="table-wrap results-table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">Top-k windows</th><th scope="col">Visual only</th><th scope="col">Audio only</th><th scope="col">Speech only</th><th scope="col">Fused</th></tr>
+            </thead>
+            <tbody id="hit-rate-table">
+              <tr><td colspan="5" class="empty-state">Run python run_ablation_k.py to calculate hit-rate vs k.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="plain-explanation" id="hit-rate-summary">Hit-rate results load from results/ablation_k.json after running the k-budget ablation.</p>
+        <p class="source-link">Source: <a href="https://github.com/aditya0722h/cricket-highlight-extraction/blob/final-evaluation/docs/results.md" target="_blank" rel="noopener">docs/results.md</a> and the machine-readable evaluation JSON files.</p>
+      </section>
+
+      <section class="section-wrap section-block" id="limitations">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">06 / Limitations &amp; next steps</p>
+            <h2>What the results say—and what to do next.</h2>
+          </div>
+        </div>
+        <p class="implementation-note"><strong>What’s implemented:</strong> The Flask worker uses a separate motion-only detector and is not connected to the multimodal fusion pipeline.</p>
+        <h3 class="subsection-title">Next steps</h3>
+        <ol class="next-steps">
+          <li>Create and manually review a human-labeled subset of match footage.</li>
+          <li>Tune fusion weights using match-level held-out validation rather than the current pseudo-label split alone.</li>
+          <li>Run and compare visual-only, audio-only, speech-only, and fused ablations against the same labels.</li>
+        </ol>
+      </section>
+
+      <section class="section-wrap section-block">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">07 / Built with</p>
+            <h2>Tools behind the prototype.</h2>
+          </div>
+        </div>
+        <div class="tag-list" aria-label="Technology stack">
+          <span>Python</span><span>OpenCV</span><span>PyTorch</span><span>MobileNetV3-Small</span><span>NumPy</span><span>pandas</span><span>librosa</span><span>FFmpeg</span><span>faster-whisper</span><span>NLTK / VADER</span><span>Flask</span><span>SQLAlchemy</span><span>React</span><span>Vite</span><span>Tailwind CSS</span>
+        </div>
+      </section>
+
+      <section class="section-wrap section-block" id="learning">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">08 / Engineering notes</p>
+            <h2>Challenges &amp; what the code taught us.</h2>
+          </div>
+        </div>
+        <div class="learning-grid">
+          <article class="learning-card">
+            <span class="card-index">01</span>
+            <h3>Long-video memory is part of the design.</h3>
+            <p>The speech channel uses a memory-mapped audio buffer and bounded feature batches; audio features are aggregated in chunks. Processing strategy matters as much as the model choice on long match footage.</p>
+          </article>
+          <article class="learning-card">
+            <span class="card-index">02</span>
+            <h3>One repo can contain distinct pipelines.</h3>
+            <p>The multimodal fusion engine is an offline path, while the Flask worker calls a motion-only detector. Keeping that boundary explicit prevents the demo from implying the application already runs full fusion.</p>
+          </article>
+          <article class="learning-card">
+            <span class="card-index">03</span>
+            <h3>Generated evidence should not be overwritten.</h3>
+            <p>The fusion exporter allocates incremented filenames when outputs already exist, with a regression test for preservation. Reproducible experiments need to retain previous clips and metadata.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-wrap section-block two-column future-section">
+        <div>
+          <p class="eyebrow">09 / Next experiments</p>
+          <h2>Make the evaluation stronger.</h2>
+        </div>
+        <ul class="future-list">
+          <li>Collect and manually verify event annotations across more complete matches.</li>
+          <li>Evaluate on multiple held-out matches instead of relying on one cricket split.</li>
+          <li>Add football-specific features and vocabulary, then validate them on labeled football matches.</li>
+          <li>Connect multimodal fusion to the Flask job path and test the end-to-end app.</li>
+        </ul>
+      </section>
+
+      <section class="section-wrap section-block run-section" id="run">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">10 / Reproduce it</p>
+            <h2>Run the pipeline locally.</h2>
+          </div>
+          <p class="section-aside">Run from the repository root. FFmpeg must be on PATH; channel outputs and sample videos are local data.</p>
+        </div>
+        <div class="run-step">
+          <div class="run-step-heading"><span>01</span><h3>Set up the Python environment</h3></div>
+          <div class="code-block">
+            <button class="copy-button" type="button" data-copy="setup-command">Copy</button>
+            <pre id="setup-command"><code>python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt</code></pre>
+          </div>
+        </div>
+        <div class="run-step">
+          <div class="run-step-heading"><span>02</span><h3>Extract timestamped features</h3></div>
+          <div class="code-block">
+            <button class="copy-button" type="button" data-copy="benchmark-command">Copy</button>
+            <pre id="benchmark-command"><code>python benchmark_channels.py --video data\videos\cricket_full_match.mp4 --output-dir data\processed\cricket_full_match --model-size small
+python benchmark_channels.py --video data\videos\football_full_match.mp4 --output-dir data\processed\football_full_match --model-size small</code></pre>
+          </div>
+          <p class="run-note">The benchmark reuses valid existing channel outputs. Add <code>--force</code> to recompute them.</p>
+        </div>
+        <div class="run-step">
+          <div class="run-step-heading"><span>03</span><h3>Rank windows and render clips</h3></div>
+          <div class="code-block">
+            <button class="copy-button" type="button" data-copy="fusion-command">Copy</button>
+            <pre id="fusion-command"><code>python -c "from fusion_channel.fusion_engine import run_fusion_pipeline; run_fusion_pipeline(source_video=r'data\videos\cricket_full_match.mp4', vis_file=r'data\processed\cricket_full_match\visual_output.json', aud_file=r'data\processed\cricket_full_match\audio_output.json', speech_file=r'data\processed\cricket_full_match\speech_output.json', out_json=r'results\cricket_site_demo.json', top_k=3, window_sec=6.0)"
+python -c "from fusion_channel.fusion_engine import run_fusion_pipeline; run_fusion_pipeline(source_video=r'data\videos\football_full_match.mp4', vis_file=r'data\processed\football_full_match\visual_output.json', aud_file=r'data\processed\football_full_match\audio_output.json', speech_file=r'data\processed\football_full_match\speech_output.json', out_json=r'results\football_site_demo.json', top_k=3, window_sec=6.0)"</code></pre>
+          </div>
+          <p class="run-note">Default weights are (0.4, 0.4, 0.2). Football uses the same generic pipeline, not football-specific event detection. Stream-copy clip boundaries may be approximate.</p>
+        </div>
+      </section>
+
+      <section class="section-wrap contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Let’s connect</p>
+          <h2>Built to make long matches easier to review.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:arindam5277acsc@gmail.com">arindam5277acsc@gmail.com</a>
+          <a href="https://github.com/aditya0722h/cricket-highlight-extraction" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="#top"><span class="wordmark-icon" aria-hidden="true">A</span><span>AutoHighlight · Arindam</span></a>
+      <span>Research prototype · model selections are not verified annotations</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
