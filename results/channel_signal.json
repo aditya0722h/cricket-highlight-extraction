@@ -1,0 +1,403 @@
+{
+  "run": {
+    "date": "2026-11-22T13:38:57.408392+05:30",
+    "git_commit": "822c708f67b8e11562f9649aed52dad9e3d26af2"
+  },
+  "binning": "one-second bins; missing channel values are zero",
+  "label_sets": {
+    "human_verified": {
+      "cricket_match_1": {
+        "description": "human-verified, 20 intervals, single labeler",
+        "metrics": {
+          "visual": {
+            "roc_auc": 0.4784550623223267,
+            "average_precision": 0.0202141792721965,
+            "mean_positive_percentile": 0.4789653722036604
+          },
+          "audio": {
+            "roc_auc": 0.6576420778968342,
+            "average_precision": 0.05963047685597668,
+            "mean_positive_percentile": 0.6458659087776663
+          },
+          "speech": {
+            "roc_auc": 0.49381605802172185,
+            "average_precision": 0.025156741553690604,
+            "mean_positive_percentile": 0.41653250336249875
+          },
+          "current_fused": {
+            "roc_auc": 0.4902067084578565,
+            "average_precision": 0.020754708434454188,
+            "mean_positive_percentile": 0.4895450646122552
+          }
+        },
+        "top_ten_six_second_windows": {
+          "visual": [
+            {
+              "match": "cricket_match_1",
+              "start": 9004,
+              "end": 9010,
+              "score": 19.425516666666663,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9005,
+              "end": 9011,
+              "score": 18.82715,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9006,
+              "end": 9012,
+              "score": 18.599433333333334,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 4606,
+              "end": 4612,
+              "score": 18.513183333333334,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9003,
+              "end": 9009,
+              "score": 18.27163333333333,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 4607,
+              "end": 4613,
+              "score": 18.006216666666667,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 2465,
+              "end": 2471,
+              "score": 17.944433333333333,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 2169,
+              "end": 2175,
+              "score": 17.81475,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 4608,
+              "end": 4614,
+              "score": 17.675,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9007,
+              "end": 9013,
+              "score": 17.546433333333333,
+              "overlaps_human_interval": false
+            }
+          ],
+          "audio": [
+            {
+              "match": "cricket_match_1",
+              "start": 1925,
+              "end": 1931,
+              "score": 0.026716666666666663,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 1923,
+              "end": 1929,
+              "score": 0.02631666666666667,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 1924,
+              "end": 1930,
+              "score": 0.026316666666666665,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 1922,
+              "end": 1928,
+              "score": 0.02595,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 1921,
+              "end": 1927,
+              "score": 0.02501666666666667,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9621,
+              "end": 9627,
+              "score": 0.021799999999999996,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9620,
+              "end": 9626,
+              "score": 0.021,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9622,
+              "end": 9628,
+              "score": 0.020766666666666666,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9619,
+              "end": 9625,
+              "score": 0.020116666666666665,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9618,
+              "end": 9624,
+              "score": 0.019033333333333333,
+              "overlaps_human_interval": false
+            }
+          ],
+          "speech": [
+            {
+              "match": "cricket_match_1",
+              "start": 2055,
+              "end": 2061,
+              "score": 1.4593,
+              "overlaps_human_interval": true
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 6853,
+              "end": 6859,
+              "score": 1.4558,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 6852,
+              "end": 6858,
+              "score": 1.4558,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 6851,
+              "end": 6857,
+              "score": 1.4558,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 6850,
+              "end": 6856,
+              "score": 1.4558,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 6849,
+              "end": 6855,
+              "score": 1.4558,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 6848,
+              "end": 6854,
+              "score": 1.4558,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 6847,
+              "end": 6853,
+              "score": 1.4558,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 6846,
+              "end": 6852,
+              "score": 1.4558,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 11704,
+              "end": 11710,
+              "score": 1.4521,
+              "overlaps_human_interval": false
+            }
+          ],
+          "current_fused": [
+            {
+              "match": "cricket_match_1",
+              "start": 9006,
+              "end": 9012,
+              "score": 0.37704999999999994,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9005,
+              "end": 9011,
+              "score": 0.36615,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9007,
+              "end": 9013,
+              "score": 0.3583,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9004,
+              "end": 9010,
+              "score": 0.35766666666666663,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9008,
+              "end": 9014,
+              "score": 0.3306333333333334,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 3000,
+              "end": 3006,
+              "score": 0.3258666666666667,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 2999,
+              "end": 3005,
+              "score": 0.3183333333333333,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 9003,
+              "end": 9009,
+              "score": 0.3056666666666667,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 3001,
+              "end": 3007,
+              "score": 0.30283333333333334,
+              "overlaps_human_interval": false
+            },
+            {
+              "match": "cricket_match_1",
+              "start": 2998,
+              "end": 3004,
+              "score": 0.29475,
+              "overlaps_human_interval": false
+            }
+          ]
+        }
+      }
+    },
+    "pseudo_label": {
+      "cricket_match_1": {
+        "interval_count": 68,
+        "metrics": {
+          "visual": {
+            "roc_auc": 0.565667993590484,
+            "average_precision": 0.05876800149100509,
+            "mean_positive_percentile": 0.5626684053604954
+          },
+          "audio": {
+            "roc_auc": 0.7674314990388689,
+            "average_precision": 0.1576771426610129,
+            "mean_positive_percentile": 0.7556913878720456
+          },
+          "speech": {
+            "roc_auc": 0.5802089164541515,
+            "average_precision": 0.06365556296750693,
+            "mean_positive_percentile": 0.582878743620442
+          },
+          "current_fused": {
+            "roc_auc": 0.6234947707946438,
+            "average_precision": 0.07377741012192882,
+            "mean_positive_percentile": 0.6178042285742051
+          }
+        }
+      },
+      "cricket_match_2": {
+        "interval_count": 67,
+        "metrics": {
+          "visual": {
+            "roc_auc": 0.6453355943248127,
+            "average_precision": 0.07023251279572619,
+            "mean_positive_percentile": 0.6385820699798088
+          },
+          "audio": {
+            "roc_auc": 0.7809056472129249,
+            "average_precision": 0.17494025630119084,
+            "mean_positive_percentile": 0.7666308083831209
+          },
+          "speech": {
+            "roc_auc": 0.6042675802783619,
+            "average_precision": 0.09769362741220496,
+            "mean_positive_percentile": 0.582067940623953
+          },
+          "current_fused": {
+            "roc_auc": 0.7387183271954162,
+            "average_precision": 0.13225440816973263,
+            "mean_positive_percentile": 0.7275946903387808
+          }
+        }
+      },
+      "football_match_1": {
+        "interval_count": 61,
+        "metrics": {
+          "visual": {
+            "roc_auc": 0.5819624585821107,
+            "average_precision": 0.058773529830461364,
+            "mean_positive_percentile": 0.578438292462018
+          },
+          "audio": {
+            "roc_auc": 0.6841553451018199,
+            "average_precision": 0.12128910499624039,
+            "mean_positive_percentile": 0.6794677005426869
+          },
+          "speech": {
+            "roc_auc": 0.4771501521693928,
+            "average_precision": 0.05018707136483668,
+            "mean_positive_percentile": 0.4869317936762386
+          },
+          "current_fused": {
+            "roc_auc": 0.6921650990653803,
+            "average_precision": 0.11511015316670313,
+            "mean_positive_percentile": 0.683848605550937
+          }
+        }
+      }
+    }
+  }
+}
