@@ -94,7 +94,7 @@ Only the audio channel (short-time energy) carries a replicated ranking signal (
 
 - F1 bootstrap CIs are not reported because resampling intervals can only lower matches, so the interval's upper bound equals the point estimate; AUC CIs are reported instead.
 - The looser ±10 s metric has no random baseline computed yet; do not quote it as evidence of beating chance.
-- Results files were generated at commit `822c708f...`, before the final commit hash listed below.
+- Results files were generated at commit `822c708f...`, before the final code commit `e054022` and results commit `65bbec7`.
 - Single labeler, 20 intervals per match, two matches, no football human labels, no tuning on match 2.
 
 ## Results (pseudo-label)
